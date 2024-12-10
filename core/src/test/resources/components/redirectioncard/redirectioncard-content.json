@@ -1,0 +1,25 @@
+{
+    "redirectioncard": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:createdBy": "admin",
+      "bgImgMob": "/content/dam/vida2-0/global/hamburger_bg_mob.png",
+      "jcr:lastModifiedBy": "admin",
+      "newtab": "false",
+      "jcr:created": "Tue Nov 28 2023 13:53:17 GMT+0530",
+      "cardText": "Visit the VIDA Community",
+      "cardType": "vida-community-card",
+      "cardImageText": "12.5k members",
+      "redirectLink": "/content/vida/in",
+      "jcr:lastModified": "Tue Nov 28 2023 13:54:38 GMT+0530",
+      "sling:resourceType": "vida/components/vida-2.0/content/redirectioncard",
+      "bgImgDesk": "/content/dam/vida2-0/global/hamburger_bg_des.png",
+      "redirectImg": "/content/dam/vida2-0/global/try_icon.png",
+      "imageCard": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+          "jcr:primaryType": "nt:unstructured",
+          "cardImg": "/content/dam/vida2-0/global/buy_icon.png"
+        }
+      }
+    }
+  }

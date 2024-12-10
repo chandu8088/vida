@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="PLP Banner V2.0"></div>
+<sly data-sly-use.plpBanner="${'com.heromotocorp.vida.core.models.PLPBannerModel'}" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ProductVariantConfig: ${ plpBanner.json  @context = 'unsafe' }
+        });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="ProductVariant" data-cmp-version="2.0" data-cmp-type="react" data-component="ProductVariant"
+    data-cmp-config="ProductVariantConfig"></div>
+</sly>

@@ -1,0 +1,7 @@
+{
+  "schedulerName": "Workflow Scheduler",
+  "enabled": "$[env:ENABLE_WORKFLOW_SCHEDULER]",
+  "model": "/var/workflow/models/export-xf-to-target",
+  "experienceFragmentPath": "/content/experience-fragments/vida/language-masters/en/site/new-testride/master,/content/experience-fragments/vida/language-masters/en/site/old-testride/master",
+  "cronExpression": "$[env:WORKFLOW_SCHEDULER_CRON_EXPRESSION]"
+}

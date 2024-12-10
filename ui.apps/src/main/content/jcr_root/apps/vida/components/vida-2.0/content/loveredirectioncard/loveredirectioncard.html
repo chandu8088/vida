@@ -1,0 +1,29 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Love Redirection Card"
+></div>
+<sly
+  data-sly-use.author="${'com.heromotocorp.vida.core.models.LoveRedirectionCardModel'}"
+/>
+
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: {
+    "redirectionCardLabel": "${properties.redirectionCardLabel @ context='scriptString'}",
+    "cardScrollSpeed": ${properties.cardScrollSpeed @ context='scriptString'},
+    "redirectionCardHeader": "${properties.redirectionCardHeading @ context='scriptString'}",
+    "redirectionCardConfig": "${author.jsonString @ context='scriptString'}"
+
+  }
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div
+    data-section-id="${currentNode.name}"
+    data-component="Love"
+    data-cmp-type="react"
+    data-cmp-config="${currentNode.name}"
+    data-cmp-version="2.0"
+  ></div>
+</sly>

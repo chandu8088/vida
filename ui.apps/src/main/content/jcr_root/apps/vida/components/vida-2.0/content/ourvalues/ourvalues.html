@@ -1,0 +1,33 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Our Values V2.0"></div>
+<section class="vida-aboutus-values ${properties.variationType =='vidas-intent' ? 'aboutus-intent' : ''}">
+  <div class="vida-aboutus-values__container">
+    <div class="our-values">
+      <h2 class="our-values__heading">
+        ${properties.ourValuesHeading}
+      </h2>
+      <div class="our-values__card-container">
+        <sly data-sly-list.outValuesItems="${resource.getChildren}">
+          <sly data-sly-test="${outValuesItems.name == 'ourValuesCards'}">
+            <sly data-sly-list.item="${outValuesItems.getChildren}">
+              <div class="our-values__card-container__card">
+                <div class="card-img">
+                  <picture>
+                    <source srcset="${item.cardDesktopImg}" media="(min-width:1024px)">
+                    <source srcset="${item.cardMobileImg}" media="(min-width: 368px)">
+                    <img class="card-image" src="${item.cardDesktopImg}" alt="${item.imagealttext}" />
+                  </picture>
+                </div>
+                <div class="card-text">
+                  <div class="card-text__value-wrap">
+                    <h3 class="card-text__title">${item.cardTitle}</h3>
+                    <p class="card-text__desc">${item.cardDescription @context='html'}</p>
+                  </div>
+                </div>
+              </div>
+            </sly>
+          </sly>
+        </sly>
+      </div>
+    </div>
+  </div>
+</section>

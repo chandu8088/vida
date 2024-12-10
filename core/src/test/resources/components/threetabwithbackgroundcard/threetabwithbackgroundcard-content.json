@@ -1,0 +1,34 @@
+{
+  "threetabwithbackgroundcard": {
+    "jcr:primaryType": "nt:unstructured",
+    "titleTab1": "Climate",
+    "titleTab2": "Costs",
+    "titleTab3": "Tranquility",
+    "jcr:createdBy": "admin",
+    "bgDesktopImgTab1": "/content/dam/2.jpeg",
+    "bgDesktopImgTab2": "/content/dam/1.jpeg",
+    "bgDesktopImgTab3": "/content/dam/2.jpeg",
+    "jcr:lastModifiedBy": "admin",
+    "ctaLinkTab1": "/content/vida/in/bn-in",
+    "ctaLinkTab2": "/content/vida/in/en",
+    "ctaLinkTab3": "/content/vida/in/gu-in",
+    "bgMobileImgTab1": "/content/dam/2.jpeg",
+    "bgMobileImgTab2": "/content/dam/1.jpeg",
+    "bgMobileImgTab3": "/content/dam/2.jpeg",
+    "jcr:created": "Tue Dec 12 2023 16:45:00 GMT+0530",
+    "title": "VIDA V1 for the",
+    "jcr:lastModified": "Tue Dec 12 2023 18:13:56 GMT+0530",
+    "descriptionTab1": "<p>You can&#39;t save the whole planet, but you can take a step towards the right direction.</p>\r\n<p> </p>\r\n<p>Be the changemaker in your daily rides, be sustainable every time you hop on.</p>\r\n",
+    "descriptionTab2": "<p>You can't save the whole planet, but you can take a step towards the right direction.</p>\r\n<p>&nbsp;</p>\r\n<p>Be the changemaker in your daily rides, be sustainable every time you hop on.</p>\r\n",
+    "descriptionTab3": "<p>You can't save the whole planet, but you can take a step towards the right direction.</p>\r\n<p>&nbsp;</p>\r\n<p>Be the changemaker in your daily rides, be sustainable every time you hop on.</p>\r\n",
+    "sling:resourceType": "vida/components/vida-2.0/content/threetabwithbackgroundcard",
+    "ctaLabelTab1": "Know More",
+    "ctaLabelTab2": "Know More",
+    "ctaLabelTab3": "Know More",
+    "textIsRich": [
+      "true",
+      "true",
+      "true"
+    ]
+  }
+}

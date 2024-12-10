@@ -1,0 +1,12 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Three Tab With Background Card V2.0"></div>
+<sly data-sly-use.threetabwithbgcard="com.heromotocorp.vida.core.models.ThreeTabWithBgCardModel" />
+
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ threetabwithbgcard.json  @context = 'unsafe' }
+      });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-component="ThreeTabWithBgCard" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>
+</sly>

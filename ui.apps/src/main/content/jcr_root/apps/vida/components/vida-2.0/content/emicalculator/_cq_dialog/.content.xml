@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title=" Emi Calculator Component V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <bgImageDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Background Image for Desktop"
+                        name="./bgImageDesktop" />
+                    <bgImageMobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Background Image for Mobile"
+                        name="./bgImageMobile" />
+                    <bgImageAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Background Image Alt Text"
+                        name="./bgImageAltText" />    
+                    <bgImageTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Background Image Title"
+                        name="./bgImageTitle" />    
+                    <calculatorCard
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="/apps/vida/components/vida-2.0/content/calculatorcard/cq:dialog/content/items/column"/>  
+                    <buyButtonLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Buy Button Label"
+                        name="./buyButtonLabel" />  
+                    <buyButtonRedirectUrl
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Buy Button Redirect Url"
+                        name="./buyButtonRedirectUrl" />     
+                    <newTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./newTab"
+                        text="Open link in new tab"
+                        fieldDescription="If checked, the link will be opened in a new browser tab."
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true" />     
+                    <closeButtonLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Close Button Label"
+                        name="./closeButtonLabel" />
+                    <showButton
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./showButton"
+                        text="Show Button"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true" />    
+                    <showOfferCard
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./showOfferCard"
+                        text="Show Offer Card"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true" />    
+                    <redirectionCard
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/include"
+                        path="/apps/vida/components/vida-2.0/content/redirectioncard/cq:dialog/content/items/tabs/items/cardInfo/items/columns/items/column"/>   
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

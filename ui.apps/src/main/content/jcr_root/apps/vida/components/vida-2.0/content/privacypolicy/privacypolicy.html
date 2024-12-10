@@ -1,0 +1,10 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Privacy Policy Component"></div>
+<sly data-sly-use.PrivacyPolicyModel="com.heromotocorp.vida.core.models.PrivacyPolicyModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ PrivacyPolicyModel.json  @context = 'unsafe' }});
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-cmp-version="2.0" data-cmp-type="react" data-component="PrivacyPolicy"
+    data-cmp-config="${currentNode.name}"></div>
+</sly>

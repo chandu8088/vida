@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Redirection Card V2.0"></div>
+<sly data-sly-use.redirectionCard="${'com.heromotocorp.vida.core.models.RedirectionCardModel'}" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ redirectionCard.json  @context = 'unsafe' }
+      });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-component="ReDirectionCards" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>
+</sly>

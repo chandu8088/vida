@@ -1,0 +1,38 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="FAQ Component V2.0"></div>
+<sly data-sly-test="${properties.variationType == 'faq-card'}">
+	<sly
+	data-sly-use.faqIcon="${'com.heromotocorp.vida.core.models.DMImageURLService' @ imageDamPath=properties.iconFaq}" />
+    <sly
+	data-sly-use.faqArrowIcon="${'com.heromotocorp.vida.core.models.DMImageURLService' @ imageDamPath=properties.arrowIconFaq}" />
+  <script>
+	window.appConfig = Object.assign(window.appConfig || {}, {
+		${ currentNode.name @context = 'scriptString'} : {
+		"dataPosition": "${properties.dataPosition @ context='scriptString'}",
+		"faqIcon": "${faqIcon.dMImagePathLink @ context='scriptString'}",
+		"faqTitle": "${properties.titleFaq @ context='scriptString'}",
+		"faqArrowIcon": "${faqArrowIcon.dMImagePathLink @ context='scriptString'}",
+		"reDirectLink": "${properties.ctaLink @ context='uri', extension='html'}",
+		"reDirectLabel": "${properties.ctaLabel @ context='scriptString'}",
+		"faqContent": "${properties.contentFaq @ context = 'scriptString'}",
+		"newTab": ${ properties.newTab @context = 'scriptString'}
+	}
+    });  
+  </script>
+  	<sly data-sly-test="${!wcmmode.edit}">
+		<div data-section-id="${currentNode.name}" data-component="FaqCard" data-cmp-type="react" data-cmp-version="2.0"
+			data-cmp-config="${currentNode.name}"></div>
+	</sly>
+</sly>
+
+<sly data-sly-test="${properties.variationType == 'faq-queries'}">
+	<sly data-sly-use.faqModel="com.heromotocorp.vida.core.models.FaqModel"/>
+	<script>
+		window.appConfig = Object.assign(window.appConfig || {}, {
+		  ${ currentNode.name @context = 'scriptString'}: ${faqModel.json  @context = 'unsafe' }
+			});
+	</script>
+	<sly data-sly-test="${!wcmmode.edit}">
+		<div data-section-id="${currentNode.name}" data-component="FaqQueries" data-cmp-type="react" data-cmp-version="2.0"
+			data-cmp-config="${currentNode.name}"></div>
+	</sly>
+</sly>

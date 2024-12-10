@@ -1,0 +1,51 @@
+.city-banner-wrapper {
+  .city-banner-top-container {
+    background: get-color("catskill-white");
+    position: relative;
+
+    .city-banner-bg-img {
+      height: rem(410px);
+      object-fit: cover;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: rem(295px);
+
+      @include media(">desktop") {
+        height: rem(620px);
+        width: rem(735px);
+      }
+    }
+
+    .city-banner-title {
+      padding: rem(64px) rem(24px);
+      position: relative;
+      width: rem(320px);
+      @include media(">desktop") {
+        padding: rem(126px) rem(90px);
+        width: rem(736px);
+      }
+
+      h1 {
+        @include vida-h1-mobile;
+
+        @include media(">desktop") {
+          @include vida-h1-desktop;
+        }
+
+        span {
+          color: get-color("orange");
+        }
+      }
+    }
+  }
+
+  .city-banner-bottom-container {
+    position: relative;
+
+    .city-banner-img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Battery Benefits Component V2.0"></div>
+<section class="vida-battery-benefits" data-component="battery-plus-benefits">
+  <div class="vida-battery-benefits__container vida-2-container">
+    <div class="vida-battery-benefits__container__wrapper">
+      <div class="battery-benefits-img">
+        <picture>
+          <source srcset="${properties.leftDesktopImage}" alt="${properties.leftImageAltText}" @ context='uri'
+            media="(min-width:1024px)">
+          <source srcset="${properties.leftMobileImage}" alt="${properties.leftImageAltText}" @ context='uri'
+            media="(min-width: 360px)">
+          <img class="battery-benefits-img__media tns-item" src="${properties.leftDesktopImage}"
+            alt="${properties.leftImageAltText}" @ context='uri' />
+        </picture>
+      </div>
+      <div class="battery-benefits-details-content">
+        <div>
+          <h2 class="benefits-heading">${properties.cardHeading @ context = 'html'}</h2>
+          <p class="benefits-heading__description">${properties.description @ context = 'html'}</p>
+        </div>
+        <div class="benefits-details">
+          <sly data-sly-list.batteryBenefitsItems="${resource.getChildren}">
+            <sly data-sly-test="${batteryBenefitsItems.name == 'batteryBenefitsCards'}">
+              <div>
+                <sly data-sly-list.item="${batteryBenefitsItems.getChildren}">
+                  <div class="benefits-details__section">
+                    <picture>
+                      <source srcset="${item.benefitsCardIcon}" alt="${item.benefitsCardAltText}" @ context='uri'
+                        media="(min-width:1024px)">
+                      <source srcset="${item.benefitsCardIcon}" alt="${item.benefitsCardAltText}" @ context='uri'
+                        media="(min-width: 360px)">
+                      <img class="benefits-details__img" src="${item.benefitsCardIcon}"
+                        alt="${item.benefitsCardAltText}" @ context='uri' />
+                    </picture>
+                    <p class="benefits-details__description">${item.benefitsCardDescription @ context = 'html'}</p>
+                  </div>
+                </sly>
+              </div>
+            </sly>
+          </sly>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

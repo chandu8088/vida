@@ -1,0 +1,34 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Charging Infra Lights V2.0"></div>
+<section class="vida-charging-lights-component">
+    <div class="charging-light-wrapper">
+        <div class="charging-light__container">
+            <h3 class="mobile-heading">${properties.chargerLightsHeading}</h3>
+            <div class="light-image">
+                <img src="${properties.chargerStationImage}" alt="${properties.chargerStationImageAltText}">
+            </div>
+            <div class="light-instruction">
+                <h3 class="heading">${properties.chargerLightsHeading}</h3>
+                <div class="light-wrapper">
+                    <sly data-sly-list.instructionsItems="${resource.getChildren}">
+                        <sly data-sly-test="${instructionsItems.name == 'instructionDetails'}">
+                            <sly data-sly-list.item="${instructionsItems.getChildren}">
+                                <div class="light-details">
+                                    <div class="light-color">
+                                        <div class="color-img">
+                                            <img src="${item.lightColorImage}" alt="${item.lightColorImageAltText}">
+                                        </div>
+                                        <h4 class="color-name">${item.lightColor}</h4>
+                                    </div>
+                                    <p class="light-para">
+                                        ${item.lightColorDesc}
+                                    </p>
+                                </div>
+                            </sly>
+                        </sly>
+                    </sly>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

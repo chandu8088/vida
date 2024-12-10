@@ -1,0 +1,33 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Product Specification V2.0"></div>
+<sly data-sly-use.plpBannerModel="${'com.heromotocorp.vida.core.models.ProductSpecificationModel'}" />
+<div class="productspecification">
+  <div data-section-id="productKeySpecification" data-cmp-version="2.0"
+    data-cmp-config="ProductKeySpecificationConfig">
+    <div class="product-specification-heading">
+      <h2 class="product-specification-heading__title">${plpBannerModel.heading}</h2>
+      <span class="product-specification-heading__description">${plpBannerModel.title}</span>
+    </div>
+    <div class="product-specification-wrapper vida-2-container">
+      <sly data-sly-list.keyFeatures="${plpBannerModel.productSpecificationList}">
+      <div class="product-item">
+        <div class="product-item-image-wrapper">
+          <picture>
+            <source srcset="${keyFeatures.specificationIcon}" media="(min-width:1024px)">
+            <source srcset="${keyFeatures.specificationIconMobile}" media="(min-width: 360px)">
+            <img class="battery-plus-details__image" src="${keyFeatures.specificationIcon}"
+              alt="${keyFeatures.specificationIconAlt}" />
+          </picture>
+        </div>
+        <sly data-sly-test="${!properties.isHomePage}">
+          <h3 class="product-item-title">${keyFeatures.specificationLabel @context='html'}</h3>
+        </sly>
+        <sly data-sly-test="${properties.isHomePage}">
+          <p class="product-item-title">${keyFeatures.specificationLabel @context='html'}</p>
+        </sly>
+        ${keyFeatures.specificationValue @context='html'}
+      </div>
+      </sly>
+
+    </div>
+  </div>
+</div>

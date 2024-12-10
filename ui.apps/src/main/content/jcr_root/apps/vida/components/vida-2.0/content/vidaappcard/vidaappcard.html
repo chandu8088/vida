@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="My Vida App Component"></div>
+<sly data-sly-use.vidaAppCard="${'com.heromotocorp.vida.core.models.VidaAppCardModel'}" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ vidaAppCard.json  @context = 'unsafe' }
+      });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-component="VidaAppDownload" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>
+</sly>

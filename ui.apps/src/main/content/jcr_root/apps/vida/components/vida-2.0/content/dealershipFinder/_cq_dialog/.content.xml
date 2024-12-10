@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Dealership Finder V2"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <titleText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Title Text"
+                        name="./titleText" />
+                    <titletag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        emptyText="select tag for Title"
+                        fieldDescription="Please Select the tag for Title"
+                        fieldLabel="Title Tag"
+                        name="./titleTag">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Tag"
+                                value="\0"/>
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="H1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="H2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="H3"
+                                value="h3"/>
+                            <h4
+                                jcr:primaryType="nt:unstructured"
+                                text="H4"
+                                value="h4"/>
+                            <h5
+                                jcr:primaryType="nt:unstructured"
+                                text="H5"
+                                value="h5"/>
+                            <h6
+                                jcr:primaryType="nt:unstructured"
+                                text="H6"
+                                value="h6"/>
+                        </items>
+                    </titletag>
+                    <dealershipFinderTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Dealership Finder Text"
+                        name="./dealershipFinderTitle" />
+                    <popularCitiesText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Popular Cities Text"
+                        name="./popularCitiesText" />
+                    <dealershipFinderBgMobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Dealership finder background Mobile"
+                        name="./dealershipFinderBgMobile"
+                        rootPath="/content/dam" />
+                    <dealershipFinderBgDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Dealership finder background desktop"
+                        name="./dealershipFinderBgDesktop"
+                        rootPath="/content/dam" />
+                    <redirectionUrl
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Redirection Url"
+                        name="./redirectionUrl"
+                        rootPath="/content" />
+                    <placeholder
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Place Holder for city field"
+                        name="./placeholder" />
+                    <geolocationIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Location icon image"
+                        name="./geolocationIcon"
+                        rootPath="/content/dam" />
+                    <geolocationSecondIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Location icon second image"
+                        name="./geolocationSecondIcon"
+                        rootPath="/content/dam" />
+                    <noDealerErrorMsg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="No dealer Error message"
+                        name="./noDealerErrorMsg" />
+                    <noValueErrorMsg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="No Value Error message"
+                        name="./noValueErrorMsg" />
+                    <geoLocationErrorMsg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Geo Location Error message"
+                        name="./geoLocationErrorMsg" />
+                    <dataPosition
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldDescription="This field specifies the value of linkPosition in the data layer."
+                        fieldLabel="Position"
+                        name="./dataPosition"/>
+                    <item_details
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldDescription="Click 'Add' to add items"
+                        fieldLabel="Add Items"
+                        validation="multifield-item-number">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./items">
+                            <items
+                                jcr:primaryType="nt:unstructured">
+                                <cityId
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="City Id"
+                                    name="./id" />
+                                <cityName
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="City Name"
+                                    name="./cityName" />
+                                <cityIcon
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="City Icon"
+                                    name="./cityIcon"
+                                    rootPath="/content/dam" />
+                            </items>
+                        </field>
+                    </item_details>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

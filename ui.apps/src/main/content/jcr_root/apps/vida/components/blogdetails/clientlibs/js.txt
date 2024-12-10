@@ -1,0 +1,4 @@
+#base=js
+
+customquery.js
+blog-details.js

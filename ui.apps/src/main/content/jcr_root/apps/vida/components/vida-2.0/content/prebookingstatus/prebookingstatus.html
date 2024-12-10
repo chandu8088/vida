@@ -1,0 +1,104 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Pre Booking Status V2.0 Component"
+></div>
+<sly data-sly-use.author="${'com.heromotocorp.vida.core.models.LoginModel'}" />
+<div data-component="Notification" data-cmp-type="react"></div>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+  	"PreBookingPaymentStatusConfig": {
+  		"bgImg": {
+  			"desktop":
+  				"${properties.backGroundDesktopImg @ context='uri'}",
+  			"mobile":
+  				"${properties.backGroundImageMobile @ context='uri'}"
+  		},
+  		"productDetails": {
+  			"range": "${properties.range @ context='scriptString'}",
+  			"rangeIcon": "${properties.rangeIcon @ context='uri'}",
+  			"rangeValue": "${properties.rangeValue @ context='scriptString'}",
+  			"topSpeed": "${properties.topSpeed @ context='scriptString'}",
+  			"topSpeedIcon": "${properties.topSpeedIcon @ context='uri'}",
+  			"topSpeedValue": "${properties.topSpeedValue @ context='scriptString'}",
+  			"inClineCapacity": "${properties.inclineCapacityTitle @ context='scriptString'}",
+  			"inClineCapacityIcon": "${properties.inclineCapacityIcon @ context='uri'}",
+  			"inClineCapacityValue": "${properties.inClineCapacityValue @ context='scriptString'}",
+  			"removableBatteries": "${properties.removableBatteries @ context='scriptString'}",
+  			"removableBattery": "${properties.removableBattery @ context='scriptString'}",
+  			"removableBatteriesIcon": "${properties.removableBatteriesIcon @ context='uri'}",
+  			"removableBatteriesValue": "${properties.removableBatteriesValue @ context='scriptString'}"
+  		},
+  		"topBanner": {
+  			"textOne": "${properties.textOne @ context='scriptString'}",
+  			"textTwo": "${properties.textTwo @ context='scriptString'}",
+  			"textThree": "${properties.textThree @ context='scriptString'}",
+  			"topBannerDesktopbackgroundImage": "${properties.topBannerDesktopbackgroundImage @ context='uri'}",
+  			"topBannerBgImg":
+  				"${properties.topBannerBgImg @ context='uri'}",
+  			"leftBgImgMob":
+  				"${properties.leftBgImgMob @ context='uri'}",
+  			"leftBgImgDesk":
+  				"${properties.leftBgImgDesk @ context='uri'}",
+  			"offerScrollingImg":
+  				"${properties.offerScrollingImg @ context='uri'}",
+  			"buyAnyLabel": "${properties.buyAnyLabel @ context='scriptString'}",
+  			"buyAnyPrice": "${properties.buyAnyPrice @ context='scriptString'}",
+  			"compareVariantsText": "${properties.compareVariantsText @ context='scriptString'}",
+  			"buyLabel1": "${properties.buyLabel1 @ context='scriptString'}",
+  			"buyLabel2": "${properties.buyLabel2 @ context='scriptString'}",
+  			"productSpecificationPdfUrl": "${properties.productSpecificationPdfUrl @ context='uri'}",
+  			"priceType": "${properties.priceType @ context='scriptString'}",
+  			"priceAmount": "${properties.priceAmount @ context='scriptString'}"
+  		},
+  		"payment": {
+  			"successImg": {
+  				"desktop":
+  					"${properties.successDesktopImg @ context='uri'}",
+  				"mobile":
+  					"${properties.successMobileImg @ context='uri'}"
+  			},
+  			"failureImg": {
+  				"desktop":
+  					"${properties.failureImageDesktop @ context='uri'}",
+  				"mobile":
+  					"${properties.failureMobileImage @ context='uri'}"
+  			},
+  			"successStatusText": "${properties.successStatusText @ context='scriptString'}",
+  			"failureStatusText": "${properties.failureStatusText @ context='scriptString'}",
+  			"successPriceText": "${properties.successPriceText @ context='scriptString'}",
+  			"failurePriceText": "${properties.failurePriceText @ context='scriptString'}"
+  		},
+  		"proceedBanner": {
+  			"scootyIcon":
+  				"${properties.scootyIcon @ context='uri'}",
+  			"header": "${properties.proceedBannerHeader @ context='scriptString'}",
+  			"showroomPrice": "${properties.showroomPrice @ context='scriptString'}",
+  			"paymentMethod":
+  				"${properties.paymentMethod @ context='scriptString'}",
+  			"paymentUrl": "${properties.paymentUrl  @extension = 'html',context = 'uri'}",
+  			"proceedBannerNewTab":${properties.proceedBannerNewTab @ context='scriptString'}
+  		},
+  		"cancelBanner": {
+  			"header": "${properties.cancelBannerHeader @ context='scriptString'}",
+  			"cancelText":
+  				"${properties.cancelText @ context='scriptString'}",
+  			"cancelUrl": "${properties.cancelUrl  @extension = 'html',context = 'uri'}",
+  			"cancelBannerNewTab":${properties.cancelBannerNewTab @ context='scriptString'}
+  		},
+  		"retryButtonLabel": "${properties.retryButtonLabel @ context='scriptString'}",
+  		"navTab": true,
+  		"navLink": "${properties.navLink  @extension = 'html',context = 'uri'}",
+		"bikeVariantDetails": "${author.bikeJson @ context='scriptString'}"
+
+  	}
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div
+    data-component="PreBookingPaymentStatus"
+    data-cmp-type="react"
+    data-cmp-config="PreBookingPaymentStatusConfig"
+    data-cmp-version="2.0"
+  ></div>
+</sly>

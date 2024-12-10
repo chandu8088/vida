@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Find Charging Station"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <general
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="General"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Title"
+                                        name="./title"/>
+                                    <titleTag
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Select heading tag"
+                                        fieldDescription="Please Select the heading tag for title"
+                                        fieldLabel="Tag for Title"
+                                        name="./titleTag">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <default
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Select Tag"
+                                                value="\0"/>
+                                            <h1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H1"
+                                                value="h1"/>
+                                            <h2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H2"
+                                                value="h2"/>
+                                            <h3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H3"
+                                                value="h3"/>
+                                            <h4
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H4"
+                                                value="h4"/>
+                                            <h5
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H5"
+                                                value="h5"/>
+                                            <h6
+                                                jcr:primaryType="nt:unstructured"
+                                                text="H6"
+                                                value="h6"/>
+                                        </items>
+                                    </titleTag>
+                                    <accordianTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Accordian Title"
+                                        name="./accordianTitle"/>
+                                    <accordianTitleIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="AccordianTitleIcon"
+                                        name="./accordianTitleIcon"
+                                        rootPath="/content/dam"/>
+                                    <chargingBatteryIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Charging Battery Icon"
+                                        name="./chargingBatteryIcon"
+                                        rootPath="/content/dam"/>
+                                    <chargingStationsInfoText1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Charging Stations Info Text1"
+                                        name="./chargingStationsInfoText1"/>
+                                    <chargingStationsInfoText2
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Charging Stations Info Text2"
+                                        name="./chargingStationsInfoText2"/>
+                                    <findChargingStationTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Find Charging Station Title"
+                                        name="./findChargingStationTitle"/>
+                                    <findChargingStationDescription
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                        fieldLabel="Find Charging Station Description"
+                                        name="./findChargingStationDescription"
+                                        useFixedInlineToolbar="{Boolean}true">
+                                        <rtePlugins
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                                        <uiSettings
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                                        <htmlRules jcr:primaryType="nt:unstructured">
+                                            <blockHandling
+                                                jcr:primaryType="nt:unstructured"
+                                                removeSingleParagraphContainer="{Boolean}true"/>
+                                        </htmlRules>
+                                    </findChargingStationDescription>
+                                    <requestChargingStationBtnLabel
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Request Charging Station Button Label"
+                                        name="./requestChargingStationBtnLabel"/>
+                                    <requestChargingStationBtnNavLink
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Request Charging Station Button Navigation Link"
+                                        name="./requestChargingStationBtnNavLink"
+                                        rootPath="/content"/>
+                                    <requestChargingStationNewTab
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldLabel="Open Request Charging Station Link in new tab?"
+                                        name="./requestChargingStationNewTab"
+                                        text="Open Request Charging Station Link in new tab?"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <isShowNearByCount
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        fieldLabel="Enable show near by count?"
+                                        name="./isShowNearByCount"
+                                        text="Enable show near by count?"
+                                        uncheckedValue="false"
+                                        value="{Boolean}true"/>
+                                    <cityFieldPlaceholderText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="City Field Placeholder Text"
+                                        name="./cityFieldPlaceholderText"/>
+                                    <cityFieldSearchIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="City Field Search Icon"
+                                        name="./cityFieldSearchIcon"
+                                        rootPath="/content/dam"/>
+                                    <cityFieldLocationIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="City Field Location Icon"
+                                        name="./cityFieldLocationIcon"
+                                        rootPath="/content/dam"/>
+                                    <cityFieldLocationSecondIcon
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="City Field Location Second Icon"
+                                        name="./cityFieldLocationSecondIcon"
+                                        rootPath="/content/dam"/>
+                                    <cityFieldLocationErrorMsg
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="City Field Location Error Message"
+                                        name="./cityFieldLocationErrorMsg"/>
+                                    <cityFieldNotFoundMessage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="City Field Not Found Message"
+                                        name="./cityFieldNotFoundMessage"/>
+                                    <chargingInfoContent
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Enter the charging info content"
+                                        fieldLabel="Charging Info Content"
+                                        validation="multifield-item-number">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./chargingInfoContent">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <icon
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Icon"
+                                                    name="./icon"
+                                                    rootPath="/content/dam"/>
+                                                <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Title"
+                                                    name="./title"/>
+                                                <number
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Number"
+                                                    name="./number"/>
+                                            </items>
+                                        </field>
+                                    </chargingInfoContent>
+                                </items>
+                            </column>
+                        </items>
+                    </general>
+                    <dataLayer
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DataLayer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <column
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <dataPosition
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                        fieldLabel="Position"
+                                        name="./dataPosition"/>
+                                </items>
+                            </column>
+                        </items>
+                    </dataLayer>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

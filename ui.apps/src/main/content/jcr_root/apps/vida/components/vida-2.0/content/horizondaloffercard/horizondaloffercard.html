@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Product Horizontal OfferCards Component">
+</div>
+<sly data-sly-use.ServiceOfferCardModel="com.heromotocorp.vida.core.models.ServiceOfferCardModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ ServiceOfferCardModel.json  @context = 'unsafe' }});  
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-component="ProductHorizontalOfferCards" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>
+</sly>

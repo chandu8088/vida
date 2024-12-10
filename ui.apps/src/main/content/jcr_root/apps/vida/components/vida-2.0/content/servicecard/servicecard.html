@@ -1,0 +1,25 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Servicing Collapse"></div>
+<sly data-sly-use.ServiceOfferCardModel="com.heromotocorp.vida.core.models.ServiceOfferCardModel" />
+<sly data-sly-test="${ServiceOfferCardModel.darkTheme}">
+  <script>
+    window.appConfig = Object.assign(window.appConfig || {}, {
+      vidaServiceConfig: ${ ServiceOfferCardModel.serviceJson  @context = 'unsafe' }
+    
+  });
+  </script>
+  <sly data-sly-test="${!wcmmode.edit}">
+    <div data-section-id="vida-service" data-cmp-version="2.0" data-cmp-type="react"
+      data-component="CollapsibleInfoLayout" data-cmp-config="vidaServiceConfig"></div>
+  </sly>
+</sly>
+<sly data-sly-test="${!ServiceOfferCardModel.darkTheme}">
+  <script>
+    window.appConfig = Object.assign(window.appConfig || {}, {
+      moreInfoConfig: ${ ServiceOfferCardModel.serviceJson  @context = 'unsafe' }
+  });
+  </script>
+  <sly data-sly-test="${!wcmmode.edit}">
+    <div data-section-id="more-info-config" data-cmp-version="2.0" data-cmp-type="react"
+      data-component="CollapsibleInfoLayout" data-cmp-config="moreInfoConfig"></div>
+  </sly>
+</sly>

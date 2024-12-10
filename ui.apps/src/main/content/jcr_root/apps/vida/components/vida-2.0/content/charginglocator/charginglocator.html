@@ -1,0 +1,27 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Charging Locator Component"></div>
+<sly data-sly-test="${wcmmode.edit}">
+<p>${properties.textCharging @ context='html'}</p>
+  </sly>
+  <script>
+    window.appConfig = Object.assign(window.appConfig || {}, {
+      "chargingStationsLocatorConfig": {
+        "mode": "${properties.variations @ context='scriptString'}",
+        "defaultLocationId": "${properties.city @ context='scriptString'}",
+        "title": "${properties.textCharging @ context='scriptString'}",
+		"googleNavigateLabel": "${properties.navigatelabel @ context='scriptString'}",
+        "locations": [{
+          "id": "chargingStations",
+          "label": "${properties.chargingStationPage @ context='scriptString'}",
+        }]
+      }
+    });
+  </script>
+  <sly data-sly-test="${!wcmmode.edit}">
+  <div
+  data-section-id="locator"
+  data-component="LocationFinder"
+  data-cmp-type="react"
+  data-cmp-version="2.0"
+  data-cmp-config="chargingStationsLocatorConfig"
+></div>
+</sly>

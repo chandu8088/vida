@@ -1,0 +1,50 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Service Page Video Banner V2.0"
+></div>
+<section class="cmp-video-banner" data-component="vida-video-banner">
+  <div class="cmp-video-banner__container vida-2-container">
+    <div class="cmp-video-banner__heading">
+      <h2>${properties.heading}</h2>
+    </div>
+    <div class="cmp-video-banner__slides-wrapper">
+      <div class="cmp-video-banner__slides-container">
+        <sly data-sly-list.cardItems="${resource.getChildren}">
+          <sly data-sly-test="${cardItems.name == 'bannerItems'}">
+            <sly data-sly-list.item="${cardItems.getChildren}">
+              <div class="cmp-video-banner__slide">
+                <div class="cmp-video-banner__video-cont" data-sly-test="${item.isYouTubeVideo}">
+                  <iframe
+                    src="${item.bannerVideo}"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                    loading="lazy"
+                  ></iframe>
+                </div>
+                <div class="cmp-video-banner__video-cont" data-sly-test="${!item.isYouTubeVideo}">
+                  <video
+                    controls
+                    src="${item.bannerVideo}"
+                    preload="metadata"
+                    disablepictureinpicture
+                    type="video/mp4"
+                  ></video>
+                </div>
+                <div class="cmp-video-banner__play-btn" data-sly-test="${!item.isYouTubeVideo}">
+                  <img src="${properties.playIcon}" alt="button" />
+                </div>
+              </div>
+            </sly>
+          </sly>
+        </sly>
+      </div>
+      <div class="cmp-video-banner__control-btn">
+        <div class="cmp-video-banner__control-btn--prev carousel-btn"></div>
+        <div class="cmp-video-banner__control-btn--next carousel-btn"></div>
+      </div>
+    </div>
+  </div>
+</section>

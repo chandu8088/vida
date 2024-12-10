@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Blogs Redirection Component"
+    extraClientlibs="[vida.authoring.dialog]"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <cardInfo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Card Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <blogTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Blog Title"
+                                                name="./blogTitle"/>
+                                            <redirectIcon
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Blog Redirect Icon"
+                                                name="./redirectIcon"
+                                                rootPath="/content/dam"/> 
+                                            <redirectLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Blog Redirect Link"
+                                                name="./redirectLink"
+                                                rootPath="/content"/>
+                                            <redirectNewTab
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./redirectNewTab"
+                                                text="Open link in new tab"
+                                                fieldDescription="If checked the link will be opened in a new browser tab."
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true" />     
+                                            <blogCardContent
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Blog Details"
+                                                validation="multifield-item-number">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./blogCardContent">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <isVideo
+                                                            granite:class="cq-dialog-checkbox-showhide"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            name="./isVideo"
+                                                            text="is Video?"
+                                                            uncheckedValue="{Boolean}false"
+                                                            value="{Boolean}true">
+                                                            <granite:data
+                                                                jcr:primaryType="nt:unstructured"
+                                                                cq-dialog-checkbox-showhide-target1=".togglefield1"
+                                                                cq-dialog-checkbox-showhide-target2=".togglefield2"/>
+                                                        </isVideo>
+                                                        <video
+                                                            granite:class="togglefield1"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container"> 
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <blogCardVideo
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                    fieldLabel="Blog Card Video"
+                                                                    name="./blogCardVideo"
+                                                                    rootPath="/content/dam"/>
+                                                            </items>
+                                                        </video>
+                                                        <image
+                                                            granite:class="togglefield2"
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <blogCardDesktopImg
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                    fieldLabel="Blog Card Image Desktop"
+                                                                    name="./blogCardDesktopImg"
+                                                                    rootPath="/content/dam"/>
+                                                                <blogCardMobileImg
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                    fieldLabel="Blog Card Image Mobile"
+                                                                    name="./blogCardMobileImg"
+                                                                    rootPath="/content/dam"/>
+                                                                <imageAlt
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldDescription="Please provide alternative text to display if image is not available"
+                                                                    fieldLabel="Alternative text for image"
+                                                                    name="./imageAlt"/>
+                                                                <imageTitle
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                    fieldDescription="Please provide the title text for image"
+                                                                    fieldLabel="Image Title"
+                                                                    name="./imageTitle"/>
+                                                            </items>
+                                                        </image>
+                                                        <blogCardDescription
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"               
+                                                            fieldLabel="Blog Card Description"
+                                                            fieldDescription="Please provide description for the blog card"
+                                                            name="./blogCardDescription"
+                                                            useFixedInlineToolbar="{Boolean}true">
+                                                            <rtePlugins
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                                                            <uiSettings
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                                                            <htmlRules jcr:primaryType="nt:unstructured">
+                                                                <blockHandling
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    removeSingleParagraphContainer="{Boolean}true" />
+                                                            </htmlRules>
+                                                        </blogCardDescription>
+                                                        <blogCardDate
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/datepicker"
+                                                            fieldLabel="Blog Card Date"
+                                                            displayedFormat="MMM DD, YYYY"
+                                                            type="date"
+                                                            name="blogCardDate"/>
+                                                        <cardNavLink
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            fieldLabel="Blog card NavLink"
+                                                            name="./cardNavLink"
+                                                            rootPath="/content"/>
+                                                        <newTab
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                            name="./newTab"
+                                                            text="Open link in new tab"
+                                                            fieldDescription="If checked the link will be opened in a new browser tab."
+                                                            uncheckedValue="{Boolean}false"
+                                                            value="{Boolean}true" />
+                                                    </items>
+                                                </field>
+                                                <granite:data jcr:primaryType="nt:unstructured"
+                                                    max-items="4"/>
+                                            </blogCardContent>
+                                        </items>
+                                    </column>
+                                </items>    
+                            </columns>
+                        </items>
+                    </cardInfo>
+                    <dataLayer
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DataLayer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dataPosition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                                fieldLabel="Position"
+                                                name="./dataPosition"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </dataLayer>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

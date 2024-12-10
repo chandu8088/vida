@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Charging Infra Accordian V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <accordianHeading
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Accordian icon"
+                        rootPath="/content/dam"
+                        name="./accordianIcon"/>
+                    <cardsinfo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        fieldDescription="Click 'Add' to add accordian"
+                        fieldLabel="Add Accordian fields"
+                        composite="{Boolean}true">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./accordianDetails">
+                            <items jcr:primaryType="nt:unstructured">
+                                <accordianHeading
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Accordian Heading"
+                                    name="./accordianHeading"/>
+                                <accordianDescription
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                    fieldDescription="This field is used to provide the Accordian Description"
+                                    fieldLabel="Accordian Description"
+                                    name="./accordianDescription"
+                                    useFixedInlineToolbar="{Boolean}true">
+                                    <rtePlugins
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins" />
+                                    <uiSettings
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings" />
+                                    <htmlRules jcr:primaryType="nt:unstructured">
+                                        <blockHandling
+                                            jcr:primaryType="nt:unstructured"
+                                            removeSingleParagraphContainer="{Boolean}true" />
+                                    </htmlRules>
+                                </accordianDescription>
+                            </items>
+                        </field>
+                    </cardsinfo>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

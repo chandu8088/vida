@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="EV Category Banner Component"></div>
+<sly data-sly-use.evCategoryBanner="${'com.heromotocorp.vida.core.models.EVCategoryBannerModel'}" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: { "bannerContent": ${ evCategoryBanner.json  @context = 'unsafe' }}
+      });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-component="EVCategoryBanner" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>
+</sly>

@@ -1,0 +1,61 @@
+{
+  "chargingbanner": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "titleTag": "h4",
+    "jcr:lastModifiedBy": "admin",
+    "jcr:created": "Sat Jan 20 2024 19:33:44 GMT+0530",
+    "title": "We took Care of Charging",
+    "jcr:lastModified": "Sat Jan 20 2024 19:55:43 GMT+0530",
+    "sling:resourceType": "vida/components/vida-2.0/content/chargingbanner",
+    "textIsRich": "true",
+    "dataPosition": "chargingbanner",
+    "cardsInfo": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "labelTag": "h1",
+        "imageTitle": "two removable batteries title",
+        "mobileImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png",
+        "imageAlt": "two removable batteries",
+        "link": "#two-battery",
+        "label": "Two removable batteries",
+        "order": "1",
+        "desktopImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "labelTag": "h1",
+        "imageTitle": "portable-charger-title",
+        "mobileImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png",
+        "imageAlt": "Portable charger",
+        "link": "#",
+        "label": "Portable charger",
+        "order": "2",
+        "desktopImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png"
+      },
+      "item2": {
+        "jcr:primaryType": "nt:unstructured",
+        "labelTag": "h2",
+        "imageTitle": "Community charging title",
+        "mobileImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png",
+        "imageAlt": "Community charging",
+        "link": "#",
+        "label": "Community charging",
+        "order": "3",
+        "desktopImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png"
+      },
+      "item3": {
+        "jcr:primaryType": "nt:unstructured",
+        "labelTag": "h1",
+        "imageTitle": "Fast-charging network",
+        "mobileImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png",
+        "imageAlt": "Fast-charging network",
+        "link": "#",
+        "label": "Fast-charging network",
+        "order": "4",
+        "desktopImage": "/content/dam/vida2-0/about_vida/about_vida__desk_img1.png"
+      }
+    }
+  }
+}

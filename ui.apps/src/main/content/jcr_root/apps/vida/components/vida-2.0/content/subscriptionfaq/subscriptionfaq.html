@@ -1,0 +1,34 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Subscription FAQ Component V2.0"></div>
+<section class="vida-faqs-card ${properties.bgColor == 'white' ? 'background-white' : ''}" data-component="faqs-card">
+  <div class="faqs-card vida-2-container">
+    <div class="faqs-card__container-section">
+      <div class="faqs-card__wrapper open">
+        <div class="faqs-card__header-container">
+          <div class="faq-icon-header-wrapper">
+            <div class="faq-icon-container">
+              <img src="${properties.iconFaq}" alt="${properties.iconAltText}" aria-label="faq-icon" />
+            </div>
+            <h2 class="faq-header">${properties.titleFaq @ context = 'html'}</h2>
+          </div>
+          <div class="faq-dropdown-arrow">
+            <a>
+              <img src="${properties.arrowIconFaq}" alt="${properties.arrowIconAltText}" aria-label="drop-down-arrow"
+                class="drop-down-arrow" />
+            </a>
+          </div>
+        </div>
+        <div class="faqs-card__content-container display-none">
+          <div class="content-container">
+            ${properties.contentFaq @ context = 'html'}
+          </div>
+        </div>
+        <sly data-sly-test="${properties.readMoreLabel}">
+          <div class="read-more-container">
+            <a href="${properties.redirectionUrl}" target="_self" class="orange-color-text redirect-anchor"
+              data-link-position="faqCard" rel="noreferrer">${properties.readMoreLabel @ context = 'html'}</a>
+          </div>
+        </sly>
+      </div>
+    </div>
+  </div>
+</section>

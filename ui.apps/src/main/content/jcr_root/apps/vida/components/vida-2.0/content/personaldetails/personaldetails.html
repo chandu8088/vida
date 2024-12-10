@@ -1,0 +1,185 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Personal Details Component V2.0"
+></div>
+<sly
+  data-sly-use.testRideScooterImage="${'com.heromotocorp.vida.core.models.DMImageURLService' @ imageDamPath=properties.testRideScooterImage}"
+/>
+<sly
+  data-sly-use.buyNowCardScooterImage="${'com.heromotocorp.vida.core.models.DMImageURLService' @ imageDamPath=properties.buyNowCardScooterImage}"
+/>
+<sly
+  data-sly-use.orderCardScooterImage="${'com.heromotocorp.vida.core.models.DMImageURLService' @ imageDamPath=properties.orderCardScooterImage}"
+/>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+      ${ currentNode.name @context = 'scriptString'}: {
+      "vidaUserProfileConfig": {
+          "uploadphototxt": "${properties.userProfileUploadText @ context='scriptString'}"
+      },
+      "testRideCardConfig": {
+          "testRideHeader": "${properties.testRideHeader @ context='scriptString'}",
+          "testRideDescription": "${properties.testRideDescription @ context='scriptString'}",
+          "testRideScooterImage": "${testRideScooterImage.dMImagePathLink @ context='scriptString'}",
+          "testRideNavLink": "${properties.testRideNavLink @ context='uri', extension='html'}",
+          "testRideScooterImgAlt": "${properties.testRideScooterImgAlt @ context='scriptString'}",
+          "testRideScooterImgTitle": "${properties.testRideScooterImgTitle @ context='scriptString'}",
+          "isTestRideUrl": ${properties.isTestRideUrl @ context='scriptString'}
+      },
+      "buyNowCardConfig": {
+          "buyNowCardHeader": "${properties.buyNowCardHeader @ context='scriptString'}",
+          "buyNowCardDescription": "${properties.buyNowCardDescription @ context='scriptString'}",
+          "buyNowCardScooterImage": "${buyNowCardScooterImage.dMImagePathLink @ context='scriptString'}",
+          "buyNowNavLink": "${properties.buyNowNavLink @ context='uri', extension='html'}",
+          "buyNowScooterImgAlt": "${properties.buyNowScooterImgAlt @ context='scriptString'}",
+          "buyNowScooterImgTitle": "${properties.buyNowScooterImgTitle @ context='scriptString'}",
+          "isTestRideUrl": false
+      },
+      "orderCardConfig": {
+          "orderCardHeader": "${properties.orderCardHeader @ context='scriptString'}",
+          "orderCardDescription": "${properties.orderCardDescription @ context='scriptString'}",
+          "orderCardScooterImage": "${orderCardScooterImage.dMImagePathLink @ context='scriptString'}",
+          "orderNavLink": "${properties.orderNavLink @ context='uri', extension='html'}",
+          "orderCardScooterImgAlt": "${properties.orderCardScooterImgAlt @ context='scriptString'}",
+          "orderCardScooterImgTitle": "${properties.orderCardScooterImgTitle @ context='scriptString'}",
+          "isTestRideUrl": false
+      },
+      "profilePicConfig": {
+          "uploadPicText": "${properties.userProfileUploadText @ context='scriptString'}",
+          "validationMsg": "${'validImageMsz' @ i18n,context='scriptString'}"
+      },
+      "firstNameField": {
+          "label": "${properties.firstnamelabel @ context='scriptString'}",
+          "placeholder": "${properties.firstnameph @ context='scriptString'}",
+          "validationRules": {
+              required: {
+                  message: "${'firstNameReqMsz' @ i18n,context='scriptString'}"
+              },
+              minLength: {
+                  value: 1,
+                  message: "${'firstNameLeastMsz' @ i18n,context='scriptString'}"
+              },
+              maxLength: {
+                  value: 10,
+                  message: "${'firstNameMaxMsz' @ i18n,context='scriptString'}"
+              },
+              fullName: {
+                  message: "${'fullNameCustomMsz' @ i18n,context='scriptString'}"
+              },
+              customValidation: {
+                  message: "${'validnameMsz' @ i18n,context='scriptString'}"
+              }
+          }
+      },
+      "lastNameField": {
+          "label": "${properties.lastnamelabel @ context='scriptString'}",
+          "placeholder": "${properties.lastnameph @ context='scriptString'}",
+          "validationRules": {
+              required: {
+                  message: "${'lastNameReqMsz' @ i18n,context='scriptString'}"
+              },
+              "minLength": {
+                  "value": 1,
+                  "message": "${'lastNameLeastMsz' @ i18n,context='scriptString'}"
+              },
+              customValidation: {
+                  message: "${'lastNameCustomMsz' @ i18n,context='scriptString'}"
+              }
+          }
+      },
+      "phoneNumberField": {
+          "label": "${properties.phonenumberlabel @ context='scriptString'}",
+          "placeholder": "${properties.phonenumberph @ context='scriptString'}",
+          "validationRules": {
+              required: {
+                  message: "${'phoneNumberReqMsz' @ i18n,context='scriptString'}"
+              },
+              "minLength": {
+                  "value": 10,
+                  "message": "${'minDigitMsz' @ i18n,context='scriptString'}"
+              },
+              "maxLength": {
+                  "value": 10,
+                  "message": "${'maxDigitMsz' @ i18n,context='scriptString'}"
+              },
+              "custom": {
+                  "message": "${'validphonenumber' @ i18n,context='scriptString'}"
+              }
+          }
+      },
+      "emailField": {
+          "label": "${properties.emaillabel @ context='scriptString'}",
+          "placeholder": "${properties.emailph @ context='scriptString'}",
+          "infoLabel": "${properties.emailinfolabel @ context='scriptString'}",
+          "validationRules": {
+              required: {
+                  message: "${'emailReqMsz' @ i18n,context='scriptString'}"
+              },
+              customValidation: {
+                  message: "${'emailValidMsz' @ i18n,context='scriptString'}"
+              }
+          }
+      },
+      "stateField": {
+          "label": "${properties.stateLabel @ context='scriptString'}",
+          "placeholder": "${properties.statePlaceholderText @ context='scriptString'}",
+          "validationRules": {
+              "required": {
+                  "message": "${'stateReqMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "cityField": {
+          "label": "${properties.cityLabel @ context='scriptString'}",
+          "placeholder": "${properties.cityPlaceholderText @ context='scriptString'}",
+          "validationRules": {
+              "required": {
+                  "message": "${'cityLabelReqMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+      "pinCodeField": {
+          "label": "${properties.pincodelabel @ context='scriptString'}",
+          "placeholder": "${properties.pincodeph @ context='scriptString'}",
+          "validationRules": {
+              required: {
+                  message: "${'pincodeReqMsz' @ i18n,context='scriptString'}"
+              },
+              minLength: {
+                  value: 6,
+                  message: "${'pincodeMinMsz' @ i18n,context='scriptString'}"
+              },
+              custom: {
+                  noServiceMsg: "${'noServiceMsg' @ i18n,context='scriptString'}",
+                  noCityMatchMsg: "${'pincodeValidMsz' @ i18n,context='scriptString'}"
+              }
+          }
+      },
+      "cancelBtn": {
+          "label": "${properties.cancelctalabel @ context='scriptString'}"
+      },
+      "saveBtn": {
+          "label": "${properties.saveCtaLabel @ context='scriptString'}"
+      },
+      "datalayerConfig": {
+          "dataPosition": "${properties.dataPosition @ context='scriptString'}"
+      }
+  }
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div
+    data-section-id="vidaSpinner"
+    data-component="Spinner"
+    data-cmp-version="2.0"
+    data-cmp-type="react"
+  ></div>
+  <div
+    data-section-id="${currentNode.name}"
+    data-cmp-version="2.0"
+    data-cmp-type="react"
+    data-component="UserProfile"
+    data-cmp-config="${currentNode.name}"
+  ></div>
+</sly>

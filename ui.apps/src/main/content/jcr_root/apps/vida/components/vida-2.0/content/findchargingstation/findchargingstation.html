@@ -1,0 +1,59 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Find Charging Station Component"
+></div>
+<sly
+  data-sly-use.findChargingStationModel="com.heromotocorp.vida.core.models.FindChargingStationModel"
+/>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${currentNode.name @context = 'scriptString'}: {
+      "title": "${properties.title @ context = 'scriptString'}",
+      "titleTag": "${properties.titleTag @ context = 'scriptString'}",
+      "accordianTitle": "${properties.accordianTitle @ context = 'scriptString'}",
+      "accordianTitleIcon":
+        "${properties.accordianTitleIcon @ context = 'uri'}",
+      "chargingBatteryIcon":
+        "${properties.chargingBatteryIcon @ context = 'uri'}",
+      "chargingStationsInfoText1": "${properties.chargingStationsInfoText1 @ context = 'scriptString'}",
+      "chargingStationsInfoText2": "${properties.chargingStationsInfoText2 @ context = 'scriptString'}",
+      "findChargingStationTitle": "${properties.findChargingStationTitle @ context = 'scriptString'}",
+      "findChargingStationDescription":
+        "${properties.findChargingStationDescription @ context = 'scriptString'}",
+      "requestChargingStationBtnLabel": "${properties.requestChargingStationBtnLabel @ context = 'scriptString'}",
+      "requestChargingStationBtnNavLink": "${properties.requestChargingStationBtnLabel @ context = 'scriptString'}",
+      "requestChargingStationNewTab": ${properties.requestChargingStationNewTab @ context = 'scriptString'},
+      "isShowNearByCount": ${properties.isShowNearByCount @ context = 'scriptString'},
+      "cityField": {
+        "placeholder": "${properties.cityFieldPlaceholderText @ context = 'scriptString'}",
+        "searchIcon":
+          "${properties.cityFieldSearchIcon @ context = 'uri'}",
+        "locationIcon":
+          "${properties.cityFieldLocationIcon @ context = 'uri'}",
+        "secondLocationIcon":
+          "${properties.cityFieldLocationSecondIcon @ context = 'uri'}",
+        "validationRules": {
+          "notFoundMsg": "${properties.cityFieldNotFoundMessage @ context = 'scriptString'}",
+          "locationErrorMsg": "${properties.cityFieldLocationErrorMsg @ context = 'scriptString'}"
+        }
+      },
+      "chargingInfoContent": ${findChargingStationModel.json @ context='unsafe'}
+    }
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div
+    data-section-id="vidaSpinner"
+    data-component="Spinner"
+    data-cmp-version="2.0"
+    data-cmp-type="react"
+  ></div>
+  <div
+    data-section-id="${currentNode.name}"
+    data-component="FindChargingStation"
+    data-cmp-type="react"
+    data-cmp-version="2.0"
+    data-cmp-config="${currentNode.name}"
+  ></div>
+</sly>

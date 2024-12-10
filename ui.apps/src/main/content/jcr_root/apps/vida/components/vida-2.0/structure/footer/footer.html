@@ -1,0 +1,13 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Footer Component - V2"></div>
+<sly data-sly-use.footer="com.heromotocorp.vida.core.models.FooterModel"/>
+  <script>
+    window.appConfig = Object.assign(window.appConfig || {}, {
+      FooterConfig:${footer.json  @ context='unsafe' }
+    });  
+  </script>
+  	<div  
+    data-section-id="vidaFooter"
+    data-cmp-type="react"
+    data-cmp-version="2.0"
+    data-component="Footer"
+    data-cmp-config="FooterConfig"></div>

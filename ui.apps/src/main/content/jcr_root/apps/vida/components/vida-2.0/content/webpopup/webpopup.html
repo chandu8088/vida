@@ -1,0 +1,109 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Web Popup V2.0"></div>
+<sly
+  data-sly-use.author="${'com.heromotocorp.vida.core.models.TestRideModel'}"
+/>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    "webPopupConfig": {
+      "genericConfig" : {
+        "webPopupTitleText": "${properties.webPopupTitleText @ context='scriptString'}",
+        "nameLabel": "${properties.nameLabel @ context='scriptString'}",
+        "emailLabel": "${properties.emailLabel @ context='scriptString'}",
+        "cityLabel": "${properties.cityLabel @ context='scriptString'}",
+        "numberLabel": "${properties.numberLabel @ context='scriptString'}",
+        "webPopupConfirmBtnLabel": "${properties.webPopupConfirmBtnLabel @ context='scriptString'}",
+        "inactivityTime": ${properties.inactivityTime @ context='scriptString'}
+      },
+      "phoneNumberField": {
+        "countrycode": "${author.countryCodes @ context='scriptString'}",
+        "label": "${properties.numberLabel @ context='scriptString'}",
+        "placeholder": "${properties.numberPlaceHolder @ context='scriptString'}",
+        "validationRules": {
+          "required": {
+            "message": "${'phoneNumberReqMsz' @ i18n,context='scriptString'}"
+          },
+          "minLength": {
+            "value": 10,
+            "message": "${'minCharaterMsz' @ i18n,context='scriptString'}"
+          },
+          "maxLength": {
+            "value": 10,
+            "message": "${'maxCharaterMsz' @ i18n,context='scriptString'}"
+          },
+          "customValidation": {
+            "message": "${'validmobilenumb' @ i18n,context='scriptString'}"
+          }
+        }
+      },
+      "firstNameField": {
+        "label": "${properties.nameLabel @ context='scriptString'}",
+        "placeholder": "${properties.namePlaceholder @ context='scriptString'}",
+        "validationRules": {
+          "required": {
+            "message": "${'nameReqMsz' @ i18n,context='scriptString'}"
+          },
+          "minLength": {
+            "value": 1,
+            "message": "${'firstNameLeastMsz' @ i18n,context='scriptString'}"
+          },
+          "fullName": {
+            "message": "${'fullNameCustomMsz' @ i18n,context='scriptString'}"
+          },
+          "customValidation": {
+            "message": "${'validnameMsz' @ i18n,context='scriptString'}"
+          }
+        }
+      },
+      "emailField": {
+        "label": "${properties.emailLabel @ context='scriptString'}",
+        "placeholder": "${properties.emailPlaceHolder @ context='scriptString'}",
+        "validationRules": {
+          "required": {
+            "message": "${'emailReqMsz' @ i18n,context='scriptString'}"
+          },
+          "customValidation": {
+            "message": "${'emailValidMsz' @ i18n,context='scriptString'}"
+          }
+        }
+      },
+      "cityField": {
+        "label": "${properties.cityLabel @ context='scriptString'}",
+        "validationRules": {
+          "required": {
+            "message": "${'cityReqMsz' @ i18n,context='scriptString'}"
+          }
+        }
+      },
+      "otpConfig": {
+        "changeNumberLabel": "${properties.changeNumberLabel @ context='scriptString'}",
+        "resendLabel": "${properties.resendLabel @ context='scriptString'}",
+        "sendOTPLabel": "${properties.sendOTPLabel @ context='scriptString'}",
+        "timer": {
+          "minutes": ${properties.timerminutes @ context='scriptString'},
+          "seconds": ${properties.timersec @ context='scriptString'}
+        },
+        "verifyBtn": {
+          "label": "${properties.submitBtnText @ context='scriptString'}"
+        },
+        "validationRules": {
+          "required": {
+            "message": "${'enterOTPMsz' @ i18n,context='scriptString'}"
+          }
+        },
+        "otpFormPrimaryText": "${properties.otpFormPrimaryText @ context='scriptString'}",
+        "otpLabel": "${properties.otpLabel @ context='scriptString'}"
+      }
+    }
+  });  
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <sly data-sly-test="${properties.enableNewWebPopup}">
+    <div data-section-id="web-popup" data-component="WebPopUpNew" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="webPopupConfig"></div>
+  </sly>
+  <sly data-sly-test="${! properties.enableNewWebPopup}">
+    <div data-section-id="web-popup" data-component="VidaWebPopUp" data-cmp-type="react"
+      data-cmp-version="2.0" data-cmp-config="webPopupConfig"></div>
+  </sly>
+    <div data-component="Notification" data-cmp-type="react"></div>
+</sly>

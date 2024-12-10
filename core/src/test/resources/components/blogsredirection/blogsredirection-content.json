@@ -1,0 +1,42 @@
+{
+  "blogsredirection": {
+    "jcr:primaryType": "nt:unstructured",
+    "jcr:createdBy": "admin",
+    "jcr:lastModifiedBy": "admin",
+    "redirectNewTab": "false",
+    "jcr:created": "Mon Dec 04 2023 17:12:25 GMT+0530",
+    "redirectIcon": "/content/dam/Screenshot from 2023-12-04 16-18-51.png",
+    "redirectLink": "/content/vida/in",
+    "jcr:lastModified": "Mon Dec 04 2023 17:16:30 GMT+0530",
+    "blogTitle": "More for you",
+    "sling:resourceType": "vida/components/vida-2.0/content/blogsredirection",
+    "textIsRich": [
+      "true",
+      "true"
+    ],
+    "blogCardContent": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "cardNavLink": "/content/vida/in/bn-in",
+        "blogCardMobileImg": "/content/dam/1.jpeg",
+        "blogCardDescription": "The advantages of using an electric scooter over a car",
+        "newTab": "false",
+        "blogCardVideo": "/content/dam/y2mate.com - Indian Tricolor Flag Tiranga Fluttering  waving 1080p_1080p.mp4",
+        "blogCardDesktopImg": "/content/dam/1.jpeg",
+        "blogCardDate": "Mon Dec 04 2023 00:00:00 GMT+0530",
+        "isVideo": "false"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "cardNavLink": "/content/vida/in/en",
+        "blogCardMobileImg": "/content/dam/2.jpeg",
+        "blogCardDescription": "The advantages of using an electric scooter over a car",
+        "newTab": "false",
+        "blogCardDesktopImg": "/content/dam/2.jpeg",
+        "blogCardDate": "Sat Dec 02 2023 00:00:00 GMT+0530",
+        "isVideo": "false"
+      }
+    }
+  }
+}

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Accessories And Merchandise V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <titleTag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        emptyText="Select heading tag"
+                        fieldDescription="Please Select the heading tag for title" fieldLabel="Tag for Title"
+                        name="./titleTag">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default jcr:primaryType="nt:unstructured" text="Select Tag" value="" />
+                            <h1 jcr:primaryType="nt:unstructured" text="H1" value="h1" />
+                            <h2 jcr:primaryType="nt:unstructured" text="H2" value="h2" />
+                            <h3 jcr:primaryType="nt:unstructured" text="H3" value="h3" />
+                            <h4 jcr:primaryType="nt:unstructured" text="H4" value="h4" />
+                            <h5 jcr:primaryType="nt:unstructured" text="H5" value="h5" />
+                            <h6 jcr:primaryType="nt:unstructured" text="H6" value="h6" />
+                        </items>
+                    </titleTag>
+                    <componentHeading
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Component Heading"
+                        name="./componentHeading"/>
+                    <headingone
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Cards Heading One"
+                        name="./cardsHeadingOne"/>
+                    <heading
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Cards Heading"
+                        name="./cardsHeading"/>
+                    <accessoriescards
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Accessories Cards">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./accessoriesCards">
+                            <items jcr:primaryType="nt:unstructured">
+                                <desktopimage
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Desktop Card Image"
+                                    name="./desktopCardImage"
+                                    rootPath="/content/dam"/>
+                                <desktophoverimage
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Desktop Card Hover Image"
+                                    name="./desktopCardHoverImage"
+                                    rootPath="/content/dam"/>
+                                <mobileimage
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Mobile Card Image"
+                                    name="./mobileCardImage"
+                                    rootPath="/content/dam"/>
+                                <mobilehoverimage
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Mobile Card Hover Image"
+                                    name="./mobileCardHoverImage"
+                                    rootPath="/content/dam"/>
+                                <imagetitle
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Card Image Title"
+                                    name="./cardImageTitle"/>
+                                <imagealttext
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Card Image Alt Text"
+                                    name="./cardImageAltText"/>
+                                <hoverimagealttext
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Card Hover Image Alt Text"
+                                    name="./cardHoverImageAltText"/>
+                                <cardtitle
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Card Title"
+                                    name="./cardTitle"/>
+                                <ctalabel
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Card CTA Label"
+                                    name="./cardCtaLabel"/>
+                                <ctalink
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Card CTA Link"
+                                    name="./cardCtaLink"/>
+                            </items>
+                        </field>
+                    </accessoriescards>
+                    <leftarrowdesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Desktop Left Arrow"
+                        name="./desktopLeftArrow"
+                        rootPath="/content/dam"/>
+                    <rightarrowdesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Desktop Right Arrow"
+                        name="./desktopRightArrow"
+                        rootPath="/content/dam"/>
+                    <leftarrowmobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Mobile Left Arrow"
+                        name="./mobileLeftArrow"
+                        rootPath="/content/dam"/>
+                    <rightarrowmobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Mobile Right Arrow"
+                        name="./mobileRightArrow"
+                        rootPath="/content/dam"/>
+                    <arrowalttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Arrow Alt Text"
+                        name="./arrowAltText"/>
+                    <viewalllabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="View All Label"
+                        name="./viewAllLabel"/>
+                    <viewalllink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="View All Link"
+                        name="./viewAllLink"/>
+                    <buttonlabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Button Label"
+                        name="./buttonLabel"/>
+                    <buttonlink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Button Link"
+                        name="./buttonLink"/>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

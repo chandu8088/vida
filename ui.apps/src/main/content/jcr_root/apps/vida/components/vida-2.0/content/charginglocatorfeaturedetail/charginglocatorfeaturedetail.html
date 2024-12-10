@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder"
+  data-emptytext="Charging Locator Feature Detail V2.0 Component"></div>
+<sly data-sly-use.chargingLocatorFeatureDetail="com.heromotocorp.vida.core.models.ChargingLocatorFeatureDetailModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ chargingLocatorFeatureDetail.json  @context = 'unsafe' }});  
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+<div data-section-id="${properties.sectionId || currentNode.name}" id="${properties.sectionId}" data-cmp-version="2.0"
+  data-cmp-type="react" data-component="ChargeAtHome" data-cmp-config="${currentNode.name}"></div>
+</sly>

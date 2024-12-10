@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
+xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Savings Calculator Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <bgImageDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Background Image Desktop"
+                        name="./bgImageDesktop"/>
+                    <bgImageMobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Background Image Mobile"
+                        name="./bgImageMobile"/>
+                    <bgImgAlt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Background Image Alt Text"
+                        name="./bgImgAlt"/>
+                    <bgImgTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Background Image Title"
+                        name="./bgImgTitle"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Title"
+                        name="./title"/>
+                    <questionText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Question Text"
+                        name="./questionText"/>
+                    <totalSavingsText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Total Savings Text"
+                        name="./totalSavingsText"/>
+                    <savingsCardTextMonthly
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Savings Card Text Monthly"
+                        name="./savingsCardTextMonthly"/>
+                    <savingsCardTextYearly
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Savings Card Text Yearly"
+                        name="./savingsCardTextYearly"/>
+                    <cardBgImgMobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Card Background Image Mobile"
+                        name="./cardBgImgMobile"/>
+                    <cardBgImgDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Card Background Image Desktop"
+                        name="./cardBgImgDesktop"/>
+                    <cardBgImgAlt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Card Background Image Alt Text"
+                        name="./cardBgImgAlt"/>
+                    <cardBgImgTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Card Background Image Title"
+                        name="./cardBgImgTitle"/>
+                    <impactTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Impact Title"
+                        name="./impactTitle"/>
+                    <impactBgImageMob
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Impact Background Image Mobile"
+                        name="./impactBgImageMob"/>
+                    <impactBgImageAlt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Impact Background Image Alt Text"
+                        name="./impactBgImageAlt"/>
+                    <impactBgImageTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Impact Background Image Title"
+                        name="./impactBgImageTitle"/>
+                    <impactCardTextOne
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Impact Card Text one"
+                        name="./impactCardTextOne"/>
+                    <impactCardTextTwo
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Impact Card Text two"
+                        name="./impactCardTextTwo"/>
+                    <savingsComparisonText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Savings Comparison Text"
+                        name="./savingsComparisonText"/>
+                    <evBenefitsText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="EV Benefits Text"
+                        name="./evBenefitsText"/>
+                    <fuelText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Fuel Text"
+                        name="./fuelText"/>
+                    <evText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="EV Text"
+                        name="./evText"/>
+                    <carbonUnit
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Carbon Unit"
+                        name="./carbonUnit"/>
+                    <assumptionsContent
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"               
+                        fieldLabel="Assumptions Content"
+                        name="./assumptionsContent"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                    </assumptionsContent>
+                    <assumptionsTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Assumptions Title"
+                        name="./assumptionsTitle"/>
+                    <arrowIconDesk
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Arrow Icon Desktop"
+                        name="./arrowIconDesk"/>
+                    <arrowIconMob
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Arrow Icon Mobile"
+                        name="./arrowIconMob"/>
+                    <arrowIconAlt
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Arrow Icon Alt Text"
+                        name="./arrowIconAlt"/>
+                    <arrowIconTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Arrow Icon Title"
+                        name="./arrowIconTitle"/>
+                    <btnLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Button Label"
+                        name="./btnLabel"/>
+                    <redirectUrl
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"              
+                        fieldLabel="Redirect Url"
+                        name="./redirectUrl"/>                         
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Privacy Policy"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[vida.authoring.dialog]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <sectionOne
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Privacy Policy Section 1"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true"
+                        name="./sectionOne">
+                        <items jcr:primaryType="nt:unstructured">
+                            <isTermsAndConditions
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                fieldLabel="check for the terms and condition version"
+                                name="./termsAndConditions"
+                                text="check for the terms and condition version"
+                                uncheckedValue="false"
+                                value="{Boolean}true" />
+                            <privacyPolicyTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please add privacy policy title text"
+                                fieldLabel="Privacy Policy Title"
+                                name="./sectionOne/privacyPolicyTitle" />
+                            <titletag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                emptyText="select tag for Title"
+                                fieldDescription="Please Select the tag for Title"
+                                fieldLabel="Title Tag"
+                                name="./sectionOne/titleTag">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <default
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Select Tag"
+                                        value="\0"/>
+                                    <h1
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H1"
+                                        value="h1"/>
+                                    <h2
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H2"
+                                        value="h2"/>
+                                    <h3
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H3"
+                                        value="h3"/>
+                                    <h4
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H4"
+                                        value="h4"/>
+                                    <h5
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H5"
+                                        value="h5"/>
+                                    <h6
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H6"
+                                        value="h6"/>
+                                </items>
+                            </titletag>
+                            <privacyPolicyLastUpdatedDate
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please add privacy policy last updated text"
+                                fieldLabel="Privacy Policy Last Updated"
+                                name="./sectionOne/privacyPolicyLastUpdatedDate" />
+                            <privacyPolicies
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click 'Add' to add items"
+                                fieldLabel="Add Items">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./sectionOne/privacyPolicies">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <contentTitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Content title"
+                                            name="./contentTitle" />
+                                        <contentDescription
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldDescription="Please add Content description"
+                                            fieldLabel="Content description"
+                                            name="./contentDescription"
+                                            useFixedInlineToolbar="{Boolean}true">
+                                            <rtePlugins
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/rtePlugins" />
+                                            <uiSettings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/uiSettings" />
+
+                                            <htmlRules
+                                                jcr:primaryType="nt:unstructured">
+                                                <blockHandling
+                                                    jcr:primaryType="nt:unstructured"
+                                                    removeSingleParagraphContainer="{Boolean}true" />
+                                            </htmlRules>
+                                        </contentDescription>
+                                    </items>
+                                </field>
+                            </privacyPolicies>
+                        </items>
+                    </sectionOne>
+                    <sectionTwo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Privacy Policy Section 2"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true"
+                        name="./sectionTwo">
+                        <items jcr:primaryType="nt:unstructured">
+                            <privacyPolicies
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click 'Add' to add items"
+                                fieldLabel="Add Items">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./sectionTwo/privacyPolicies">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <contentTitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Content title"
+                                            name="./contentTitle" />
+                                        <contentDescription
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                            fieldDescription="Please add Content description"
+                                            fieldLabel="Content description"
+                                            name="./contentDescription"
+                                            useFixedInlineToolbar="{Boolean}true">
+                                            <rtePlugins
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/rtePlugins" />
+                                            <uiSettings
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/uiSettings" />
+
+                                            <htmlRules
+                                                jcr:primaryType="nt:unstructured">
+                                                <blockHandling
+                                                    jcr:primaryType="nt:unstructured"
+                                                    removeSingleParagraphContainer="{Boolean}true" />
+                                            </htmlRules>
+                                        </contentDescription>
+                                    </items>
+                                </field>
+                            </privacyPolicies>
+                        </items>
+                    </sectionTwo>
+                    <sectionThree
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Privacy Policy Section 3"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true"
+                        name="./sectionThree">
+                        <items jcr:primaryType="nt:unstructured">
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title"
+                                name="./sectionThree/title" />
+                            <description
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldDescription="Please add Content description"
+                                fieldLabel="Description"
+                                name="./sectionThree/description"
+                                useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/rtePlugins" />
+                                <uiSettings
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/uiSettings" />
+                                <htmlRules
+                                    jcr:primaryType="nt:unstructured">
+                                    <blockHandling
+                                        jcr:primaryType="nt:unstructured"
+                                        removeSingleParagraphContainer="{Boolean}true" />
+                                </htmlRules>
+                            </description>
+                            <conatctInfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click 'Add' to add items"
+                                fieldLabel="Add Items">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./sectionThree/contactInfo">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <icon
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Icon"
+                                            name="./icon"
+                                            rootPath="/content/dam" />
+                                        <text
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Text"
+                                            name="./text" />
+                                    </items>
+                                </field>
+                            </conatctInfo>
+                        </items>
+                    </sectionThree>
+                    <dataLayer
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DataLayer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dataPosition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                                fieldLabel="Position"
+                                                name="./dataPosition" />
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </dataLayer>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

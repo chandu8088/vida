@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Three Tab With Background Card V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <cardInfo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Card Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <threeTabWithBgCard
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <title
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Title"
+                                                        name="./title" />
+                                                    <isVariantOne
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                        checked="{Boolean}false"
+                                                        name="./variantOne"
+                                                        text="Check to open variation one"
+                                                        uncheckedValue="{Boolean}false"
+                                                        value="{Boolean}true" />
+                                                    <tabs
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                                                        maximized="{Boolean}true">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <tab1
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Tab1"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                maximized="{Boolean}true">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <columns
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                                        margin="{Boolean}true">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <column
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <detailsTab1
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                                            <titleTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldLabel="Tab Title"
+                                                                                                name="./titleTab1" />
+                                                                                            <bgDesktopImgTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="Background Image Desktop"
+                                                                                                name="./bgDesktopImgTab1"
+                                                                                                rootPath="/content/dam" />
+                                                                                            <bgMobileImgTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="Background Image Mobile"
+                                                                                                name="./bgMobileImgTab1"
+                                                                                                rootPath="/content/dam" />
+                                                                                            <bgImageAltTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Please provide alternative text to display if image is not available"
+                                                                                                fieldLabel="Alternative text for background image"
+                                                                                                name="./bgImageAltTab1"/>
+                                                                                            <imageTitleTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Please provide the title text for image"
+                                                                                                fieldLabel="Alt Image Title"
+                                                                                                name="./imageTitleTab1"/>
+                                                                                            <descriptionTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                                                fieldLabel="Description"
+                                                                                                name="./descriptionTab1"
+                                                                                                useFixedInlineToolbar="{Boolean}true">
+                                                                                                <rtePlugins
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins" />
+                                                                                                <uiSettings
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings" />
+                                                                                                <htmlRules
+                                                                                                    jcr:primaryType="nt:unstructured">
+                                                                                                    <blockHandling
+                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                        removeSingleParagraphContainer="{Boolean}true" />
+                                                                                                </htmlRules>
+                                                                                            </descriptionTab1>
+                                                                                            <ctaLabelTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldLabel="CTA Label"
+                                                                                                name="./ctaLabelTab1" />
+                                                                                            <ctaLinkTab1
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="CTA Link"
+                                                                                                name="./ctaLinkTab1"
+                                                                                                rootPath="/content" />
+                                                                                        </items>
+                                                                                    </detailsTab1>
+                                                                                </items>
+                                                                            </column>
+                                                                        </items>
+                                                                    </columns>
+                                                                </items>
+                                                            </tab1>
+                                                            <tab2
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Tab2"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                maximized="{Boolean}true">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <columns
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                                        margin="{Boolean}true">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <column
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <detailsTab2
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                                            <titleTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldLabel="Tab Title"
+                                                                                                name="./titleTab2" />
+                                                                                            <bgDesktopImgTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="Background Image Desktop"
+                                                                                                name="./bgDesktopImgTab2"
+                                                                                                rootPath="/content/dam" />
+                                                                                            <bgMobileImgTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="Background Image Mobile"
+                                                                                                name="./bgMobileImgTab2"
+                                                                                                rootPath="/content/dam" />
+                                                                                            <bgImageAltTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Please provide alternative text to display if image is not available"
+                                                                                                fieldLabel="Alternative text for background image"
+                                                                                                name="./bgImageAltTab2"/>
+                                                                                            <imageTitleTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Please provide the title text for image"
+                                                                                                fieldLabel="Alt Image Title"
+                                                                                                name="./imageTitleTab2"/>
+                                                                                            <descriptionTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                                                fieldLabel="Description"
+                                                                                                name="./descriptionTab2"
+                                                                                                useFixedInlineToolbar="{Boolean}true">
+                                                                                                <rtePlugins
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins" />
+                                                                                                <uiSettings
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings" />
+                                                                                                <htmlRules
+                                                                                                    jcr:primaryType="nt:unstructured">
+                                                                                                    <blockHandling
+                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                        removeSingleParagraphContainer="{Boolean}true" />
+                                                                                                </htmlRules>
+                                                                                            </descriptionTab2>
+                                                                                            <ctaLabelTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldLabel="CTA Label"
+                                                                                                name="./ctaLabelTab2" />
+                                                                                            <ctaLinkTab2
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="CTA Link"
+                                                                                                name="./ctaLinkTab2"
+                                                                                                rootPath="/content" />
+                                                                                        </items>
+                                                                                    </detailsTab2>
+                                                                                </items>
+                                                                            </column>
+                                                                        </items>
+                                                                    </columns>
+                                                                </items>
+                                                            </tab2>
+                                                            <tab3
+                                                                jcr:primaryType="nt:unstructured"
+                                                                jcr:title="Tab3"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                maximized="{Boolean}true">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <columns
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                                                        margin="{Boolean}true">
+                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                            <column
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <detailsTab3
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                                        <items jcr:primaryType="nt:unstructured">
+                                                                                            <titleTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldLabel="Tab Title"
+                                                                                                name="./titleTab3" />
+                                                                                            <bgDesktopImgTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="Background Image Desktop"
+                                                                                                name="./bgDesktopImgTab3"
+                                                                                                rootPath="/content/dam" />
+                                                                                            <bgMobileImgTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="Background Image Mobile"
+                                                                                                name="./bgMobileImgTab3"
+                                                                                                rootPath="/content/dam" />
+                                                                                            <bgImageAltTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Please provide alternative text to display if image is not available"
+                                                                                                fieldLabel="Alternative text for background image"
+                                                                                                name="./bgImageAltTab3"/>
+                                                                                            <imageTitleTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldDescription="Please provide the title text for image"
+                                                                                                fieldLabel="Alt Image Title"
+                                                                                                name="./imageTitleTab3"/>
+                                                                                            <descriptionTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                                                fieldLabel="Description"
+                                                                                                name="./descriptionTab3"
+                                                                                                useFixedInlineToolbar="{Boolean}true">
+                                                                                                <rtePlugins
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins" />
+                                                                                                <uiSettings
+                                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings" />
+                                                                                                <htmlRules
+                                                                                                    jcr:primaryType="nt:unstructured">
+                                                                                                    <blockHandling
+                                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                                        removeSingleParagraphContainer="{Boolean}true" />
+                                                                                                </htmlRules>
+                                                                                            </descriptionTab3>
+                                                                                            <ctaLabelTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                                fieldLabel="CTA Label"
+                                                                                                name="./ctaLabelTab3" />
+                                                                                            <ctaLinkTab3
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                                fieldLabel="CTA Link"
+                                                                                                name="./ctaLinkTab3"
+                                                                                                rootPath="/content" />
+                                                                                        </items>
+                                                                                    </detailsTab3>
+                                                                                </items>
+                                                                            </column>
+                                                                        </items>
+                                                                    </columns>
+                                                                </items>
+                                                            </tab3>
+                                                        </items>
+                                                    </tabs>
+                                                </items>
+                                            </threeTabWithBgCard>
+                                        </items>
+                                    </column>
+                                </items>    
+                            </columns>
+                        </items>
+                    </cardInfo>
+                    <dataLayer
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DataLayer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dataPosition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                                fieldLabel="Position"
+                                                name="./dataPosition"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </dataLayer>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

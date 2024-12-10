@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Redirection Card V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <cardInfo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Card Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <cardType
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="This card has various variations, Select a Variation for the specific experience"
+                                                fieldLabel="Card Type"
+                                                name="./cardType">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <community
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Vida Community Card"
+                                                        value="vida-community-card" />
+                                                    <calculator
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Cost Calculator Card"
+                                                        value="cost-calculator-card" />
+                                                    <warranty
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Vida Warranty Card"
+                                                        value="vida-warranty-card" />
+                                                    <modify
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Modify Your Vida Card"
+                                                        value="modify-your-vida-card" />
+                                                    <offer
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Vida Offer Card"
+                                                        value="vida-offer-card"/>
+                                                </items>
+                                            </cardType>
+                                            <cardTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide the Card Title"
+                                                fieldLabel="Card Title"
+                                                name="./cardTitle"/>
+                                            <imageCard
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                composite="{Boolean}true"
+                                                fieldLabel="Card Image(s)">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                    name="./imageCard">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <cardImage
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                            name="./cardImg"
+                                                            rootPath="/content/dam" />
+                                                    </items>
+                                                </field>
+                                            </imageCard>
+                                            <imageAlt
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide alternative text to display if image is not available"
+                                                fieldLabel="Alternative text for image"
+                                                name="./imageAlt"/>
+                                            <imageTitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="Please provide the title text for image"
+                                                fieldLabel="Image Title"
+                                                name="./imageTitle"/>
+                                            <cardImageText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Card Image Text"
+                                                name="./cardImageText" />
+                                            <cardText
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Card Text"
+                                                name="./cardText" />
+                                            <cardTextColor
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please select card text color"
+                                                fieldLabel="Card Text Color"
+                                                name="./cardTextColor">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <default
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Default"
+                                                        value="" />
+                                                    <black
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Black"
+                                                        value="black" />
+                                                    <white
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="White"
+                                                        value="white" />
+                                                </items>
+                                            </cardTextColor>
+                                            <fontSize
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Font size"
+                                                name="./fontSize" />
+                                            <fontWeight
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldLabel="Font weight Text"
+                                                name="./fontWeight" />
+                                            <cardBgColor
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                fieldDescription="Please select card background color"
+                                                fieldLabel="Card Background Color"
+                                                name="./cardBgColor">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <default
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Default"
+                                                        value="" />
+                                                    <orange
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Orange"
+                                                        value="orange" />
+                                                    <white
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="White"
+                                                        value="white" />
+                                                    <black
+                                                        jcr:primaryType="nt:unstructured"
+                                                        text="Black"
+                                                        value="black" />
+                                                </items>
+                                            </cardBgColor>
+                                            <redirectImage
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Redirect Image"
+                                                name="./redirectImg"
+                                                rootPath="/content/dam" />
+                                            <secondImageUrl
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Second Image Path"
+                                                name="./secondImageUrl"
+                                                rootPath="/content/dam" />
+                                            <redirectLink
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Redirect Link"
+                                                name="./redirectLink"
+                                                rootPath="/content" />
+                                            <newtab
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./newtab"
+                                                text="Open link in new tab"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true" />
+                                            <backgroundDesktop
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Background Image Desktop"
+                                                name="./bgImgDesk"
+                                                rootPath="/content/dam" />
+                                            <backgroundMobile
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                fieldLabel="Background Image Mobile"
+                                                name="./bgImgMob"
+                                                rootPath="/content/dam" />
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </cardInfo>
+                    <dataLayer
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DataLayer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dataPosition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                                fieldLabel="Position"
+                                                name="./dataPosition" />
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </dataLayer>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

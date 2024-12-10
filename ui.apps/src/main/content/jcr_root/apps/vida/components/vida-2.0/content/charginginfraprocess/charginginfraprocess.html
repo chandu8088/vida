@@ -1,0 +1,21 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Charging Infra Process V2.0"></div>
+<section class="vida-charging-process-component">
+    <div class="charing-infra-wrapper">
+        <div class="charing-process__container">
+            <h2>${properties.processHeading}</h2>
+            <div class="steps">
+                <sly data-sly-list.processItems="${resource.getChildren}">
+                    <sly data-sly-test="${processItems.name == 'processSteps'}">
+                        <sly data-sly-list.item="${processItems.getChildren}">
+                            <div class="step">
+                                <h3>${item.processStepHeading}</h3>
+                                <p>${item.processStepDescription @ context='html'}</p>
+                                <div class="liner"></div>
+                            </div>
+                        </sly>
+                    </sly>
+                </sly>
+            </div>
+        </div>
+    </div>
+</section>

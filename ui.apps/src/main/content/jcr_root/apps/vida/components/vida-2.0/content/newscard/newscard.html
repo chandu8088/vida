@@ -1,0 +1,17 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="News Card V2"></div>
+<sly data-sly-use.author="${'com.heromotocorp.vida.core.models.NewsCardModel'}" />
+
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: {
+    "newslabel": "${properties.newsLabel @ context='scriptString'}",
+    "newsHeader": "${properties.newsHeading @ context='scriptString'}",
+    "newsCardContent": "${author.jsonString @ context='scriptString'}",
+    "dataPosition": "${properties.dataPosition @ context='scriptString'}"
+  }
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-component="NewsCards" data-cmp-type="react"
+    data-cmp-config="${currentNode.name}" data-cmp-version="2.0"></div>
+</sly>

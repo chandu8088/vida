@@ -1,0 +1,443 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Pre Booking 2.0 Component"
+></div>
+<sly data-sly-use.author="${'com.heromotocorp.vida.core.models.LoginModel'}" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+  	preBookingConfig: {
+  		"genericConfig": {
+  			"backgroundImg":
+  				"${properties.backgroundImg @ context='uri'}",
+  			"mobileBackgroundImg":
+  				"${properties.mobileBackgroundImg @ context='uri'}",
+  			"bannerBackgroundImg":
+  				"${properties.bannerBackgroundImg @ context='uri'}",
+  			"bannerBikeImg":
+  				"${properties.bannerBikeImg @ context='uri'}",
+  			"bannerBikeImgAlt": "${properties.bannerBikeImgAlt @ context='scriptString'}",
+  			"bannerBikeImgTitle": "${properties.bannerBikeImgTitle @ context='scriptString'}",
+  			"subHeader": "${properties.subHeader @ context='scriptString'}",
+  			"subText": "${properties.subText @ context='scriptString'}",
+			"textColor": "${properties.textColor @ context='scriptString'}",
+  			"limitesOfferText": "${properties.limitesOfferText @ context='scriptString'}",
+  			"letsBeginLabel": "${properties.letsBeginLabel @ context='scriptString'}",
+  			"headerLabel": "${properties.headerLabel @ context='scriptString'}",
+  			"subHeaderLabel": "${properties.subHeaderLabel @ context='scriptString'}",
+  			"stepLabel": "${properties.steplabel @ context='scriptString'}",
+  			"nonDealerSelectedError": "${'selectDealerReqMsz' @ i18n,context='scriptString'}",
+  			"noDealerAvailableError": "${'availableDealerMsz' @ i18n,context='scriptString'}",
+  			"locationErrorMsg": "${properties.locationErrorMsg @ context='scriptString'}",
+  			"dealersLoadingMsg": "${properties.dealerloadmessage @ context='scriptString'}",
+  			"confirmButtonLabel": "${properties.confirmButtonLabel @ context='scriptString'}",
+  			"buyAnyLabel": "${properties.buyAnyLabel @ context='scriptString'}",
+  			"buyAnyPrice": "${properties.buyAnyPrice @ context='scriptString'}",
+  			"fullyRefundableText": "${properties.fullyRefundableText @ context='scriptString'}",
+  			"compareVariantsText": "${properties.compareVariantsText @ context='scriptString'}",
+  			"buyLabel1": "${properties.buyLabel1 @ context='scriptString'}",
+  			"buyLabel2": "${properties.buyLabel2 @ context='scriptString'}",
+  			"addMoreLabe1": "${properties.addMoreLabe1 @ context='scriptString'}",
+  			"addMoreLink": "${properties.addMoreLink @ extension = 'html', context='uri'}",
+  			"addMoreNewTab": ${ properties.addMoreNewTab @context = 'scriptString'},
+  	"productSpecificationPdfUrl": "${properties.productSpecificationPdfUrl @ context='uri'}",
+  	"offerScrollingImg":
+  	"${properties.offerScrollingImg @ context='uri'}",
+  	"defaultRandomName": "${properties.defaultRandomName @ context='scriptString'}",
+  	"randomNames": "${author.json @ context='scriptString'}",
+	"bikeVariantDetails": "${author.bikeJson @ context='scriptString'}"
+   		},
+  	"cityField": {
+  	"label": "${properties.citylabel @ context='scriptString'}",
+  	"placeholder": "${properties.cityPlaceholder @ context='scriptString'}",
+  	"icon": "${properties.cityIcon @ context='scriptString'}",
+  	"secondIcon": "${properties.secondCityIcon @ context='scriptString'}",
+  	"validationRules": {
+  		"noDealerErrorMsg": "${'availableDealerMsz' @ i18n,context='scriptString'}",
+  		"noValueErrorMsg": "${'enterCity' @ i18n,context='scriptString'}",
+  		"required": {
+  			"message": "${'cityLabelReqMsz' @ i18n,context='scriptString'}"
+  		}
+  	}
+  },
+  	"stateField": {
+  	"id": "state",
+  	"label": "${properties.statelabel @ context='scriptString'}",
+  	"placeholder": "${properties.stateph @ context='scriptString'}",
+  	"validationRules": {
+  		"required": {
+  			"message": "${'stateReqMsz' @ i18n,context='scriptString'}"
+  		}
+  	}
+  },
+  	"userDetails": {
+  	"title": "${properties.bookingtittle @ context='scriptString'}",
+  	"welcomeTitle": "${properties.welcometittle @ context='scriptString'}",
+  	"message": "${properties.welcomemessage @ context='scriptString'}",
+  	"changeNumberLabel": "${properties.changephonenumber @ context='scriptString'}",
+  	"changePincodeLabel": "${properties.changepincodelabel @ context='scriptString'}",
+  	"confirmLabel": "${properties.confirmlabel @ context='scriptString'}",
+  	"switchAccount": {
+  		"message": "${properties.switchaccountmessage @ context='scriptString'}",
+  		"redirectionLabel": "${properties.loginregisterlabel @ context='scriptString'}"
+  	},
+  	"mobileField": {
+  		"id": "mobile",
+  		"label": "${properties.phonelabel @ context='scriptString'}",
+  		"placeholder": "${properties.phonenumberph @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'phoneNumberReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"minLength": {
+  				"value": 10,
+  				"message": "${'minCharaterMsz' @ i18n,context='scriptString'}"
+  			},
+  			"maxLength": {
+  				"value": 10,
+  				"message": "${'maxCharaterMsz' @ i18n,context='scriptString'}"
+  			},
+  			"customValidation": {
+  				"message": "${'validmobilenumber' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"phoneNumberEmailField": {
+  		"label": "${properties.phoneemaillabel @ context='scriptString'}",
+  		"placeholder": "${properties.phonenumberemailph @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'phoneEmailReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"minLength": {
+  				"value": 10,
+  				"message": "${'minDigitMsz' @ i18n,context='scriptString'}"
+  			},
+  			"maxLength": {
+  				"value": 10,
+  				"message": "${'maxDigitMsz' @ i18n,context='scriptString'}"
+  			},
+  			"custom": {
+  				"message": "${'validmobilenumber' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"firstNameField": {
+  		"label": "${properties.firstnamelabel @ context='scriptString'}",
+  		"placeholder": "${properties.firstnameph @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'firstNameReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"minLength": {
+  				"value": 1,
+  				"message": "${'firstNameLeastMsz' @ i18n,context='scriptString'}"
+  			},
+  			"customValidation": {
+  				"message": "${'validfirstname' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"lastNameField": {
+  		"label": "${properties.lastnamelabel @ context='scriptString'}",
+  		"placeholder": "${properties.lastnameph @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'lastNameReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"minLength": {
+  				"value": 1,
+  				"message": "${'lastNameLeastMsz' @ i18n,context='scriptString'}"
+  			},
+  			"customValidation": {
+  				"message": "${'validlastname' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"emailField": {
+  		"label": "${properties.emaillabel @ context='scriptString'}",
+  		"placeholder": "${properties.emailph @ context='scriptString'}",
+  		"infoLabel": "${properties.emailinfolabel @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'emailReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"customValidation": {
+  				"message": "${'emailValidMsz' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"cityField": {
+  		"id": "city",
+  		"label": "${properties.cityfieldlabel @ context='scriptString'}",
+  		"placeholder": "${properties.cityfieldph @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'cityLabelReqMsz' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"stateField": {
+  		"id": "state",
+  		"label": "${properties.statefieldlabel @ context='scriptString'}",
+  		"placeholder": "${properties.statefieldph @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'stateReqMsz' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"pinCodeField": {
+  		"label": "${properties.pincodelabel @ context='scriptString'}",
+  		"placeholder": "${properties.pincodeph @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'pinCodeReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"customValidation": {
+  				"message": "${'pinCodeCustomMsz' @ i18n,context='scriptString'}"
+  			},
+  			"minLength": {
+  				"value": 6,
+  				"message": "${'pinCodeMinCharaterMsz' @ i18n,context='scriptString'}"
+  			},
+  			"maxLength": {
+  				"value": 6,
+  				"message": "${'pinCodeMaxCharaterMsz' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"notificationBanner": {
+  		"label": "${properties.notificationbannerlabel @ context='scriptString'}",
+  		"info": "${properties.notificationbannerinfo @ context='scriptString'}",
+  		"confirmField": {
+  			"label": "${properties.notificationconfirmlabel @ context='scriptString'}"
+  		}
+  	},
+  	"disclaimer": "<strong>${properties.disclaimerheading @ context='scriptString'}</strong> ${properties.disclaimertext @ context='scriptString'}",
+  	"continueBtn": {
+  		"label": "${properties.continuectalabel @ context='scriptString'}"
+  	},
+  	"sendOtpBtn": {
+  		"label": "${properties.sendotpctalabel @ context='scriptString'}"
+  	},
+  	"notificationBtn": {
+  		"label": "${properties.notificationbuttonlabel @ context='scriptString'}"
+  	},
+  	"checkAvailabilityBtn": {
+  		"label": "${properties.checkavailabilitybtn @ context='scriptString'}"
+  	},
+  	"promotionBanner": "${properties.promotionbanner @ context='scriptString'}"
+  },
+  	"overrideInfo": {
+  	"title": "${properties.overrideTitle @ context='scriptString'}",
+  	"content": "${properties.overrideContent @ context='scriptString'}",
+  	"overrideBtn": {
+  		"label": "${properties.overrideBtnLabel @ context='scriptString'}"
+  	},
+  	"cancelBtn": {
+  		"label": "${properties.cancelBtnLabel @ context='scriptString'}"
+  	}
+  },
+  	"bookingSummary": {
+  	"title": "${properties.bookingtitle @ context='scriptString'}",
+  	"content": "${properties.bookingcontent @ context='scriptString'}",
+  	"productInfo": {
+  		"priceLabel": "${properties.pricelabel @ context='scriptString'}",
+  		"priceInfo": "${properties.bspriceinfo @ context='scriptString'}",
+  		"time": "${properties.estimatetimelabel @ context='scriptString'}"
+  	},
+  	"agreeTerms": {
+  		"id": "${properties.prebookingid @ context='scriptString'}",
+  		"agreeLabel": "${properties.agreetermslabel @ context='scriptString'}",
+  		"terms": {
+  			"label": "${properties.termscondlabel @ context='scriptString'}",
+  			"actionUrl": ""
+  		},
+  		"btnLabel": {
+  			"agree": "${properties.agreebtnlabel @ context='scriptString'}",
+  			"close": "${properties.closebtnlabel @ context='scriptString'}"
+  		},
+  		"validationRules": {
+  			"required": {
+  				"message": "${'selectTermsMsz' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"terms": "${properties.termslabel @ context='scriptString'} <a href='${properties.termsandconditionpagelink @ extension = 'html', context='uri'}' target='_blank'>${properties.termsandconditionlabel @ context='scriptString'}</a>",
+  	"paymentBtn": {
+  		"label": "${properties.paymentlabel @ context='scriptString'}"
+  	},
+  	"helpLink": {
+  		"helpLabel": "${properties.helptext @ context='scriptString'}",
+  		"chatLabel": "${properties.chatlabel @ context='scriptString'}"
+  	}
+  },
+  	"bookingInterest": {
+  	"title": "${properties.bookinginteresttitle @ context='scriptString'}",
+  	"content": "${properties.bookinginterestcontent @ context='scriptString'}",
+  	"helpContent": {
+  		"title": "${properties.helpcontenttitle @ context='scriptString'}",
+  		"message": "${properties.helpcontentmessage @ context='scriptString'}",
+  		"call": "${properties.helpcall @ context='scriptString'}",
+  		"mail": "${properties.helpemail @ context='scriptString'}"
+  	},
+  	"chatBtn": {
+  		"label": "${properties.chatbuttonlabel @ context='scriptString'}",
+  		"actionUrl": "${properties.chaturl @ context='scriptString'}"
+  	},
+  	"backBtn": {
+  		"label": "${properties.backbuttonlabel @ context='scriptString'}",
+  		"actionUrl": ""
+  	}
+  },
+  	"scooterInfo": {
+  	"priceType": "${properties.pricetype @ context='scriptString'}",
+  	"defaultCityState": "${properties.city @ context='scriptString'}",
+  	"splitterChar": "${'splitChar' @ i18n,context='scriptString'}",
+  	"product": {
+  		"range": "${properties.productrange @ context='scriptString'}",
+  		"rangeIcon": "${properties.rangeIcon @ context='uri'}",
+  		"topSpeed": "${properties.topspeed @ context='scriptString'}",
+  		"topSpeedIcon": "${properties.topSpeedIcon @ context='uri'}",
+  		"inClineCapacity": "${properties.inClineCapacity @ context='scriptString'}",
+  		"inClineCapacityIcon": "${properties.inClineCapacityIcon @ context='uri'}",
+  		"removableBatteries": "${properties.removableBatteries @ context='scriptString'}",
+  		"removableBattery": "${properties.removableBattery @ context='scriptString'}",
+  		"removableBatteriesIcon": "${properties.removableBatteriesIcon @ context='uri'}",
+  		"acceleration": "${properties.acceleration @ context='scriptString'}",
+  		"chargingTime": "${properties.chargingtime @ context='scriptString'}",
+  		"certifiedRange": "${properties.certifiedRange @ context='scriptString'}",
+      "enableCertifiedRange": ${properties.enableCertifiedRange @ context='scriptString'}
+  	},
+  	"variantHeaderLabel": "${properties.variantHeaderLabel @ context='scriptString'}",
+  	"selectVidaLabel": "${properties.selectVidaLabel @ context='scriptString'}",
+  	"chooseColorLabel": "${properties.chooseColorLabel @ context='scriptString'}",
+  	"colorSummaryLabel": "${properties.colorsummarylabel @ context='scriptString'}",
+  	"tooltipConfig": {
+  		"info": "${properties.tooltiptext @ context='scriptString'}",
+  		"infoPosition": "top",
+  		"id": "effective-price"
+  	},
+
+  },
+  	"dealersConfig": {
+  	"headerLabel": "${properties.dealersHeaderLabel @ context='scriptString'}",
+  	"listTabLabel": "${properties.dealersListTabLabel @ context='scriptString'}",
+  	"mapTabLabel": "${properties.dealersMapTabLabel @ context='scriptString'}",
+  	"centerNearByLabel": "${properties.dealersCenterNearByLabel @ context='scriptString'}",
+  	"confirmDealerLabel": "${properties.dealersConfirmDealerLabel @ context='scriptString'}"
+  },
+  	"popUpConfig": {
+  	"header": "${properties.popUpHeader @ context='scriptString'}",
+  	"subHeader": "${properties.popUpSubHeader @ context='scriptString'}",
+  	"desc": "${properties.popUpDesc @ context='scriptString'}",
+  	"confirmMessage": "${properties.popUpConfirmMessage @ context='scriptString'}",
+  	"cancelButtonLabel": "${properties.popUpCancelButtonLabel @ context='scriptString'}",
+  	"confirmButtonLabel": "${properties.popUpConfirmButtonLabel @ context='scriptString'}"
+  },
+  	"otpConfig": {
+  	"changeNumberLabel": "${properties.changenumberlabel @ context='scriptString'}",
+  	"dataPosition": "${ properties.dataPosition @context = 'scriptString'}",
+  	"validationRules": {
+  		"required": {
+  			"message": "${'enterOTPMsz' @ i18n,context='scriptString'}"
+  		}
+  	}
+  	,
+  	"resendLabel": "${properties.resendlabel @ context='scriptString'}",
+  	"otpFormNormalText": "${properties.otpFormPrimaryText @ context='scriptString'}",
+  	"otpFormBoldText": "${properties.otpFormBoldText @ context='scriptString'}",
+  	"timer": {
+  		"minutes": "${properties.timerminutes @ context='scriptString'}",
+  		"seconds": "${properties.timersec @ context='scriptString'}"
+  	},
+  	"verifyBtn": {
+  		"label": "${properties.verifyctalabel @ context='scriptString'}"
+  	}
+  }, "registerConfig": {
+  	"firstNameField": {
+  		"id": "fname",
+  		"placeholder": "${properties.fnamePlcHld @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'nameReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"minLength": {
+  				"value": 1,
+  				"message": "${'nameLeastMsz' @ i18n,context='scriptString'}"
+  			},
+			"fullName": {
+                "message": "${'fullNameCustomMsz' @ i18n,context='scriptString'}"
+            },
+  			"customValidation": {
+  				"message": "${'validnameMsz' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"mobileField": {
+  		"id": "mobile",
+  		"placeholder": "${properties.phplchld @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'mobileReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"minLength": {
+  				"value": 10,
+  				"message": "${'minCharaterMsz' @ i18n,context='scriptString'}"
+  			},
+  			"maxLength": {
+  				"value": 10,
+  				"message": "${'maxCharaterMsz' @ i18n,context='scriptString'}"
+  			},
+  			"customValidation": {
+  				"message": "${'validMobileNumber' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"emailField": {
+  		"placeholder": "${properties.emailPhld @ context='scriptString'}",
+  		"validationRules": {
+  			"required": {
+  				"message": "${'emailReqMsz' @ i18n,context='scriptString'}"
+  			},
+  			"customValidation": {
+  				"message": "${'emailValidMsz' @ i18n,context='scriptString'}"
+  			}
+  		}
+  	},
+  	"generateOtpBtnLabel": "${properties.generateOtpBtnLabel @ context='scriptString'}",
+  	"registerFormPrimaryText": "${properties.registerFormPrimaryText @ context='scriptString'}",
+  	"registerFormBoldText": "${properties.registerFormBoldText @ context='scriptString'}"
+  }, "bookBuySwitch": {
+  	"tabOne": {
+  		"textOne": "${properties.tabOneTextOne @ context='scriptString'}",
+  		"price": "${properties.tabOnePrice @ context='scriptString'}",
+  		"textTwo": "${properties.tabOneTextTwo @ context='scriptString'}"
+  	},
+  	"tabTwo": {
+  		"textOne": "${properties.tabTwoTextOne @ context='scriptString'}",
+  		"price": "${properties.tabTwoPrice @ context='scriptString'}",
+  		"textTwo": "${properties.tabTwoTextTwo @ context='scriptString'}"
+  	}
+  },
+  	"showBookingdealers": "${ properties.showdealers @context = 'scriptString'}",
+  	"dataPosition": "${ properties.dataPosition @context = 'scriptString'}"
+   	}
+   });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div
+    data-section-id="vidaSpinner"
+    data-component="Spinner"
+    data-cmp-version="2.0"
+    data-cmp-type="react"
+  ></div>
+  <div
+    data-section-id="preBooking"
+    data-component="PreBooking"
+    data-cmp-type="react"
+    data-cmp-config="preBookingConfig"
+    data-cmp-version="2.0"
+  ></div>
+</sly>

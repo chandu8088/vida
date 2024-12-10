@@ -1,0 +1,36 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Battery Plus Popup Banner Component V2.0"></div>
+<section class="vida-battery-plus-banner" data-component="battery-plus-banner">
+    <div class="vida-battery-plus-banner__contianer">
+      <div class="battery-plus-banner">
+        <div class="battery-plus-banner__media">
+          <picture data-sly-test="${properties.backgroundDesktopImage}">
+            <source srcset="${properties.backgroundDesktopImage}" alt="${properties.backgroundImageAltText}" @ context = 'uri' media="(min-width:1024px)">
+            <source srcset="${properties.backgroundMobileImage}" alt="${properties.backgroundImageAltText}" @ context = 'uri' media="(min-width: 360px)">
+            <img class="battery-plus-banner__img tns-item" src="${properties.backgroundDesktopImage}" alt="${properties.backgroundImageAltText}" @ context = 'uri' />
+          </picture>
+        </div>
+        <div class="battery-plus-banner__content">
+          <div>
+            <div class="battery-plus-details__heading">${properties.cardHeading @ context='html'}</div>
+          </div>
+          <div class="battery-plus-details__container ">
+            <sly data-sly-list.batteryIconItems="${resource.getChildren}">
+                <sly data-sly-test="${batteryIconItems.name == 'batteryPopupCards'}">
+                  <sly data-sly-list.item="${batteryIconItems.getChildren}">
+                    <div class="battery-plus-details">
+                      <picture>
+                          <source srcset="${item.cardIcon}" alt="${item.cardAltText}" @ context = 'uri' media="(min-width:1024px)">
+                          <source srcset="${item.cardIcon}" alt="${item.cardAltText}" @ context = 'uri' media="(min-width: 360px)">
+                          <img class="battery-plus-details__image" src="${item.cardIcon}" alt="${item.cardAltText}" @ context = 'uri' />
+                      </picture>
+                      <h3 class="battery-plus-details__description">${item.cardDescription @ context = 'html'}
+                      </h3>
+                    </div>
+                  </sly>
+                </sly>
+            </sly>
+          </div>
+        </div>
+      </div>
+    </div>
+ </section>

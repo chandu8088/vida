@@ -1,0 +1,35 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Subscription Banner Component V2.0"></div>
+<sly>
+    <section data-sly-test="${!wcmmode.edit}" class="vida-product-subscription" data-component="subscription-banner">
+      <div class="vida-product-subscription__bannercontainer">
+        <div class="vida-product-subscription__banner-wrapper">
+          <div class="vida-product-subscription__banner-wrapper__content">
+            <picture>
+              <source srcset="${properties.desktopBackgroundImg}" alt="${properties.bgImageAlt}" media="(min-width:1024px)">
+              <source srcset="${properties.mobileBackgroundImg}" alt="${properties.bgImageAlt}" media="(min-width: 360px)">
+              <img class="vida-product-subscription-banner-media tns-item" src="${properties.desktopBackgroundImg}" alt="${properties.bgImageAlt}" />
+            </picture>
+            <sly data-sly-test="${properties.bottomText}">
+            <div class="vida-product-subscription-banner-bottom-text">
+              <p>${properties.bottomText}</p>
+            </div>
+            </sly>
+          </div>
+          <div class="vida-product-subscription-banner-content">
+            <sly data-sly-test="${properties.header}">
+            <h1 class="vida-product-subscription-banner-content__title ${properties.textColor == 'white' ? 'text-color-white' : ''}">${properties.header @ context = 'html'}</h1>
+            </sly>
+            <div>
+              <sly data-sly-test="${properties.description}">
+              <p class="vida-product-subscription-banner-content__description1 ${properties.textColor == 'white' ? 'text-color-white' : ''}">${properties.description @ context = 'html'}</p>
+              </sly>
+              <sly data-sly-test="${properties.howVidaLabel}">
+              <h2 class="vida-product-subscription-banner-content__description2 ${properties.textColor == 'white' ? 'text-color-white' : ''}">${properties.howVidaLabel @ context = 'html'}</h2>
+              </sly>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+</sly>

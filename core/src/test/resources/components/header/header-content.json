@@ -1,0 +1,178 @@
+{
+    "header": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "yuvraj.patel@moonraft.com",
+        "exploreTitle": "EXPLORE",
+        "loveTitle": "LOVE",
+        "jcr:lastModifiedBy": "admin",
+        "mobileheaderlogo": "/content/dam/vida2-0/global/vida_white_icon.png",
+        "buyTitle": "BUY",
+        "myAccountText": "MY ACCOUNT",
+        "alttext": "vida logo",
+        "jcr:created": "Sun Nov 19 2023 07:40:16 GMT+0000",
+        "logourl": "/content/vida/in/en",
+        "preLoginText": "LOGIN / SIGN UP",
+        "jcr:lastModified": "Fri Nov 24 2023 18:31:45 GMT+0530",
+        "sling:resourceType": "vida/components/vida-2.0/structure/header",
+        "tryTitle": "TRY",
+        "headerlogo": "/content/dam/vida2-0/global/vida_logo.png",
+        "addLabels": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "true",
+                "image": "/content/dam/vida2-0/global/explore_icon.png",
+                "title": "EXPLORE",
+                "navLink": "/content/vida/in/en"
+            },
+            "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "true",
+                "image": "/content/dam/vida2-0/global/try_icon.png",
+                "title": "TRY",
+                "navLink": "/content/vida/in/en"
+            },
+            "item2": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "true",
+                "image": "/content/dam/vida2-0/global/buy_icon.png",
+                "title": "BUY",
+                "navLink": "/content/vida/in/en"
+            },
+            "item3": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "true",
+                "image": "/content/dam/vida2-0/global/love_icon.png",
+                "title": "LOVE",
+                "navLink": "/content/vida/in/en"
+            }
+        },
+        "tryOptionContent": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Book Test Ride",
+                "navLink": "/content/vida/in/en/test-ride"
+            },
+            "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Design your VIDA",
+                "navLink": "/content/vida/in/en/vida-v1"
+            }
+        },
+        "buyOptionContent": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Book @ ₹499",
+                "navLink": "/content/vida/in/en/reserve"
+            },
+            "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Buy a VIDA",
+                "navLink": "/content/vida/in/en/reserve"
+            }
+        },
+        "exploreOptionContent": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "All Products",
+                "navLink": "/content/vida/in/en/products"
+            },
+            "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "V1 Pro",
+                "navLink": "/content/vida/in/en/vida-v1"
+            },
+            "item2": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "V1 Plus",
+                "navLink": "/content/vida/in/en/vida-plus"
+            },
+            "item3": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Our Story",
+                "navLink": "/content/vida/in/en/about-us"
+            },
+            "item4": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Blogs",
+                "navLink": "/content/vida/in/en/connect-with-us"
+            },
+            "item5": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "FAQs",
+                "navLink": "/content/vida/in/en/faq"
+            }
+        },
+        "loveOptionContent": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "VIDA Community",
+                "navLink": "/content/vida/in/en/privacy-policy"
+            },
+            "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Charging Stations",
+                "navLink": "/content/vida/in/en/service-center"
+            },
+            "item2": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Dealership Locator",
+                "navLink": "/content/vida/in/en/service-center"
+            },
+            "item3": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "null",
+                "name": "Offers",
+                "navLink": "/content/vida/in/en/profile/billing-pricing"
+            }
+        },
+        "secondarynavigation": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "true",
+                "title": "TERMS OF SERVICE",
+                "navLink": "/content/vida/in/en/appprivacy"
+            },
+            "item1": {
+                "jcr:primaryType": "nt:unstructured",
+                "newtab": "true",
+                "title": "PRIVACY POLICY",
+                "navLink": "/content/vida/in/en/appprivacy"
+            }
+        },
+        "hamburgerBgImg": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "mobImg": "/content/dam/vida2-0/global/hamburger_bg_mob.png",
+                "desktopImg": "/content/dam/vida2-0/global/hamburger_bg_des.png"
+            }
+        },
+        "hamburgerBg1Img": {
+            "jcr:primaryType": "nt:unstructured",
+            "item0": {
+                "jcr:primaryType": "nt:unstructured",
+                "mobImg": "/content/dam/vida2-0/global/hamburger_bg1_mob.png",
+                "desktopImg": "/content/dam/vida2-0/global/hamburger_bg1_des.png"
+            }
+        }
+    }
+}

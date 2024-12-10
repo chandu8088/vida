@@ -1,0 +1,67 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "jcr:createdBy": "admin",
+  "jcr:lastModifiedBy": "admin",
+  "jcr:created": "Fri Feb 02 2024 14:32:17 GMT+0530",
+  "jcr:lastModified": "Fri Feb 02 2024 14:35:07 GMT+0530",
+  "sling:resourceType": "vida/components/vida-2.0/content/privacypolicy",
+  "textIsRich": ["true", "true", "true", "true", "true", "true"],
+  "termsAndConditions": true,
+  "sectionOne": {
+    "jcr:primaryType": "nt:unstructured",
+    "privacyPolicyLastUpdatedDate": "Updated on 20 Sep 2023",
+    "privacyPolicyTitle": "Privacy Policy",
+    "privacyPolicies": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "contentDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna ex, sed sollicitudin sapien facilisis vel. Sed efficitur molestie ante, rutrum laoreet libero molestie vitae. Maecenas eleifend, purus ac fringilla eleifend, magna tellus elementum sapien, sit amet dapibus felis massa eget nisl. Ut sagittis, nibh quis sagittis mollis, erat ligula tempus tortor, quis fringilla risus urna vel lectus. Aenean auctor, massa id fringilla egestas, orci nisi iaculis tortor, sit amet tempus velit ligula nec ipsum. Pellentesque nisi metus, congue quis libero sit amet, hendrerit tempus neque. Morbi sodales eros id blandit volutpat. Sed in elit eu elit molestie venenatis. Ut sed hendrerit elit, feugiat gravida justo. Pellentesque varius tellus massa, et sollicitudin diam ultricies id. Sed elementum viverra felis sed varius. Nunc non congue mauris. Morbi sodales eros id blandit volutpat. Duis a pharetra eros.",
+        "contentTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna ex quis fringilla risus urna, sed sollicitudin sapien facilisis vel."
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "contentDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna ex, sed sollicitudin sapien facilisis vel. Sed efficitur molestie ante, rutrum laoreet libero molestie vitae. Maecenas eleifend, purus ac fringilla eleifend, magna tellus elementum sapien, sit amet dapibus felis massa eget nisl. Ut sagittis, nibh quis sagittis mollis, erat ligula tempus tortor, quis fringilla risus urna vel lectus. Aenean auctor, massa id fringilla egestas, orci nisi iaculis tortor, sit amet tempus velit ligula nec ipsum. Pellentesque nisi metus, congue quis libero sit amet, hendrerit tempus neque. Morbi sodales eros id blandit volutpat. Sed in elit eu elit molestie venenatis. Ut sed hendrerit elit, feugiat gravida justo. Pellentesque varius tellus massa, et sollicitudin diam ultricies id. Sed elementum viverra felis sed varius. Nunc non congue mauris. Morbi sodales eros id blandit volutpat. Duis a pharetra eros.",
+        "contentTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna ex quis fringilla risus urna, sed sollicitudin sapien facilisis vel."
+      }
+    }
+  },
+  "sectionTwo": {
+    "jcr:primaryType": "nt:unstructured",
+    "privacyPolicies": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "contentDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna ex, sed sollicitudin sapien facilisis vel. Sed efficitur molestie ante, rutrum laoreet libero molestie vitae. Maecenas eleifend, purus ac fringilla eleifend, magna tellus elementum sapien, sit amet dapibus felis massa eget nisl. Ut sagittis, nibh quis sagittis mollis, erat ligula tempus tortor, quis fringilla risus urna vel lectus. Aenean auctor, massa id fringilla egestas, orci nisi iaculis tortor, sit amet tempus velit ligula nec ipsum. Pellentesque nisi metus, congue quis libero sit amet, hendrerit tempus neque. Morbi sodales eros id blandit volutpat. Sed in elit eu elit molestie venenatis. Ut sed hendrerit elit, feugiat gravida justo. Pellentesque varius tellus massa, et sollicitudin diam ultricies id. Sed elementum viverra felis sed varius. Nunc non congue mauris. Morbi sodales eros id blandit volutpat. Duis a pharetra eros.",
+        "contentTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna quis fringilla."
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "contentDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna ex, sed sollicitudin sapien facilisis vel. Sed efficitur molestie ante, rutrum laoreet libero molestie vitae. Maecenas eleifend, purus ac fringilla eleifend, magna tellus elementum sapien, sit amet dapibus felis massa eget nisl. Ut sagittis, nibh quis sagittis mollis, erat ligula tempus tortor, quis fringilla risus urna vel lectus. Aenean auctor, massa id fringilla egestas, orci nisi iaculis tortor, sit amet tempus velit ligula nec ipsum. Pellentesque nisi metus, congue quis libero sit amet, hendrerit tempus neque. Morbi sodales eros id blandit volutpat. Sed in elit eu elit molestie venenatis. Ut sed hendrerit elit, feugiat gravida justo. Pellentesque varius tellus massa, et sollicitudin diam ultricies id. Sed elementum viverra felis sed varius. Nunc non congue mauris. Morbi sodales eros id blandit volutpat. Duis a pharetra eros.",
+        "contentTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna quis fringilla."
+      },
+      "item2": {
+        "jcr:primaryType": "nt:unstructured",
+        "contentDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna ex, sed sollicitudin sapien facilisis vel. Sed efficitur molestie ante, rutrum laoreet libero molestie vitae. Maecenas eleifend, purus ac fringilla eleifend, magna tellus elementum sapien, sit amet dapibus felis massa eget nisl. Ut sagittis, nibh quis sagittis mollis, erat ligula tempus tortor, quis fringilla risus urna vel lectus. Aenean auctor, massa id fringilla egestas, orci nisi iaculis tortor, sit amet tempus velit ligula nec ipsum. Pellentesque nisi metus, congue quis libero sit amet, hendrerit tempus neque. Morbi sodales eros id blandit volutpat. Sed in elit eu elit molestie venenatis. Ut sed hendrerit elit, feugiat gravida justo. Pellentesque varius tellus massa, et sollicitudin diam ultricies id. Sed elementum viverra felis sed varius. Nunc non congue mauris. Morbi sodales eros id blandit volutpat. Duis a pharetra eros.",
+        "contentTitle": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In porta magna quis fringilla."
+      }
+    }
+  },
+  "sectionThree": {
+    "jcr:primaryType": "nt:unstructured",
+    "description": "Our team is at your side with words and deeds.",
+    "title": "Any Questions or Concerns?",
+    "contactInfo": {
+      "jcr:primaryType": "nt:unstructured",
+      "item0": {
+        "jcr:primaryType": "nt:unstructured",
+        "icon": "/content/dam/vida2-0/global/explore_icon.png",
+        "text": "+91 57868 39822"
+      },
+      "item1": {
+        "jcr:primaryType": "nt:unstructured",
+        "icon": "/content/dam/vida2-0/global/love_icon.png",
+        "text": "vidaspacemadunga@hmc.com"
+      }
+    }
+  }
+}

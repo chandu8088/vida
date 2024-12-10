@@ -1,0 +1,10 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Dealership Locator Component"></div>
+<sly data-sly-use.DealershipLocatorModel="com.heromotocorp.vida.core.models.DealershipLocatorModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ DealershipLocatorModel.json  @context = 'unsafe' }});  
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-cmp-version="2.0" data-cmp-type="react"
+    data-component="DealershipLocator" data-cmp-config="${currentNode.name}"></div>
+</sly>

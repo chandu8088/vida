@@ -1,0 +1,10 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Charging Locator City Search V2.0"></div>
+<sly data-sly-use.communityCharging="com.heromotocorp.vida.core.models.CommunityChargingModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: {"communityChargingCardConfig":${ communityCharging.chargingJson  @context = 'unsafe' }}});  
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+<div data-section-id="${properties.sectionId || currentNode.name}" id="${properties.sectionId}" data-cmp-version="2.0"
+  data-cmp-type="react" data-component="FastChargingNetwork" data-cmp-config="${currentNode.name}"></div>
+</sly>

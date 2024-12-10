@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Cancel Booking Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[vida.authoring.dialog]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <setItemDetails
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <granite:data jcr:primaryType="nt:unstructured" />
+                        <items jcr:primaryType="nt:unstructured">
+                            <cancelBookingTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Cancel Booking Title"
+                                name="./cancelBookingTitle" />
+                            <cancelBookingBannerImg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Cancel booking banner image"
+                                name="./cancelBookingBannerImg"
+                                rootPath="/content/dam" />
+                            <bannerImgAlt
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please provide alternative text to display if banner image is not available"
+                                fieldLabel="Alternative text for banner image"
+                                name="./bannerImgAlt"/>
+                            <bannerImgTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please provide the title text for banner image"
+                                fieldLabel="Banner Image Title"
+                                name="./bannerImgTitle"/>
+                            <cancelBookingBgDesktop
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Cancel booking background desktop image"
+                                name="./cancelBookingBgDesktop"
+                                rootPath="/content/dam" />
+                            <cancelBookingBgMobile
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Cancel booking background mobile image"
+                                name="./cancelBookingBgMobile"
+                                rootPath="/content/dam" />
+                            <bikeInfoSubText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Bike info sub text"
+                                name="./bikeInfoSubText" />
+                            <cancelBookingBikeImg
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Cancel booking bike image"
+                                name="./cancelBookingBikeImg"
+                                rootPath="/content/dam" />
+                            <bikeImgAlt
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please provide alternative text to display if bike image is not available"
+                                fieldLabel="Alternative text for bike image"
+                                name="./bikeImgAlt"/>
+                            <bikeImgTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldDescription="Please provide the title text for bike image"
+                                fieldLabel="Bike Image Title"
+                                name="./bikeImgTitle"/>    
+                            <cancelBookingVidaText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Cancel booking vida text"
+                                name="./cancelBookingVidaText" />
+                            <cancelBookingDeliveryText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Cancel booking delivery text"
+                                name="./cancelBookingDeliveryText" />
+                            <cancelBookingPayableText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Cancel booking payable text"
+                                name="./cancelBookingPayableText" />
+                            <deliveryChargesHandlingText
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Delivery charges handling text"
+                                name="./deliveryChargesHandlingText" />
+                            <bikePriceWithoutTax
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Bike price without tax"
+                                name="./bikePriceWithoutTax" />
+                            <bikePriceWithTax
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Bike price with tax"
+                                name="./bikePriceWithTax" />
+                            <deliveryBikeIcon
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Delivery bike icon image"
+                                name="./deliveryBikeIcon"
+                                rootPath="/content/dam" />
+                            <drawerTitle
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Drawer title"
+                                name="./drawerTitle" />
+                            <cancelBtnLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Cancel button label"
+                                name="./cancelBtnLabel" />
+                            <confirmBtnLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Confirm button label"
+                                name="./confirmBtnLabel" />
+                            <cancelNavLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Cancel navigation button link"
+                                name="./cancelNavLink"
+                                rootPath="/content" />
+                            <cancelNewTab
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                checked="{Boolean}false"
+                                name="./cancelNewTab"
+                                text="Open link in new tab"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true" />
+                            <confirmNavLink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                fieldLabel="Confirm navigation button link"
+                                name="./confirmNavLink"
+                                rootPath="/content" />
+                            <confirmNewTab
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                checked="{Boolean}false"
+                                name="./confirmNewTab"
+                                text="Open link in new tab"
+                                uncheckedValue="{Boolean}false"
+                                value="{Boolean}true" />
+                            <item_details
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                composite="{Boolean}true"
+                                fieldDescription="Click 'Add' to add items"
+                                fieldLabel="Add Items"
+                                validation="multifield-item-number">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                    name="./cancelBookingAddOnContent">
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <addOnIcon
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Add on card icon"
+                                            name="./addOnIcon"
+                                            rootPath="/content" />
+                                        <addOnTitle
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                            fieldLabel="Add on title"
+                                            name="./addOnTitle" />
+                                        <addOnSubText
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add on sub text"
+                                            name="./addOnSubText" />
+                                        <addOnBtnText
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                            fieldLabel="Add on button text"
+                                            name="./addOnBtnText" />
+                                        <addOnBtnNavLink
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                            fieldLabel="Add on button navigation link"
+                                            name="./addOnBtnNavLink"
+                                            rootPath="/content" />
+                                        <newtab
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                            checked="{Boolean}false"
+                                            name="./newTab"
+                                            text="Open link in new tab"
+                                            uncheckedValue="{Boolean}false"
+                                            value="{Boolean}true" />
+                                    </items>
+                                </field>
+                                <granite:data
+                                    jcr:primaryType="nt:unstructured"
+                                    max-items="10"
+                                    min-items="2" />
+                            </item_details>
+                        </items>
+                    </setItemDetails>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

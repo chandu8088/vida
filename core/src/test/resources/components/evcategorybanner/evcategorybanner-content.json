@@ -1,0 +1,29 @@
+{
+    "evcategorybanner": {
+        "image":{
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Thu Nov 30 2023 10:05:48 GMT+0530",
+            "jcr:lastModified": "Thu Nov 30 2023 10:24:23 GMT+0530",
+            "sling:resourceType": "vida/components/vida-2.0/content/evcategorybanner",
+            "title": "Ride VIDA V1 to the Future",
+            "imageDesk": "/content/dam/vida2-0/bannercarousal/image 56.png",
+            "imageAlt": "alt text",
+            "imageMob": "/content/dam/vida2-0/bannercarousal/image 56.png",
+            "variations": "image"
+        },
+        "video":{
+            "jcr:primaryType": "nt:unstructured",
+            "jcr:createdBy": "admin",
+            "jcr:lastModifiedBy": "admin",
+            "jcr:created": "Thu Nov 30 2023 10:05:48 GMT+0530",
+            "jcr:lastModified": "Thu Nov 30 2023 10:24:23 GMT+0530",
+            "sling:resourceType": "vida/components/vida-2.0/content/evcategorybanner",
+            "title": "Ride VIDA V1 to the Future",
+            "videoMob": "/content/dam/y2mate.com - Indian Tricolor Flag Tiranga Fluttering  waving 1080p_1080p.mp4",
+            "videoDesk": "/content/dam/y2mate.com - Indian Tricolor Flag Tiranga Fluttering  waving 1080p_1080p.mp4",
+            "variations": "video"
+        }
+    }
+}

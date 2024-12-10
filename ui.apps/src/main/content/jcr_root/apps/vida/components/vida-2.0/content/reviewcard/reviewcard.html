@@ -1,0 +1,18 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Review Card"></div>
+<sly data-sly-use.author="${'com.heromotocorp.vida.core.models.ReviewCardModel'}" />
+
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: {
+    "ratingsLabel": "${properties.ratingsLabel @ context='scriptString'}",
+    "ratingsHeader": "${properties.ratingsHeading @ context='scriptString'}",
+    "loadMoreContent": "${properties.loadMoreLabel @ context='scriptString'}",
+    "reviewCount": "${properties.reviewCount @ context='scriptString'}",
+    "reviewCardContent": "${author.jsonString @ context='scriptString'}"
+  }
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-component="ReviewCard" data-cmp-type="react"
+    data-cmp-config="${currentNode.name}" data-cmp-version="2.0"></div>
+</sly>

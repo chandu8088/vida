@@ -1,0 +1,23 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Our Vision V2.0"></div>
+<section class="vida-aboutus-stories">
+  <div class="vida-aboutus-stories__container">
+      <div class="our-stories-img">
+              <picture>
+                  <source srcset="${properties.backgroundDesktopImg}" media="(min-width:1024px)">
+                  <source srcset="${properties.backgroundMobileImg}" media="(min-width: 368px)">
+                  <img class="our-stories-img__image" src="${properties.backgroundDesktopImg}"
+                      alt="imagealttext" />
+              </picture>
+      </div>
+      <div class="our-stories-text">
+          <div class="our-stories-text__vision">
+              <h2>${properties.ourVisionTitle}</h2>
+              <p>${properties.ourVisionDescription}</p>
+          </div>
+          <div class="our-stories-text__mission">
+              <h2>${properties.ourMissionTitle}</h2>
+              <p>${properties.ourMissionDescription}</p>
+          </div>
+      </div>
+  </div>
+</section>

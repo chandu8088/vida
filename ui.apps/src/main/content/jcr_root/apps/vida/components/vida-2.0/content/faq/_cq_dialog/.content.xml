@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="FAQ Component V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <faqInfo
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="FAQ Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <faq
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <variationType
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/select"
+                                                        class="cq-dialog-dropdown-showhide"
+                                                        cq-dialog-dropdown-showhide-target=".test-options-showhide-target"
+                                                        fieldLabel="Please Select the Variation type"
+                                                        name="./variationType">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <option1
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Faq Card"
+                                                                value="faq-card"/>
+                                                            <option2
+                                                                jcr:primaryType="nt:unstructured"
+                                                                text="Faq Queries"
+                                                                value="faq-queries"/>
+                                                        </items>
+                                                    </variationType> 
+                                                    <faqCard
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/container"
+                                                        class="hide test-options-showhide-target"
+                                                        showhidetargetvalue="faq-card">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <iconFaq
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Icon"
+                                                                fieldDescription="Please provide icon for the Frequently asked questions"
+                                                                name="./iconFaq"
+                                                                rootPath="/content/dam" />
+                                                            <titleFaq
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Title"
+                                                                fieldDescription="Please provide title for the Frequently asked questions"
+                                                                name="./titleFaq"/>
+                                                            <arrowIconFaq
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Arrow Icon"
+                                                                fieldDescription="Please provide arrow icon"
+                                                                name="./arrowIconFaq"
+                                                                rootPath="/content/dam" />
+                                                            <contentFaq
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"               
+                                                                fieldLabel="Content"
+                                                                name="./contentFaq"
+                                                                useFixedInlineToolbar="{Boolean}true">
+                                                                <rtePlugins
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                                                                <uiSettings
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                                                            </contentFaq>    
+                                                            <ctaLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="CTA Label"
+                                                                name="./ctaLabel"/>
+                                                            <ctaLink
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="CTA Link"
+                                                                name="./ctaLink"
+                                                                rootPath="/content" />
+                                                            <newTab
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./newTab"
+                                                                text="Open link in new tab"
+                                                                fieldDescription="If checked, the link will be opened in a new browser tab."
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true" />
+                                                        </items>
+                                                    </faqCard>
+                                                    <faqQueries
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/container"
+                                                        class="hide test-options-showhide-target"
+                                                        showhidetargetvalue="faq-queries">
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <searchIconMob
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Search Icon for Mobile"
+                                                                fieldDescription="Please provide Search icon to the input field for Mobile Devices"
+                                                                name="./searchIconMob"
+                                                                rootPath="/content/dam" />
+                                                            <searchIconDesk
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Search Icon for Desktop"
+                                                                fieldDescription="Please provide Search icon to the input field for Desktops"
+                                                                name="./searchIconDesk"
+                                                                rootPath="/content/dam" />       
+                                                            <searchAltText
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Search Icon Alt Text"
+                                                                fieldDescription="Please provide Alternative text attribute for the search icon." 
+                                                                name="./searchAltText"/>    
+                                                            <searchImgTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Search Icon Image Title" 
+                                                                fieldDescription="Please provide Image Title attribute for the search icon."
+                                                                name="./searchImgTitle"/>  
+                                                            <searchLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Search Label"
+                                                                fieldDescription="Please provide Search Label for the Input Field"
+                                                                name="./searchLabel"
+                                                                rootPath="/content/dam" />
+                                                            <showSearchBar
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./showSearchBar"
+                                                                text="Show Search Bar"
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true"/>
+                                                            <itemDetails
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                composite="{Boolean}true"
+                                                                fieldDescription="Click 'Add' to add items"
+                                                                fieldLabel="Add FAQ Items">
+                                                                <field
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                    name="./queryContent">
+                                                                    <items jcr:primaryType="nt:unstructured">
+                                                                        <queryIconMobile
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                            fieldLabel="Query Content Icon for Mobile"
+                                                                            fieldDescription="Please provide icon for the Query Content for Mobile devices"
+                                                                            name="./queryIconMob"
+                                                                            rootPath="/content/dam" />
+                                                                        <queryIconDesk
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                            fieldLabel="Query Content Icon for Desktop"
+                                                                            fieldDescription="Please provide icon for the Query Content for Desktops"
+                                                                            name="./queryIconDesk"
+                                                                            rootPath="/content/dam" />  
+                                                                        <queryIconAltText
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Query Content Icon Alt Text"
+                                                                            fieldDescription="Please provide Alternative Text attribute for the Query Content icon"
+                                                                            name="./queryIconAltText"
+                                                                            rootPath="/content/dam" />     
+                                                                        <queryIconImgTitle
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                            fieldLabel="Query Content Icon Image Title"
+                                                                            fieldDescription="Please provide Image Title attribute for the Query Content icon"
+                                                                            name="./queryIconImgTitle"
+                                                                            rootPath="/content/dam" /> 
+                                                                        <contentDescription
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/textfield"               
+                                                                            fieldLabel="Query Description"
+                                                                            name="./queryDescription"/>  
+                                                                        <faqItemDetails
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                            composite="{Boolean}true"
+                                                                            fieldDescription="Click 'Add' to add items"
+                                                                            fieldLabel="Add FAQ Content Items">
+                                                                            <field
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                name="./faqContent">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <queryContent
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"               
+                                                                                        fieldLabel="Enter the Query Content"
+                                                                                        name="./queries"
+                                                                                        useFixedInlineToolbar="{Boolean}true">
+                                                                                        <rtePlugins
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins"/>
+                                                                                        <uiSettings
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings"/>
+                                                                                    </queryContent> 
+                                                                                </items>
+                                                                            </field>
+                                                                        </faqItemDetails>    
+                                                                    </items>
+                                                                </field>
+                                                            </itemDetails>
+                                                            <redirectLabel
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Redirect Label"
+                                                                fieldDescription="Please provide Redirect Label"
+                                                                name="./redirectLabel"
+                                                                rootPath="/content/dam" />
+                                                            <redirectUrl
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                fieldLabel="Redirect Url"
+                                                                fieldDescription="Please provide Redirect Url"
+                                                                name="./redirectUrl"
+                                                                rootPath="/content" />
+                                                            <faqContentnewTab
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                name="./contentNewTab"
+                                                                text="Open link in new tab"
+                                                                fieldDescription="If checked, the link will be opened in a new browser tab."
+                                                                uncheckedValue="{Boolean}false"
+                                                                value="{Boolean}true" />         
+                                                       </items>
+                                                </faqQueries>    
+                                            </items>
+                                        </faq>
+                                    </items>
+                                </column>
+                            </items>    
+                        </columns>
+                    </items>
+                </faqInfo>
+                <dataLayer
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DataLayer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                    <items jcr:primaryType="nt:unstructured">
+                        <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                            <items jcr:primaryType="nt:unstructured">
+                                <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                    <items jcr:primaryType="nt:unstructured">                           
+                                        <dataPosition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                                fieldLabel="Position"
+                                                name="./dataPosition"/>
+                                    </items>
+                                </column>
+                            </items>
+                        </columns>
+                    </items>
+                </dataLayer>
+            </items>
+        </tabs>
+    </items>
+</content>
+</jcr:root>

@@ -1,0 +1,293 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Test Ride New V2.0 Component"
+></div>
+<div data-component="Notification" data-cmp-type="react"></div>
+<sly
+  data-sly-use.author="${'com.heromotocorp.vida.core.models.TestRideModel'}"
+/>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    "testRideNewConfig": {
+      "backgroundImg": "${properties.testridepageImg @ context='uri'}",
+      "mobileBackgroundImg": "${properties.mobileBackgroundImg @ context='uri'}",
+      "redirectionUrl": "${author.redirectionUrl @ context='uri' }",
+      "bgImgAlt": "${properties.bgImgAlt @ context='scriptString'}",
+      "bgImgTitle": "${properties.bgImgTitle @ context='scriptString'}",
+      "bookingForm": {
+        "contactPhoneNumber": "${properties.contactPhoneNumber @ context='scriptString'}",
+        "bookingTitle": "${properties.bookingTitle @ context='scriptString'}",
+        "bookingSubTitle":"${properties.bookingSubTitle @ context='scriptString'}",
+        "changeNumberLabel": "${properties.changenumberlabel @ context='scriptString'}",
+        "country": "${properties.country @ context='scriptString'}",
+        "locationErrorMsg": "${properties.locationErrorMsg @ context='scriptString'}",
+        "cityField": {
+          "label": "${properties.placelabel @ context='scriptString'}",
+          "icon": "${properties.cityFieldIcon @ context='scriptString'}",
+          "secondIcon": "${properties.cityFieldSecondIcon @ context='scriptString'}",
+          "validationRules": {
+            "required": {
+              "message": "${'cityReqMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "stateField": {
+          "label": "${properties.statelabel @ context='scriptString'}",
+          "validationRules": {
+            "required": {
+              "message": "${'stateReqMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "firstNameField": {
+          "label": "${properties.firstnamelabel @ context='scriptString'}",
+          "placeholder": "${properties.firstnameph @ context='scriptString'}",
+          "validationRules": {
+            "required": {
+              "message": "${'nameReqMsz' @ i18n,context='scriptString'}"
+            },
+            "minLength": {
+              "value": 1,
+              "message": "${'firstNameLeastMsz' @ i18n,context='scriptString'}"
+            },
+            "fullName": {
+              "message": "${'fullNameCustomMsz' @ i18n,context='scriptString'}"
+            },
+            "customValidation": {
+              "message": "${'validnameMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "lastNameField": {
+          "label": "${properties.lastnamelabel @ context='scriptString'}",
+          "placeholder": "${properties.lastnameph @ context='scriptString'}",
+          "validationRules": {
+            "required": {
+              "message": "${'lastNameReqMsz' @ i18n,context='scriptString'}"
+            },
+            "minLength": {
+              "value": 1,
+              "message": "${'lastNameLeastMsz' @ i18n,context='scriptString'}"
+            },
+            "customValidation": {
+              "message": "${'validlastname' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "phoneNumberEmailField": {
+          "countrycode": "${author.countryCodes @ context='scriptString'}",
+          "label": "${properties.phoneemaillabel @ context='scriptString'}",
+          "placeholder": "${properties.phonenumberemailph @ context='scriptString'}",
+          "validationRules": {
+            "required": {
+              "message": "${'phoneEmailReqMsz' @ i18n,context='scriptString'}"
+            },
+            "minLength": {
+              "value": 10,
+              "message": "${'minDigitMsz' @ i18n,context='scriptString'}"
+            },
+            "maxLength": {
+              "value": 10,
+              "message": "${'maxDigitMsz' @ i18n,context='scriptString'}"
+            },
+            "custom": {
+              "message": "${'validmobilenumb' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "phoneNumberField": {
+          "countrycode": "${author.countryCodes @ context='scriptString'}",
+          "label": "${properties.phonelabel @ context='scriptString'}",
+          "placeholder": "${properties.phonenumberph @ context='scriptString'}",
+          "validationRules": {
+            "required": {
+              "message": "${'phoneNumberReqMsz' @ i18n,context='scriptString'}"
+            },
+            "minLength": {
+              "value": 10,
+              "message": "${'minCharaterMsz' @ i18n,context='scriptString'}"
+            },
+            "maxLength": {
+              "value": 10,
+              "message": "${'maxCharaterMsz' @ i18n,context='scriptString'}"
+            },
+            "customValidation": {
+              "message": "${'validmobilenumb' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "emailField": {
+          "label": "${properties.emaillabel @ context='scriptString'}",
+          "placeholder": "${properties.emailph @ context='scriptString'}",
+          "infoLabel": "${properties.emailinfolabel @ context='scriptString'}",
+          "validationRules": {
+            "required": {
+              "message": "${'emailReqMsz' @ i18n,context='scriptString'}"
+            },
+            "customValidation": {
+              "message": "${'emailValidMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "modalVariantField": {
+              "subHeader": "${properties.modelVarientSubHeader @ context='scriptString'}",
+              "validationRules": {
+                "required": {
+                  "message": "${properties.modelVarientReqMessage @ context='scriptString'}"
+                }
+              }
+            },
+        "notificationField": {
+          "label": "${properties.checkboxlabel @ context='scriptString'}",
+          "message": "${properties.checkboxdescription @ context='scriptString'}"
+        },
+        "nextBtn": {
+          "label": "${properties.nextctalabel @ context='scriptString'}"
+        },
+        "otpConfig": {
+          "dataPosition" : "${properties.dataPosition @ context='scriptString'}",
+          "otpSubTitle": "${properties.otpSubTitle @ context='scriptString'}",
+          "changeNumberLabel": "${properties.changeNumberLabel @ context='scriptString'}",
+          "otpFormNormalText": "${properties.otpFormNormalText @ context='scriptString'}",
+          "otpFormBoldText": "${properties.otpFormBoldText @ context='scriptString'}",
+          "resendLabel": "${properties.resendlabel @ context='scriptString'}",
+          "timer": {
+            "minutes": "${properties.timerminutes @ context='scriptString'}",
+            "seconds": "${properties.timersec @ context='scriptString'}"
+          },
+          "verifyBtn": {
+            "label": "${properties.verifyOtpBtnLabel @ context='scriptString'}"
+          },
+          "validationRules": {
+            "required": {
+              "message": "${'enterOTPMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "agreeTerms": {
+          "id": "quickDriveTerms",
+          "agreeLabel": "${properties.agreelabel @ context='scriptString'}",
+          "terms": {
+            "label": "${properties.termsAndCondition @ context='scriptString'}",
+            "actionUrl": ""
+          },
+          "btnLabel": {
+            "agree": "${properties.agreebtnlabel @ context='scriptString'}",
+            "close": "${properties.closebtnlabel @ context='scriptString'}"
+          },
+          "validationRules": {
+            "required": {
+              "message": "${'selectTermsMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        "genericConfig": {
+          "stepLabel": "${properties.stepLabel @ context='scriptString'}",
+          "userInfoFormTitle": "${properties.userInfoFormTitle @ context='scriptString'}",
+          "selectModelVariantText": "${properties.selectModelVariantText @ context='scriptString'}",
+          "chooseDealerText": "${properties.chooseDealerText @ context='scriptString'}",
+          "chooseDateTimeText": "${properties.chooseDateTimeText @ context='scriptString'}",
+          "nonDealerSelectedError": "${'selectDealerReqMsz' @ i18n,context='scriptString'}",
+          "noDealerAvailableError": "${'availableDealerMsz' @ i18n,context='scriptString'}",
+          "dealersLoadingMsg": "${properties.loadingmessage @ context='scriptString'}",
+          "cityStateSelection": "${'cityStateSelectMsz' @ i18n,context='scriptString'}",
+          "testRideNameHeader": "${properties.testRideNameHeader @ context='scriptString'}",
+          "testRideNameConfirmBtnLabel": "${properties.testRideNameConfirmBtnLabel @ context='scriptString'}",
+          "testRideVidaCenterConfirmBtnLabel": "${properties.testRideVidaCenterConfirmBtnLabel @ context='scriptString'}",
+          "testRidestateHeader": "${properties.testRidestateHeader @ context='scriptString'}",
+          "testRideDealersHeader": "${properties.testRideDealersHeader @ context='scriptString'}",
+          "testRideDealersSubHeader": "${properties.testRideDealersSubHeader @ context='scriptString'}",
+          "tabList": "${author.tabListJson @ context='scriptString'}"
+        },
+        "updateInfo": {
+          "defaultRandomName": "${properties.defaultRandomName @ context='scriptString'}",
+          "randomNames": "${author.json @ context='scriptString'}",
+          "testRideText": "${properties.testRideText @ context='scriptString'}",
+          "freeText": "${properties.freeText @ context='scriptString'}",
+          "OfferPrice": "${properties.OfferPrice @ context='scriptString'}",
+          "meetLabel": "${properties.meetLabel @ context='scriptString'}",
+          "dateLabel": "${properties.dateLabel @ context='scriptString'}",
+          "timeLabel": "${properties.timeLabel @ context='scriptString'}",
+          "vidaExpertIcon": "${properties.vidaExpertIcon @ context='uri'}",
+          "VidaExpertLabel": "${properties.VidaExpertLabel @ context='scriptString'}",
+          "bannerBikeImg": "${properties.bannerBikeImg @ context='uri'}",
+          "bannerLeftImg": "${properties.bannerLeftImg @ context='uri'}",
+          "BannerRightImg": "${properties.BannerRightImg @ context='uri'}",
+          "meetPlaceholderLabel": "${properties.meetPlaceholderLabel @ context='scriptString'}",
+          "dateplaceholderlabel": "${properties.dateplaceholderlabel @ context='scriptString'}",
+          "timePlaceholderLabel": "${properties.timePlaceholderLabel @ context='scriptString'}",
+          "yetToAssignLabel":"${properties.yetToAssignLabel @ context='scriptString'}",
+          "bannerBikeImgAlt": "${properties.bannerBikeImgAlt @ context='scriptString'}",
+          "bannerBikeImgTitle": "${properties.bannerBikeImgTitle @ context='scriptString'}"
+        },
+        "mapIcon": "${properties.mapIconImagePath @ context='scriptString'}",
+        "phoneIcon": "${properties.phoneIconImagePath @ context='scriptString'}"
+        ,
+        "confirmCard": {
+          "confirmMsg": "${properties.confirmMsg @ context='scriptString'}",
+          "funRideMsg": "${properties.funRideMsg @ context='scriptString'}",
+
+        },
+        "rescheduleLabel": "${properties.rescheduleLabel @ context='scriptString'}",
+        "cancelLabel": "${properties.cancelLabel @ context='scriptString'}",
+        "cancelCard": {
+          "cancelHeader": "${properties.cancelHeader @ context='scriptString'}",
+          "cancelContentMsg": "${properties.cancelContentMsg @ context='scriptString'}",
+          "cancelBtnLabel": "${properties.cancelBtnLabel @ context='scriptString'}",
+          "keepBtnLabel": "${properties.keepBtnLabel @ context='scriptString'}",
+          "mistakeLabel": "${properties.mistakeLabel @ context='scriptString'}"
+        },
+        "notifyConfig": {
+            "showNotifyUs": "${properties.showNotifyUs @ context='scriptString'}",
+            "notifyUsDescription": "${properties.notifyUsDescription @ context='scriptString'}",
+            "notifyUsBtnLabel": "${properties.notifyUsBtnLabel @ context='scriptString'}",
+            "notifyHeader": "${properties.notifyHeader @ context='scriptString'}",
+            "sorryText": "${properties.sorryText @ context='scriptString'}",
+            "notifySubHeader": "${properties.notifySubHeader @ context='scriptString'}",
+            "pinCodeCard": ${author.pinCodeCard @ context='unsafe'},
+            "nearByCard": ${author.nearByCard @ context='unsafe'},
+            "notifyContent": "${properties.notifyContent @ context='scriptString'}",
+            "notifyLink": "${properties.notifyLink @ context='scriptString'}",
+            "mobileFieldConfig": {
+              "mobileHeader": "${properties.mobileHeader @ context='scriptString'}",
+              "mobileSubHeader": "${properties.mobileSubHeader @ context='scriptString'}",
+              "whatsappConsent": "${properties.whatsappConsent @ context='scriptString'}",
+              "confirmBtnLabel": "${properties.confirmBtnLabel @ context='scriptString'}",
+              "validationRules": {
+                  "errorMsg": "${'mobFieldNotifyConfigValMsz' @ i18n,context='scriptString'}"
+              }
+            },
+            "notifySuccessConfig": {
+              "successHeader": "${properties.successHeader @ context='scriptString'}",
+              "successSubHeader": "${properties.successSubHeader @ context='scriptString'}",
+              "successMessage": "${properties.successMessage @ context='scriptString'}",
+              "successBtnLabel": "${properties.successBtnLabel @ context='scriptString'}",
+              "contactUs":{
+                "contactHeader": "${properties.contactHeader @ context='scriptString'}",
+                "contactContent": "${properties.contactContent @ context='scriptString'}",
+                "contactPhone": "${properties.contactPhone @ context='scriptString'}",
+                "contactEmail": "${properties.contactEmail @ context='scriptString'}"
+              }
+            }
+          }
+        }
+    }
+  })
+</script>
+
+<sly data-sly-test="${!wcmmode.edit}">
+  <div
+    data-section-id="vidaSpinner"
+    data-component="Spinner"
+    data-cmp-version="2.0"
+    data-cmp-type="react"
+  ></div>
+  <div
+    data-section-id="test-ride-new"
+    data-component="TestRideNew"
+    data-cmp-type="react"
+    data-cmp-version="2.0"
+    data-cmp-config="testRideNewConfig"
+  ></div>
+</sly>

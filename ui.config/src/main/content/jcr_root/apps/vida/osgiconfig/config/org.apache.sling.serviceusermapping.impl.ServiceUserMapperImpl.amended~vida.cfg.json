@@ -1,0 +1,8 @@
+{
+  "service.ranking:Integer":0,
+  "user.mapping":[
+    "vida.core:vidareaderservice=[vida-reader-service]",
+    "vida.core:vidawriterservice=[vida-writer-service]",
+    "vida.core:vidareadwriteservice=[vida-read-write-service]"
+  ]
+}

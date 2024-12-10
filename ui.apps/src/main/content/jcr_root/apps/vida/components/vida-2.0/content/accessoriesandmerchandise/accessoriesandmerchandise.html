@@ -1,0 +1,64 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Accessories And Merchandise Component V2.0"></div>
+<section class="accessories-merchandise vida-2-container" data-component="accessories-merchandise">
+  <div class="accessories-merchandise__container">
+    <div class="accessories-merchandise__heading">
+      <p class="accessories-merchandise__heading__description">${properties.cardsHeadingOne}</p>
+      <h2 data-sly-element="${properties.titleTag}" class="accessories-merchandise__heading__title">${properties.cardsHeading}</h2>
+    </div>
+    <div class="accessories-merchandise__details">
+      <sly data-sly-list.accessoriesCardItems="${resource.getChildren}">
+        <sly data-sly-test="${accessoriesCardItems.name == 'accessoriesCards'}">
+          <sly data-sly-list.item="${accessoriesCardItems.getChildren}">
+          <div class="accessories-merchandise__details__item">    
+            <div class="accessories-merchandise-imagebox">
+              <div class="default-image">
+                <picture>
+                  <source srcset="${item.desktopCardImage}" alt="${item.cardImageAltText}" @ context = 'uri' media="(min-width:1024px)">
+                  <source srcset="${item.mobileCardImage}" alt="${item.cardImageAltText}" @ context = 'uri' media="(min-width: 360px)">
+                  <img class="accessories-merchandise-imagebox__img" src="${item.desktopCardImage}" alt="${item.cardImageAltText}" @ context = 'uri' />
+                </picture>
+              </div>        
+              <div class="hover-image">
+                <picture>
+                  <source srcset="${item.desktopCardHoverImage}" alt="${item.cardHoverImageAltText}" @ context = 'uri' media="(min-width:1024px)">
+                  <source srcset="${item.mobileCardHoverImage}" alt="${item.cardHoverImageAltText}" @ context = 'uri' media="(min-width: 360px)">
+                  <img class="accessories-merchandise-imagebox__img" src="${item.desktopCardHoverImage}" alt="${item.cardHoverImageAltText}" @ context = 'uri' />
+                </picture>
+              </div>
+            </div>
+            <h3 class="accessories-merchandise__details__item__name">${item.cardTitle}</h3>
+              <a class="view-price-link" href="${item.cardCtaLink}" data-position="${properties.componentHeading}" aria-hidden="false" target="_blank">
+                <span>${item.cardCtaLabel}</span>
+              </a>
+          </div>
+        </sly>
+      </sly>
+      </sly>
+      <div class="view-all-container">
+        <a class="view-price-link" href="${properties.viewAllLink}" target="_blank" data-position="${properties.componentHeading}" aria-hidden="false">
+          ${properties.viewAllLabel}
+        </a>
+      </div>
+      <div class="accessories-left-arrow">
+        <picture>
+          <source srcset="${properties.desktopLeftArrow}" alt="${properties.arrowAltText}" @ context = 'uri' media="(min-width:1024px)">
+          <source srcset="${properties.mobileLeftArrow}" alt="${properties.arrowAltText}" @ context = 'uri' media="(min-width: 360px)">
+          <img class="accessories-merchandise__arrow-icon" src="${properties.desktopLeftArrow}" alt="${properties.arrowAltText}" @ context = 'uri' />
+        </picture>
+      </div>
+      <div class="accessories-right-arrow">
+        <picture>
+          <source srcset="${properties.desktopRightArrow}" alt="${properties.arrowAltText}" @ context = 'uri' media="(min-width:1024px)">
+          <source srcset="${properties.mobileRightArrow}" alt="${properties.arrowAltText}" @ context = 'uri' media="(min-width: 360px)">
+          <img class="accessories-merchandise__arrow-icon" src="${properties.desktopRightArrow}" alt="${properties.arrowAltText}" @ context = 'uri' />
+        </picture>
+      </div>
+    </div>
+    <div class="accessories-merchandise__download-action" data-sly-test="${properties.buttonLabel}">
+      <a href="${properties.buttonLink}" data-position="${properties.componentHeading}" class="downloadcta" role="button">
+        ${properties.buttonLabel}
+      </a>
+    </div>
+ 
+  </div>
+</section>

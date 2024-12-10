@@ -1,0 +1,594 @@
+.model-variant-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  &__flex {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding-top: rem(40px);
+    width: 100%;
+
+    .heading {
+      color: get-color("mine-shaft");
+      font-size: rem(20px);
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      padding-bottom: rem(23px);
+      padding-left: rem(25px);
+      padding-top: rem(44px);
+      @include media(">=tablet") {
+        padding-left: 0;
+      }
+      @include media("<tablet") {
+        display: none;
+      }
+    }
+
+    .bold-heading {
+      @include vida-h1-mobile;
+      max-width: rem(1090px);
+      padding-bottom: rem(5px);
+      padding-left: rem(24.75px);
+      padding-right: rem(31.25px);
+
+      @include media(">=tablet") {
+        @include vida-banner-header;
+        padding-bottom: rem(16px);
+        padding-left: 0;
+      }
+    }
+
+    .model-variant-content-container {
+      display: flex;
+      justify-content: space-between;
+      padding-left: rem(296px);
+      padding-right: rem(88px);
+
+      @include media("<desktop-md") {
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 1.546875rem;
+        padding-right: 1.953125rem;
+      }
+
+      @include media(">=desktop-md") {
+        gap: rem(100px);
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .model-variant {
+        // background-image: url("../../../../resources/images/svg/model-view.svg");
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @include media(">=tablet") {
+          flex-direction: row;
+        }
+
+        .image-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          // position: relative;
+          left: rem(300px);
+          margin-bottom: rem(20px);
+          width: rem(360px);
+
+          @include media(">=tablet") {
+            flex-direction: column;
+            height: rem(500px);
+            width: rem(500px);
+          }
+        }
+
+        .image-group {
+          @include media(">=tablet") {
+            // left: rem(140px);
+            // position: relative;
+          }
+
+          .platform {
+            background-color: get-color("white");
+            border: rem(1px) dashed;
+            border-color: #0006;
+            border-radius: 231.75px/46.51px;
+            height: rem(60px);
+            // top: 288px;
+            margin-top: rem(-75px);
+            // left: 0;
+            position: relative;
+            width: 300px;
+            z-index: 1;
+            @include media(">=tablet") {
+              height: rem(93px);
+              margin-top: rem(-153px);
+              width: rem(463px);
+            }
+            @include media(">=desktop") {
+              margin-top: rem(-105px);
+            }
+          }
+
+          .icon {
+            align-self: center;
+            display: none;
+            gap: rem(16px);
+            margin-left: rem(60px);
+            margin-top: rem(32px);
+            margin-top: rem(32px);
+            max-width: 100%;
+            padding: 0 rem(2px);
+            width: rem(176px);
+
+            @include media(">=tablet") {
+              display: flex;
+              justify-content: center;
+              margin-left: rem(155px);
+            }
+          }
+
+          .icon-class {
+            align-items: center;
+            background-color: get-color("white");
+            border-radius: 23.52px/24px;
+            box-shadow: 0 rem(4.95px) rem(9.9px) #0000001a;
+            cursor: pointer;
+            display: flex;
+            height: rem(48px);
+            justify-content: center;
+            margin-top: rem(5px);
+            width: rem(47px);
+          }
+
+          .icon1 {
+            height: rem(16px);
+            width: rem(16px);
+          }
+
+          .color-text {
+            @include vida-mobile-body-3;
+            // color: get-color("mine-shaft");
+            // font-family: PP Neue Montreal;
+            // font-size: rem(12px);
+            // font-style: normal;
+            // font-weight: 400;
+            // line-height: normal;
+            margin-top: rem(16px);
+            // text-align: center;
+            @include media(">=tablet") {
+              font-size: rem(18px);
+            }
+          }
+
+          .image1 {
+            min-height: rem(210px);
+            object-fit: none;
+            position: relative;
+            width: rem(300px);
+            z-index: 20;
+            @include media(">=tablet") {
+              min-height: rem(386px);
+              scale: 1.2;
+              width: rem(500px);
+            }
+          }
+
+          .visualizer-color-text-wrapper {
+            display: flex;
+            justify-content: center;
+          }
+
+          .visualizer-icons {
+            position: absolute;
+          }
+
+          .visualizer-icons-mobile {
+            align-items: flex-end;
+            display: flex;
+            flex-direction: column-reverse;
+            gap: rem(16px);
+            margin-left: rem(20px);
+            overflow: visible;
+            position: absolute;
+            right: rem(20px);
+            z-index: 5;
+
+            @include media(">=tablet") {
+              display: none;
+            }
+          }
+
+          .additional-icons-container {
+            bottom: rem(52px);
+            display: inline;
+            position: absolute;
+            z-index: 10;
+          }
+
+          .visualizer-icons {
+            position: absolute;
+          }
+
+          .open {
+            animation: accordian-open 2s reverse;
+          }
+        }
+
+        .colors {
+          align-items: center;
+          display: flex;
+          gap: rem(16px);
+          justify-content: center;
+          margin-top: rem(40px);
+
+          @include media(">=tablet") {
+            gap: rem(16px);
+          }
+
+          @include media(">=tablet") {
+            .selec {
+              height: rem(32px);
+              width: rem(32px);
+            }
+          }
+
+          div {
+            border-radius: rem(50px);
+            cursor: pointer;
+            height: rem(14px);
+            width: rem(14px);
+
+            @include media(">=tablet") {
+              height: rem(24px);
+              width: rem(24px);
+            }
+          }
+
+          .border-black {
+            border: 0.75px solid get-color("mine-shaft");
+          }
+
+          .selec {
+            height: rem(22px);
+            width: rem(22px);
+          }
+        }
+      }
+
+      .model {
+        align-items: center;
+        backdrop-filter: blur(2.5px);
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 16px;
+        bottom: rem(37px);
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        left: rem(837px);
+        margin-bottom: rem(37px);
+        // margin: 16px 32px 32px;
+        padding: 32px 16px 16px;
+        width: rem(320px);
+
+        @include media(">=tablet") {
+          max-width: rem(515px);
+          // position: relative;
+          min-width: rem(515px);
+          // bottom: rem(542px);
+          // height: rem(542px);
+          padding: rem(32px);
+        }
+
+        .model-box-container {
+          position: relative;
+        }
+
+        .box-flex-container {
+          display: flex;
+          gap: rem(16px);
+          justify-content: space-between;
+
+          @include media(">=tablet") {
+            width: 100%;
+          }
+        }
+         
+        .model-box-scroll-btn-container {
+          display: none;
+          @include media(">=tablet") {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+          }
+        }
+
+        .scroll-btn {
+          background-color: transparent;
+          background-position: center;
+          background-repeat: no-repeat;
+          height: rem(32px);
+          padding: 0;
+          width: rem(32px);
+
+          &.left {
+            background-image: url("/clientlib-site/images/svg/chevron-left.svg");
+            left: rem(-32px);
+          }
+
+          &.right {
+            background-image: url("/clientlib-site/images/svg/chevron-right.svg");
+            right: rem(-32px);
+          }
+
+          &.disabled {
+            background-color: transparent;
+            opacity: 0.3;
+            pointer-events: none;
+          }
+        }
+
+        .left {
+          @include vida-mobile-body-3;
+          // color: get-color("mine-shaft");
+          // font-size: rem(12px);
+          // font-style: normal;
+          // font-weight: 400;
+          // line-height: normal;
+
+          @include media(">=tablet") {
+            font-size: 18px;
+          }
+
+          .black-color-text {
+            color: get-color("mine-shaft");
+            font-family: PP Neue Montreal;
+            font-size: rem(12px);
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+
+            @include media(">=tablet") {
+              font-size: rem(18px);
+              font-weight: 600;
+            }
+          }
+        }
+
+        select {
+          align-items: center;
+          appearance: none;
+          background-position: right 5px center;
+          background-repeat: no-repeat;
+          background-size: rem(20px);
+          border: rem(1px) solid #85888c;
+          border-radius: rem(8px);
+          cursor: pointer;
+          display: flex;
+          font-family: PP Neue Montreal;
+          font-size: rem(14px);
+          font-style: normal;
+          font-weight: 400;
+          height: rem(36px);
+          line-height: normal;
+          margin-top: rem(8px);
+          padding: rem(8px);
+          width: rem(150px);
+
+          @include media(">=tablet") {
+            background-position: right 1rem center;
+            background-size: rem(30px);
+            font-size: 20px;
+            font-weight: 500;
+            height: rem(56px);
+            width: rem(228px);
+          }
+        }
+
+        .right {
+          display: flex;
+          flex-direction: column;
+          right: 0;
+        }
+
+        .amount {
+          @include vida-h2-mobile;
+          display: flex;
+          font-weight: 600;
+          @include media(">=tablet") {
+            font-size: rem(32px);
+          }
+        }
+
+        .price-text {
+          color: get-color("mine-shaft");
+          font-size: rem(12px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+
+          @include media(">=tablet") {
+            font-size: rem(16px);
+          }
+        }
+
+        .toolbar {
+          @include vida-tertiary-cta-mobile;
+          cursor: pointer;
+          // color: get-color("orange");
+          // cursor: pointer;
+          // font-size: rem(16px);
+          // font-style: normal;
+          // font-weight: 500;
+          // line-height: normal;
+          padding-top: rem(8px);
+          text-decoration: underline;
+
+          @include media(">=tablet") {
+            font-size: rem(20px);
+          }
+        }
+
+        .whats-included-container {
+          align-items: flex-start;
+          align-self: stretch;
+          background: var(--Neutral-Lightest-Grey, #f1f5f8);
+          border-radius: rem(8px);
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          gap: rem(16px);
+          padding: rem(16px);
+
+          @include media(">=tablet") {
+            gap: rem(32px);
+            padding: rem(32px);
+          }
+
+          &__header {
+            color: #ff5310;
+            font-family: PP Neue Montreal;
+            font-size: rem(16px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            @include media(">=tablet") {
+              font-size: rem(20px);
+            }
+          }
+
+          &__text {
+            color: #000;
+            font-family: PP Neue Montreal;
+            font-size: rem(12px);
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            @include media(">=tablet") {
+              font-size: rem(18px);
+            }
+          }
+        }
+
+        .button {
+          @include vida-h5-mobile;
+          align-items: center;
+          background: get-color("orange");
+          border-radius: rem(8px);
+          box-shadow: 0 rem(7.5px) rem(15px) 0 rgba(0, 0, 0, 0.1);
+          color: get-color("white");
+          cursor: pointer;
+          display: flex;
+          font-family: PP Neue Montreal;
+          height: rem(52px);
+          justify-content: center;
+          width: 100%;
+          @include media(">tablet") {
+            @include vida-h5-desktop;
+            border-radius: rem(16px);
+            color: get-color("white");
+            height: rem(72px);
+          }
+        }
+
+        .box-container {
+          display: flex;
+          flex-flow: row;
+          gap: rem(30px);
+          // justify-content: space-around;
+          margin: 0;
+          max-width: rem(451px);
+          overflow-x: unset;
+          padding-bottom: rem(10px);
+
+          @include media("<tablet") {
+            max-width: rem(288px);
+          }
+          
+          @include media(">=tablet") {
+            overflow-x: scroll;
+            padding-bottom: 0;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+          }
+
+          .box {
+            align-items: flex-start;
+            align-self: stretch;
+            background: var(--Medium-Grey, #e4eaf1);
+            border-radius: rem(8px);
+            display: flex;
+            flex-direction: column;
+            height: rem(125px);
+            min-width: rem(220px);
+            padding: rem(20px) rem(12px);
+            // background: tomato;
+            text-align: center;
+            @include media(">=tablet") {
+              border-radius: rem(16px);
+              height: rem(260px);
+              min-width: rem(240px);
+              padding: rem(32px) rem(16px);
+            }
+          }
+
+          .box1 {
+            height: rem(30px);
+            margin-bottom: rem(30px);
+            width: rem(30px);
+          }
+
+          .box2 {
+            @include vida-h5-mobile;
+            align-self: stretch;
+            // color: var(--Vida-Black, #222);
+            // font-family: PP Neue Montreal;
+            // font-size: rem(16px);
+            // font-style: normal;
+            // font-weight: 600;
+            height: rem(136px);
+            // line-height: normal;
+            text-align: left;
+            width: rem(208px);
+            @include media(">=tablet") {
+              @include vida-h3-desktop;
+            }
+          }
+        }
+
+        .horizontal-scroll-container {
+          &::-webkit-scrollbar-track {
+            margin-left: 0;
+            margin-right: 0;
+          }
+
+        }
+      }
+    }
+  }
+
+  @keyframes accordian-open {
+    from {
+      max-height: 0;
+    }
+
+    80% {
+      max-height: 100vh;
+    }
+
+    to {
+      max-height: 100vh;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Request Charging Station Form V2.0"></div>
+
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: {
+    "title": "${properties.title @ context='scriptString'}",
+    "titleTag": "${properties.titleTag @ context='scriptString'}",
+    "description": "${properties.description @ context='scriptString'}",
+    "formTitle": "${properties.formTitle @ context='scriptString'}",
+    "formTitleTag": "${properties.formTitleTag @ context='scriptString'}",
+    "chooseYourLocationCta": "${properties.chooseLocationcta @ context='scriptString'}",
+    "buttonLabel": "${properties.buttonLabel @ context='scriptString'}",
+    "formErrorMsg": "${'chargingStationFormErrorMsz' @ i18n,context='scriptString'}",
+    "formSuccessMsg": "${'chargingStationFormSuccessMsz' @ i18n,context='scriptString'}",
+    "nameField": {
+      "label": "${properties.nameLabel @ context='scriptString'}",
+      "placeholder": "${properties.nameplaceholder @ context='scriptString'}",
+      "validationRules": {
+        "required": {
+          "message": "${'nameReqMsz' @ i18n,context='scriptString'}"
+        },
+        "minLength": {
+          "value": 1,
+          "message": "${'nameLeastMsz' @ i18n,context='scriptString'}"
+        },
+        "customValidation": {
+          "message": "${'validnameMsz' @ i18n,context='scriptString'}"
+        }
+      }
+    },
+    "phoneNumberField": {
+      "label": "${properties.phoneNumberLabel @ context='scriptString'}",
+      "placeholder": "${properties.phoneNoPlaceholder @ context='scriptString'}",
+      "validationRules": {
+        "required": {
+          "message": "${'mobileReqMsz' @ i18n,context='scriptString'}"
+        },
+        "minLength": {
+          "value": 10,
+          "message": "${'minCharaterMsz' @ i18n,context='scriptString'}"
+        },
+        "maxLength": {
+          "value": 10,
+          "message": "${'maxCharaterMsz' @ i18n,context='scriptString'}"
+        },
+        "customValidation": {
+          "message": "${'validMobileNumber' @ i18n,context='scriptString'}"
+        }
+      }
+    },
+    "cityField": {
+      "label": "${properties.citylabel @ context='scriptString'}",
+      "placeholder": "${properties.cityPlaceHolder @ context='scriptString'}",
+      "validationRules": {
+        "required": {
+          "message": "${'cityLabelReqMsz' @ i18n,context='scriptString'}"
+        },
+        "minLength": {
+          "value": 1,
+          "message": "${'cityLeastMsz' @ i18n,context='scriptString'}"
+        },
+        "customValidation": {
+          "message": "${'validcityMsz' @ i18n,context='scriptString'}"
+        }
+      }
+    },
+    "pincodeField": {
+      "label": "${properties.pinCodeLabel @ context='scriptString'}",
+      "placeholder": "${properties.pinCodeplaceholder @ context='scriptString'}",
+      "validationRules": {
+        "required": {
+          "message": "${'pincodeReqMsz' @ i18n,context='scriptString'}"
+        },
+        "minLength": {
+          "value": 6,
+          "message": "${'pincodeMinMsz' @ i18n,context='scriptString'}"
+        }
+      }
+    }
+  }
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${properties.sectionId}" id="${properties.sectionId}" data-cmp-version="2.0"
+    data-cmp-type="react" data-component="ChargingStationRequestForm" data-cmp-config="${currentNode.name}"></div>
+</sly>

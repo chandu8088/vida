@@ -1,0 +1,54 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Two Cards Component" ></div>
+<div class="navigation-cards" data-component="twocards">
+  <div class="cards-container vida-2-container">
+    <div class="cards-container__explore-card">
+      <div class="cards-container__explore-card__banner">
+        <picture>
+          <source srcset="${properties.bgTextureImgDesk}" media="(min-width:1024px)">
+          <source srcset="${properties.bgTextureImgMob}" media="(min-width: 360px)">
+          <img class="background-image" src="${properties.bgTextureImgDesk}" alt="banner-img" />
+        </picture>
+      </div>
+      <div class="content">
+        <h2 class="vida-explore-card-heading">${properties.leftcardText @ context = 'html'}</h2>
+        <div class="explorecard-navigation-wrapper">
+          <div class="navigation-icon-wrapper" data-cta-location="Home Page" data-heading="${properties.leftcardText @ context = 'html'}">
+            <a href="${properties.redirectLink @ extension='html'}" role="button">
+              <picture>
+                <source srcset="${properties.redirectImage}" media="(min-width:1024px)">
+                <source srcset="${properties.redirectImage}" media="(min-width: 360px)">
+                <img class="navigation-icon" src="${properties.redirectImage}" alt="redirection-img" />
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cards-container__wrapper">
+      <div class="content">
+        <div>
+          <div class="icon-wrapper">
+            <picture>
+              <source srcset="${properties.desklocationIcon}" media="(min-width:1024px)">
+              <source srcset="${properties.moblocationIcon}" media="(min-width: 360px)">
+              <img class="search-icon" src="${properties.desklocationIcon}" alt="${properties.altTextLocation}" />
+            </picture>
+          </div>
+          <h2 class="vida-card-heading">${properties.cardTitle @ context = 'html'}</h2>
+          <div class="card-navigation-wrapper">
+            <h2 class="need-description">${properties.cardDescription @ context = 'html'}</h2>
+          </div>
+        </div>
+        <div class="navigation-icon-wrapper" data-cta-location="Home Page" data-heading="${properties.cardTitle @ context = 'html'}">
+          <a href="${properties.rightredirectLink @ extension='html'}" role="button">
+            <picture>
+              <source srcset="${properties.rightredirectImage}" media="(min-width:1024px)">
+              <source srcset="${properties.rightredirectImage}" media="(min-width: 360px)">
+              <img class="navigation-icon" src="${properties.rightredirectImage}" alt="${properties.alttextredirect}" />
+            </picture>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

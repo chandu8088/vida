@@ -1,0 +1,15 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Charging guide 2.0 Component"></div>
+<sly data-sly-use.ChargingGuideModel="com.heromotocorp.vida.core.models.ChargingGuideModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${currentNode.name @context = 'scriptString'}: ${ ChargingGuideModel.json  @context = 'unsafe' }});  
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+<div
+data-section-id="${currentNode.name}"
+data-cmp-version="2.0"
+data-cmp-type="react"
+data-component="ChargingGuide"
+data-cmp-config="${currentNode.name}"
+></div>
+</sly>

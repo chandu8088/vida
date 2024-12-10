@@ -1,0 +1,17 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Charging Infra Cards V2.0"></div>
+<section class="vida-charging-component">
+  <div class="charing-cards-wrapper">
+    <div class="container">
+      <sly data-sly-list.cardItems="${resource.getChildren}">
+        <sly data-sly-test="${cardItems.name == 'cardsDetails'}">
+          <sly data-sly-list.item="${cardItems.getChildren}">
+            <div class="card">
+              <h2>${item.cardsHeading}</h2>
+              <p>${item.cardsDescription}</p>
+            </div>
+          </sly>
+        </sly>
+      </sly>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Charging Infra Caution V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <cautionHeading
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Caution Heading"
+                        name="./cautionHeading"/>
+                    <cautionSubHeading
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                        fieldLabel="Caution Sub Description"
+                        name="./cautionSubHeading"/>
+                    <imagepath
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Caution Image path"
+                        name="./cautionImage"
+                        rootPath="/content/dam" />
+                    <cautionDescription
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                        fieldLabel="Caution description"
+                        name="./cautionDescription"
+                        useFixedInlineToolbar="{Boolean}true">
+                        <rtePlugins
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/rtePlugins" />
+                        <uiSettings
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/uiSettings" />
+                        <htmlRules
+                            jcr:primaryType="nt:unstructured">
+                            <blockHandling
+                                jcr:primaryType="nt:unstructured"
+                                removeSingleParagraphContainer="{Boolean}true" />
+                        </htmlRules>
+                    </cautionDescription>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

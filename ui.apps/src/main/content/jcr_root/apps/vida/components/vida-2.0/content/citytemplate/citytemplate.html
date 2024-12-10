@@ -1,0 +1,22 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="City CityTemplate V2 Component"></div>
+<div data-component="Notification" data-cmp-type="react"></div>
+<sly data-sly-use.DealershipFinderModel="com.heromotocorp.vida.core.models.DealershipFinderModel" />
+<script>
+	window.appConfig = Object.assign(window.appConfig || {}, {
+	  "CityTemplateConfig":  ${ DealershipFinderModel.cityTemplateJson  @context = 'unsafe' }});
+  </script>
+  <sly data-sly-test="${!wcmmode.edit}">
+  <div
+	data-section-id="vidaSpinner"
+	data-component="Spinner"
+	data-cmp-version="2.0"
+	data-cmp-type="react"
+  ></div>
+  <div
+	data-section-id="cityTemplate"
+	data-component="CityTemplate"
+	data-cmp-type="react"
+	data-cmp-version="2.0"
+	data-cmp-config="CityTemplateConfig"
+  ></div>
+</sly>

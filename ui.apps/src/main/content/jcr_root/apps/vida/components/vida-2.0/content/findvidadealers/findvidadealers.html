@@ -1,0 +1,21 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Find Vida Dealers Component"
+></div>
+<sly
+  data-sly-use.FindVidaDealersModel="com.heromotocorp.vida.core.models.FindVidaDealersModel"
+/>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ FindVidaDealersModel.json  @context = 'unsafe' }});
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div
+    data-section-id="${currentNode.name}"
+    data-component="FindVidaDealers"
+    data-cmp-type="react"
+    data-cmp-version="2.0"
+    data-cmp-config="${currentNode.name}"
+  ></div>
+</sly>

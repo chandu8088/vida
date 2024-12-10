@@ -1,0 +1,28 @@
+<div class="footer-main-container footer-faq-container" data-component="footer-faq">
+  <div class="faq-section">
+    <div class="accordian-container">
+      <div class="accordian-container__wrapper">
+        <div class="accordian-container__header-wrapper">
+          <button class="accordian-container__header">
+            <h2 class="accordian-container__header">${properties.titleFaq}</h2>
+            <div class="accordian-container__header-icon">
+              <div>
+                <img src="/etc.clientlibs/vida/clientlibs/clientlib-site/resources/images/svg/minus-icon.svg" alt="minus icon" class="minus-icon" />
+                <img src="/etc.clientlibs/vida/clientlibs/clientlib-site/resources/images/svg/add-icon.svg" alt="add icon" class="add-icon" />
+              </div>
+            </div>
+          </button>
+        </div>
+        <div>
+          <div class="accordian-container__content">
+            <div class="accordian-container__content__wrapper">
+              <div>
+                ${properties.contentFaq @context='html'}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

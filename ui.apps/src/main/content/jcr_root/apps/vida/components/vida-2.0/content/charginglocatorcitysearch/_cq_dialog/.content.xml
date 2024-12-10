@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Charging Locator City Search V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[vida.authoring.dialog]">
+    <content jcr:primaryType="nt:unstructured" sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <chargingLocCitySearch
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Banner Details"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <sectionId
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Section ID"
+                                name="./sectionId"/>
+                            <pretitle jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Pre-Title" name="./pretitle" />
+                            <title jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Title" name="./title" />
+                            <titleTag granite:class="cq-dialog-dropdown-showhide-multival"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                emptyText="Select heading tag"
+                                fieldDescription="Please Select the heading tag for title" fieldLabel="Tag for Title"
+                                name="./titleTag">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <default jcr:primaryType="nt:unstructured" text="Select Tag" value="" />
+                                    <h1 jcr:primaryType="nt:unstructured" text="H1" value="h1" />
+                                    <h2 jcr:primaryType="nt:unstructured" text="H2" value="h2" />
+                                    <h3 jcr:primaryType="nt:unstructured" text="H3" value="h3" />
+                                    <h4 jcr:primaryType="nt:unstructured" text="H4" value="h4" />
+                                    <h5 jcr:primaryType="nt:unstructured" text="H5" value="h5" />
+                                    <h6 jcr:primaryType="nt:unstructured" text="H6" value="h6" />
+                                </items>
+                            </titleTag>
+                            <description jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                fieldLabel="Description" name="./description" useFixedInlineToolbar="{Boolean}true">
+                                <rtePlugins jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/rtePlugins" />
+                                <uiSettings jcr:primaryType="nt:unstructured"
+                                    sling:resourceSuperType="/apps/vida/components/richtext/cq:dialog/content/items/tabs/items/properties/items/columns/items/column/items/text/uiSettings" />
+                            </description>
+                            <descPositionDesktop
+                                granite:class="cq-dialog-dropdown-showhide-multival"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                fieldDescription="Select DEscription Position(Default value is left)"
+                                fieldLabel="Description Position for Desktop"
+                                name="./desPositionDesktop"
+                                value="left">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <left
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Left"
+                                        value="left"/>
+                                    <right
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Right"
+                                        value="right"/>
+                                </items>
+                            </descPositionDesktop>
+                         
+                            <images
+                                granite:class="images"
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"> 
+                                <items jcr:primaryType="nt:unstructured">
+                                    <mobileimagepath jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Mobile Image Path" name="./mobileimage" rootPath="/content/dam" />
+                                    <desktopimagepath jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        fieldLabel="Desktop Image Path" name="./desktopimage" rootPath="/content/dam" />
+                                    <imageAlt
+                                        jcr:primaryType="nt:unstructured"
+                                        fieldDescription="This field is used for providing alt text if image."
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Alternative Text for image"
+                                        name="./imageAlt"/>
+                                    <imageTitle
+                                        jcr:primaryType="nt:unstructured"
+                                        fieldDescription="This field is used for providing title text for image"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Image Title"
+                                        name="./imageTitle"/>
+                                </items>
+                            </images>
+                        </items>
+                    </chargingLocCitySearch>
+                    <chargingInformation jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        jcr:title="Charging Information"
+                        composite="{Boolean}true" fieldLabel="Charging Information">
+                        <field jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./multivalues">
+                            <items jcr:primaryType="nt:unstructured">
+                                <order jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldDescription="Order Of Display on the page" fieldLabel="Display Order"
+                                    name="./order" />
+                                <iconpath jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Icon Path" name="./icon" rootPath="/content/dam" />
+                                <iconAlt jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Alternative text"
+                                    name="./iconAlt" />
+                                <labeltext jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldDescription="Please enter label text" fieldLabel="Label Text"
+                                    name="./labeltext" />
+                                <labelvalue jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldDescription="Please enter label value" fieldLabel="Label Value"
+                                    name="./labelvalue" />
+                            </items>
+                        </field>
+                    </chargingInformation>
+                    <cityConfig
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="City Config"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <inclueCitySearch
+                                                granite:class="cq-dialog-checkbox-showhide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                name="./inclueCitySearch"
+                                                text="Include City Search?"
+                                                uncheckedValue="{Boolean}false"
+                                                value="{Boolean}true">
+                                                    <granite:data
+                                                        jcr:primaryType="nt:unstructured"
+                                                        cq-dialog-checkbox-showhide-target1=".city-search-show-hide"
+                                                        />
+                                            </inclueCitySearch>
+                                            <citySearch
+                                                granite:class="city-search-show-hide"
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container"> 
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <searchCityText
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Search City Text"
+                                                        name="./searchCityText"/>
+                                                    <searchIcon
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        fieldLabel="Search Icon"
+                                                        name="./searchIcon"
+                                                        rootPath="/content/dam" />
+                                                    <searchIconAlt
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="Please provide alternative text to display if search icon is not available"
+                                                        fieldLabel="Alternative text"
+                                                        name="./searchIconAlt"/>
+                                                    <dropDownIcon
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                        fieldLabel="Dropdown Icon"
+                                                        name="./dropDownIcon"
+                                                        rootPath="/content/dam" />
+                                                    <dropDownIconAlt
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="Please provide alternative text to display if dropdown icon is not available"
+                                                        fieldLabel="Alternative text"
+                                                        name="./dropDownIconAlt"/>
+                                                    <chargingCountLabel
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Charging Count Label text"
+                                                        name="./chargingCountLabel"/>
+                                                    <chargingStationNotAvailable
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldLabel="Charging Station Not Available Text"
+                                                        name="./chargingStationNotAvailable"/>        
+                                                </items>
+                                            </citySearch>			
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </cityConfig>
+                    <dataLayer
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="DataLayer"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <dataPosition
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                                fieldLabel="Position"
+                                                name="./dataPosition"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </dataLayer>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

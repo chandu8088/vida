@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="About Vida Component"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[vida.authoring.dialog]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <tabs
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                        maximized="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <aboutVidaInfo
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="About Vida Info"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <setItemDetails
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <granite:data jcr:primaryType="nt:unstructured"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <cardType
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldDescription="Select variation"
+                                                                fieldLabel="Select Variation"
+                                                                name="./variationType">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <ourvalues
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Our Values"
+                                                                        value="our-values" />
+                                                                    <vidasintent
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Vida's Intent"
+                                                                        value="vidas-intent" />
+                                                                </items>
+                                                            </cardType>
+                                                            <aboutVidaTitleaboutVidaTitle
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldDescription="Our Values Heading"
+                                                                fieldLabel="Our Values Heading"
+                                                                name="./ourValuesHeading"/>
+                                                            <CardContent
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                            composite="{Boolean}true"
+                                                                            fieldDescription="Click 'Add' to add items"
+                                                                            fieldLabel="Our Values Cards"
+                                                                            validation="multifield-item-number">
+                                                                            <field
+                                                                                jcr:primaryType="nt:unstructured"
+                                                                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                                name="./ourValuesCards">
+                                                                                <items jcr:primaryType="nt:unstructured">
+                                                                                    <cardTitle
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                        fieldLabel="Heading"
+                                                                                        name="./cardTitle"/>
+                                                                                    <cardDescription
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                                                        fieldLabel="Card content description"
+                                                                                        name="./cardDescription"
+                                                                                        useFixedInlineToolbar="{Boolean}true">
+                                                                                        <rtePlugins
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/rtePlugins"/>
+                                                                                        <uiSettings
+                                                                                            jcr:primaryType="nt:unstructured"
+                                                                                            sling:resourceSuperType="/apps/vida/components/vida-2.0/structure/footer/cq:dialog/content/items/tabs/items/footerMain/items/columns/items/column/items/footerMainItem/items/footerAddress/uiSettings"/>
+                                                                                        <htmlRules jcr:primaryType="nt:unstructured">
+                                                                                            <blockHandling
+                                                                                                jcr:primaryType="nt:unstructured"
+                                                                                                removeSingleParagraphContainer="{Boolean}true"/>
+                                                                                        </htmlRules>
+                                                                                    </cardDescription>
+                                                                                    <imagepath
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                        fieldLabel="Desktop Image path"
+                                                                                        name="./cardDesktopImg"
+                                                                                        rootPath="/content/dam"/>
+                                                                                    <mobileimagepath
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                        fieldLabel="Mobile Image path"
+                                                                                        name="./cardMobileImg"
+                                                                                        rootPath="/content/dam"/>
+                                                                                    <imagealttext
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                        fieldLabel="Image alt text"
+                                                                                        name="./imagealttext"/>
+                                                                                    <imageTitle
+                                                                                        jcr:primaryType="nt:unstructured"
+                                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                        fieldDescription="Please provide the title text for image"
+                                                                                        fieldLabel="Image Title"
+                                                                                        name="./imageTitle"/>
+                                                                                </items>
+                                                                            </field>
+                                                            </CardContent>
+                                                        </items>
+                                                    </setItemDetails>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </columns>
+                                </items>
+                            </aboutVidaInfo>
+                            <dataLayer
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="DataLayer"
+                                sling:resourceType="granite/ui/components/coral/foundation/container"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <columns
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <dataPosition
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                        fieldDescription="This field specifies the value of linkPosition in the data layer."
+                                                        fieldLabel="Position"
+                                                        name="./dataPosition"/>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </columns>
+                                </items>
+                            </dataLayer>
+                        </items>
+                    </tabs>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

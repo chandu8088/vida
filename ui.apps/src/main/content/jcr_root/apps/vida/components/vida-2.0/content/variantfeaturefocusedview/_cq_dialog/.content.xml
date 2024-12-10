@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Variant Feature Focused View"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[vida.authoring.dialog]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <multifield
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Add Banner Carousel Items"
+                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <setItemDetails
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <granite:data jcr:primaryType="nt:unstructured" />
+                                <items jcr:primaryType="nt:unstructured">
+                                    <aboutText
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="About Text"
+                                        name="./aboutText" />
+                                    <item_details
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                        composite="{Boolean}true"
+                                        fieldDescription="Click 'Add' to add items"
+                                        fieldLabel="Add Items"
+                                        validation="multifield-item-number">
+                                        <field
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                            name="./items">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <header
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Heading"
+                                                    name="./header" />
+                                                <content
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Content"
+                                                    name="./content" />
+                                                <cardNumber
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Card number"
+                                                    name="./cardNumber" />
+                                                <cardTextColor
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Card text color"
+                                                    name="./cardTextColor" />
+                                                <cardBgColor
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Card background color"
+                                                    name="./cardBgColor" />
+                                                <mobileImg
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Bike image mobile"
+                                                    name="./mobileImg"
+                                                    rootPath="/content/dam" />
+                                                <desktopImg
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Bike Image desktop"
+                                                    name="./desktopImg"
+                                                    rootPath="/content/dam" />
+                                                <bikeImgAlt
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide alternative text to display if image is not available"
+                                                    fieldLabel="Alternative text for bike image"
+                                                    name="./bikeImgAlt"/>
+                                                <bikeImgTitle
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldDescription="Please provide the title text for image"
+                                                    fieldLabel="Bike Image Title"
+                                                    name="./bikeImgTitle"/>
+                                                <isHeadLight
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                    name="./isHeadLight"
+                                                    checked="{Boolean}false"
+                                                    text="Check this to show it as headlight image"
+                                                    fieldDescription="If checked the link will be opened in a new browser tab."
+                                                    uncheckedValue="{Boolean}false"
+                                                    value="{Boolean}true" />
+                                                <headLightImgMobile
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Head light image mobile"
+                                                    fieldDescription="Add only if we need to show headlight in image."
+                                                    name="./headLightImgMobile"
+                                                    rootPath="/content/dam" />
+                                                <headLightImgDesktop
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                    fieldLabel="Headlight image desktop"
+                                                    fieldDescription="Add only if we need to show headlight in image."
+                                                    name="./headLightImgDesktop"
+                                                    rootPath="/content/dam" />
+                                            </items>
+                                        </field>
+                                        <granite:data
+                                            jcr:primaryType="nt:unstructured"
+                                            max-items="10"
+                                            min-items="2" />
+                                    </item_details>
+                                </items>
+                            </setItemDetails>
+                        </items>
+                    </multifield>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

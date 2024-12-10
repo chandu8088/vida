@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Exclusive Deals"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    extraClientlibs="[vida.authoring.dialog]">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <dealsCard
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Dealscard Info"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <column
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <setItemDetails
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                        <granite:data jcr:primaryType="nt:unstructured" />
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <pageType
+                                                                granite:class="cq-dialog-dropdown-showhide-multival"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                                fieldDescription="This component has various variations, Select a Variation for the specific experience"
+                                                                fieldLabel="Page Type"
+                                                                name="./pageType">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <offersPage
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Offers Page"
+                                                                        value="offers-page"/>
+                                                                    <offerDetailsPage
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        text="Offer Details Page"
+                                                                        value="offer-details-page"/>
+                                                                </items>
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    cq-dialog-dropdown-showhide-target=".item-type-hide-show"/>
+                                                            </pageType>
+                                                            <primarytext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Primary Text"
+                                                                name="./primaryText" />
+                                                            <boldtext
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="Bold Text"
+                                                                name="./boldText" />
+                                                            <seemore
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="See More Text"
+                                                                name="./seeMoreText" />
+                                                            <seeless
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                fieldLabel="See Less Text"
+                                                                name="./seeLessText" />
+                                                            <dealscard
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <item_details
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                                                                        composite="{Boolean}true"
+                                                                        fieldDescription="Click 'Add' to add items"
+                                                                        fieldLabel="Add Exclusive Deals Items">
+                                                                        <field
+                                                                            jcr:primaryType="nt:unstructured"
+                                                                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                                                                            name="./dealsCardItems">
+                                                                            <items jcr:primaryType="nt:unstructured">
+                                                                                <backgroundDesktop
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Background Image Desktop"
+                                                                                    name="./cardDesktopBgImg"
+                                                                                    rootPath="/content/dam" />
+                                                                                <backgroundMobile
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Background Image Mobile"
+                                                                                    name="./cardMobileBgImg"
+                                                                                    rootPath="/content/dam"/>
+                                                                                <backgroundAltText
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Background Image Alt Text"
+                                                                                    name="./cardBgImgAltText"
+                                                                                    rootPath="/content/dam"/>
+                                                                                <backgroundImageTitle
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Background Image Title"
+                                                                                    name="./cardBgImgTitle"
+                                                                                    rootPath="/content/dam"/>
+                                                                                <imageDesktop
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Image Desktop"
+                                                                                    name="./cardDesktopImg"
+                                                                                    rootPath="/content/dam" />
+                                                                                <imageMobile
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Image Mobile"
+                                                                                    name="./cardMobileImg"
+                                                                                    rootPath="/content/dam" />
+                                                                                <imageAltText
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Image Alt Text"
+                                                                                    name="./cardImgAltText"
+                                                                                    rootPath="/content/dam"/>
+                                                                                <imageTitle
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Image Title"
+                                                                                    name="./cardImgTitle"
+                                                                                    rootPath="/content/dam"/>
+                                                                                <title
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Card Title Text"
+                                                                                    name="./cardTitleText" />
+                                                                                <redirectImage
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Redirect Icon"
+                                                                                    name="./redirectionIcon"
+                                                                                    rootPath="/content/dam" />
+                                                                                <redirectImageAltText
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Redirect Icon Alt Text"
+                                                                                    name="./redirectionIconAltText"
+                                                                                    rootPath="/content/dam"/>
+                                                                                <redirectImageTitle
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                                                    fieldLabel="Redirect Icon Image Title"
+                                                                                    name="./redirectionIconImgTitle"
+                                                                                    rootPath="/content/dam"/>
+                                                                                <link
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                                                                    fieldLabel="Redirect Link"
+                                                                                    name="./navLink"
+                                                                                    rootPath="/content" />
+                                                                                <newtab
+                                                                                    jcr:primaryType="nt:unstructured"
+                                                                                    sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                                                                    checked="{Boolean}false"
+                                                                                    name="./newTab"
+                                                                                    text="Open link in new tab"
+                                                                                    uncheckedValue="{Boolean}false"
+                                                                                    value="{Boolean}true" />
+                                                                            </items>
+                                                                        </field>
+                                                                    </item_details>
+                                                                </items>
+                                                            </dealscard>
+                                                            <loveredirectioncard
+                                                                granite:class="hide item-type-hide-show"
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <redirectioncardlabel
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/include"
+                                                                        path="/apps/vida/components/vida-2.0/content/loveredirectioncard/cq:dialog/content/items/tabs/items/cardInfo/items/column/items/column/items/redirectioncardLabel"/>
+                                                                    <redirectioncardheading
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/include"
+                                                                        path="/apps/vida/components/vida-2.0/content/loveredirectioncard/cq:dialog/content/items/tabs/items/cardInfo/items/column/items/column/items/redirectioncardheading"/>
+                                                                    <redirectioncardlist
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/include"
+                                                                        path="/apps/vida/components/vida-2.0/content/loveredirectioncard/cq:dialog/content/items/tabs/items/cardInfo/items/column/items/column/items/primary"/>
+                                                                </items>
+                                                                <granite:data
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    showhidetargetvalue="offer-details-page"/>
+                                                            </loveredirectioncard>
+                                                        </items>
+                                                    </setItemDetails>
+                                                </items>
+                                            </column>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </dealsCard>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

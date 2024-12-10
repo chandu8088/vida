@@ -1,0 +1,23 @@
+{
+    "vidaappcard": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "cardBackgroundImageDesktop": "/content/dam/vida2-0/global/vida_logo.png",
+        "urlAppStore": "https://apps.apple.com/in/app/my-vida/id1619977916",
+        "cardBgImgMob": "/content/dam/vida/5.png",
+        "jcr:lastModifiedBy": "admin",
+        "appStoreLink": "https://apps.apple.com/in/app/my-vida/id1619977916",
+        "desktopDownloadImage": "/content/dam/vida2-0/global/try_icon.png",
+        "stayConnectTitle": " Stay connected with the My VIDA app. No matter where you are.",
+        "urlPlayStore": "https://play.google.com/store/apps/details?id=com.hero.vida&hl=en&gl=US",
+        "jcr:created": "Tue Nov 21 2023 15:35:02 GMT+0530",
+        "title": "Stay connected with the My VIDA app. No matter where you are.",
+        "jcr:lastModified": "Tue Nov 21 2023 17:22:18 GMT+0530",
+        "cardBgImgDesktop": "/content/dam/vida/3.png",
+        "downloadText": "Download the My VIDA app",
+        "sling:resourceType": "vida/components/vida-2.0/content/vidaappcard",
+        "playStoreLink": "https://play.google.com/store/apps/details?id=com.hero.vida&hl=en&gl=US",
+        "cardBackgroundImageMobile": "/content/dam/vida2-0/global/vida_logo.png",
+        "mobileDownloadImage": "/content/dam/vida2-0/global/love_icon.png"
+    }
+}

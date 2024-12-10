@@ -1,0 +1,16 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Battery Heading Component V2.0"></div>
+<section class="vida-battery-plus" data-component="battery-plus-details">
+  <div class="vida-battery-plus__contianer vida-2-container">
+    <div class="battery-details">
+      <h2 class="battery-details__heading">${properties.header @ context='html'}</h2>
+      <div class="battery-details__price">
+        <span class="discount-price-text">${properties.descriptionOne @ context='html'}</span>
+        <span class="discount-price-amount">${properties.discountPrice @ context='html'}</span>
+        <span class="original-price">${properties.originalPrice @ context='html'}</span>
+      </div>
+      <div>
+        <a href="${properties.visitVidaLink @ extension='html'}" class="battery-details--button_nav" role="button">${properties.visitVidaLabel}</a>
+      </div>
+    </div>
+  </div>
+</section>

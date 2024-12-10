@@ -1,0 +1,20 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Subscription Offer Scroller Component V2.0"></div>
+<div class="vida-product-subscription-marquee" data-component="limited-offer">
+  <div class="scroll-wrapper">
+    <div class="scroll-wrapper__img-scroll">
+    	<sly data-sly-list.scrollingImageItems="${resource.getChildren}">
+            <sly data-sly-test="${scrollingImageItems.name == 'scrollingOffers'}">
+                <div>
+                    <sly data-sly-list.item="${scrollingImageItems.getChildren}">
+                      <picture>
+                        <source srcset="${item.desktopScrollingImage}" alt="${item.desktopScrollingImageAlt}" @ context = 'uri' media="(min-width:1024px)">
+                        <source srcset="${item.mobileScrollingImage}" alt="${item.mobileScrollingImageAlt}" @ context = 'uri' media="(min-width: 360px)">
+                        <img src="${item.desktopScrollingImage}" alt="${item.desktopScrollingImageAlt}" @ context = 'uri' />
+                      </picture>
+                    </sly>
+                </div>
+            </sly>
+        </sly>
+    </div>
+  </div>
+</div>

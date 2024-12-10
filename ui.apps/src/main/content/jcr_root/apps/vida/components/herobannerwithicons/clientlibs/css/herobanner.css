@@ -1,0 +1,115 @@
+
+.herobanner-with-icons-container {
+  display: flex;
+    
+  justify-content : flex-start;
+  align-items: center;
+  align-content: center;
+  margin-top: 50px;
+  width: 100%;
+  margin-left: 0px;
+  font-size: 58px;
+  font-family: sans-serif;
+  font-weight: 350;
+  color: #fff;
+  @media only screen and (max-width: 767px) {
+    margin-left: 10px !important;
+      align-items: flex-start;
+      height: 40px;
+      margin-top:0px;
+      flex-direction:column;
+      
+  }
+  @media only screen and (min-width: 768px) and (max-width: 1250px) {
+    flex-direction:column;
+     align-items:flex-start;
+      margin-left:25px;
+      margin-top:140px;
+      justify-content:center;
+    }
+    
+}
+.hero-banner-icons-container{
+	display:flex;
+    align-items:center;
+    
+    @media only screen and (max-width: 767px) {
+    	margin-top: 10px;
+    	margin-left: -10px;
+      
+  }
+    @media only screen and (min-width: 768px) and (max-width: 1250px) {
+    margin-left:-25px;
+    }
+}
+
+.herobanner-with-icons-container-text {
+    word-wrap: none;
+    min-width: 180px;
+    font-size:35px;
+    @media only screen and (max-width: 767px) {
+        display: block;
+        min-width: 75px;
+    	font-size: 14px;
+    }
+}
+.text1 {
+    padding-right: 20px;
+    align-items: center;
+    font-size: 40px;
+    padding-top: 10px;
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+        padding-right: 8px;
+        padding-top:0px;
+        font-weight: 200;
+    /* padding-top: 0; */
+  }
+    
+    
+}
+.amazon {
+  z-index: 10;
+  width: 210px;
+  padding-top: 29px;
+  height: 90px;
+  @media only screen and (max-width: 767px) {
+      height: 25px;
+      width:80px;
+      padding-top:5px;
+    /* padding-top: 0; */
+  }
+    @media only screen and (min-width: 768px) and (max-width: 1250px) {
+    height: 90px;
+      width:180px;
+      padding-top:30px;
+        
+      
+    }
+}
+.flipkart {
+  z-index: 10;
+  width: 240px;
+  padding-bottom: 10px;
+   padding-top: 13px;
+  height: 80px;
+  @media only screen and (max-width: 767px) {
+    /* padding-top: 0; */
+      height: 40px;
+      width:100px;
+      padding-top:8px;
+  }
+    @media only screen and (min-width: 768px) and (max-width: 1250px) {
+    height: 80px;
+      width:180px;
+      padding-top:13px;
+        
+      
+    }
+}
+
+.amazon img,.flipkart img{
+	width:100%;
+    height:100%;
+    
+}

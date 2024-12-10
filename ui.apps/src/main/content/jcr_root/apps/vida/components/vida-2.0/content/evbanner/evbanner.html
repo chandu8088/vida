@@ -1,0 +1,27 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="EV Banner Component V2.0"></div>
+<sly data-sly-use.evCategoryBanner="${'com.heromotocorp.vida.core.models.EVCategoryBannerModel'}" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    EvBannerConfig: {
+      evBannerContent: {
+        desktopBackgroundImg: "${properties.desktopBackgroundImg @ context='uri'}",
+        mobileBackgroundImg: "${properties.mobileBackgroundImg @ context='uri'}",
+        bannerTopRightImage: "${properties.bannerTopRightImage @ context='uri'}",
+        exporeIcon: "${properties.exporeIcon @ context='uri'}",
+        exploreLabel: "${properties.exploreLabel @ context='scriptString'}",
+        header: "${properties.header @ context='scriptString'}",
+        description1: "${properties.descriptionOne @ context='scriptString'}",
+        description2: "${properties.descriptionTwo @ context='scriptString'}",
+        howVidaLink: "${evCategoryBanner.howVidaLink  @ context = 'uri'}",
+        howVidaLabel: "${properties.howVidaLabel @ context='scriptString'}",
+        isNewTab: ${properties.newTab @ context='scriptString'},
+        backgroundImgAlt: "${properties.bgImageAlt @ context='scriptString'}",
+        backgroundImgTitle:"${properties.backgroundImgTitle @ context='scriptString'}"
+      }
+    }
+  });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+<div data-section-id="EvBanner" data-component="EvBanner" data-cmp-type="react" data-cmp-version="2.0"
+  data-cmp-config="EvBannerConfig"></div>
+</sly>

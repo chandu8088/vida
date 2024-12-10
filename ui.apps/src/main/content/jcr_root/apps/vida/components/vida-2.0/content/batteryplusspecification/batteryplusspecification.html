@@ -1,0 +1,54 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Battery Specification Component V2.0"></div>
+<section class="vida-battery-specification" data-component="battery-plus-specification">
+  <div class="vida-battery-specification__container vida-2-container">
+    <div class="vida-battery-specification__heading">
+      <h2>${properties.heading}</h2>
+    </div>
+    <div class="specification-banner">
+      <div class="specification-banner-image-wrapper">
+      <picture>
+        <source srcset="${properties.batteryCenterDesktopImage}" alt="${properties.batteryCenterImageAltText}" @ context = 'uri' media="(min-width:1024px)">
+        <source srcset="${properties.batteryCenterMobileImage}" alt="${properties.batteryCenterImageAltText}" @ context = 'uri' media="(min-width: 360px)">
+        <img class="specification-banner__image" src="${properties.batteryCenterDesktopImage}" alt="${properties.batteryCenterImageAltText}" @ context = 'uri' />
+      </picture>
+    </div>
+      <div class="specification-tooltip-container">
+      <sly data-sly-list.batteryIconItems="${resource.getChildren}">
+        <sly data-sly-test="${batteryIconItems.name == 'batteryIcons'}">
+          <div>
+            <sly data-sly-list.item="${batteryIconItems.getChildren}">
+              <div class="battery-specification ${item.batterySpecificationClassName}">
+                <div class="battery-specification__icon">
+                  <div class="default-icon">
+                    <picture>
+                      <source srcset="${item.batteryDefaultIcon}" alt="${item.batteryDefaultAltText}" @ context = 'uri' media="(min-width:1024px)">
+                      <source srcset="${item.batteryDefaultIcon}" alt="${item.batteryDefaultAltText}" @ context = 'uri' media="(min-width: 360px)">
+                      <img class="battery-specification__icon__dimensions" src="${item.batteryDefaultIcon}" alt="${item.batteryDefaultAltText}" @ context = 'uri' />
+                    </picture>
+                  </div>
+                  <div class="battery-specification__icon__hover-icon">
+                    <picture>
+                      <source srcset="${item.batteryHoverIcon}" alt="${item.batteryHoverAltText}" @ context = 'uri' media="(min-width:1024px)">
+                      <source srcset="${item.batteryHoverIcon}" alt="${item.batteryHoverAltText}" @ context = 'uri' media="(min-width: 360px)">
+                      <img class="battery-specification__icon__dimensions" src="${item.batteryHoverIcon}" alt="${item.batteryHoverAltText}" @ context = 'uri' />
+                    </picture>
+                  </div>
+                </div>
+                <div class="battery-specification__tooltip ${item.batterySpecificationToolTipClassName}">
+                  <sly data-sly-test="${item.iconCardHeading}">
+                  <h3 class="battery-specification__tooltip__heading">${item.iconCardHeading @ context='html'}</h3>
+                  </sly>
+                  <sly data-sly-test="${item.iconCardDescription}">
+                  <p class="battery-specification__tooltip__title">${item.iconCardDescription @ context='html'}
+                  </p>
+                  </sly>
+                </div>
+              </div>
+            </sly>
+          </div>
+        </sly>
+      </sly>
+    </div>
+    </div>
+  </div>
+</section>

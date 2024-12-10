@@ -1,0 +1,14 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Bottom Tray Component V2"></div>
+<sly data-sly-use.BottomTrayModel="com.heromotocorp.vida.core.models.BottomTrayModel"/>
+  <script>
+    window.appConfig = Object.assign(window.appConfig || {}, {
+      BottomTrayConfig:${BottomTrayModel.json  @ context='unsafe' }});  
+  </script>
+  <sly data-sly-test="${!wcmmode.edit}">
+  	<div 
+    data-section-id="bottomTray"
+    data-cmp-version="2.0"
+    data-cmp-type="react"
+    data-component="BottomTray"
+    data-cmp-config="BottomTrayConfig"></div>
+  </sly>

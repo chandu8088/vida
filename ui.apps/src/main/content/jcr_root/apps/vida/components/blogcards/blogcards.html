@@ -1,0 +1,72 @@
+<sly data-sly-use.blogs="com.heromotocorp.vida.core.models.BlogsCardsModel">
+  <sly data-sly-test.cardNumber="${blogs.noOfCards}"></sly>
+  <div
+    data-sly-test="${wcmmode.edit}"
+    class="cq-placeholder"
+    data-emptytext="Blog Cards Component"
+  ></div>
+  <section class="vida-blog-card">
+    <div class="vida-blog-card__container">
+      <sly data-sly-test="${cardNumber > 0}">
+        <div class="vida-blog-card__title">
+          <div>${blogs.recentBlogsTitle @ context = 'html'}</div>
+        </div>
+      </sly>
+      <div class="vida-blog-card__body">
+        <sly data-sly-list.items="${blogs.carddetail}">
+          <sly data-sly-test="${itemsList.index < cardNumber}">
+            <div class="vida-blog-card__articlebody">
+              <a href="${items.cardlink @ extension='html'}"
+                ><img
+                  class="vida-blog-card__imgsize"
+                  src="${items.cardimage}"
+                  alt="${items.cardimagealttext}"
+              /></a>
+              <div class="vida-blog-card__content">
+                ${items.cardtitle @ context = 'html'}
+                <div>
+                  <a
+                    class="vida-blog-card__blogname"
+                    href="${items.cardlink @ extension='html'}"
+                    >${items.cardlinktext}</a
+                  >
+                  ${items.carddesc @ context = 'html'}
+                  <div>${items.cardtimelinetext @ context = 'html'}</div>
+                </div>
+              </div>
+            </div>
+          </sly>
+        </sly>
+      </div>
+      <div class="vida-blog-card__title">
+        <div>${blogs.cardstitle @ context = 'html'}</div>
+      </div>
+      <div class="vida-blog-card__body">
+        <sly data-sly-list.items="${blogs.carddetail}">
+          <sly data-sly-test="${itemsList.index >= cardNumber}">
+            <div class="vida-blog-card__articlebody">
+              <a href="${items.cardlink @ extension='html'}"
+                ><img
+                  class="vida-blog-card__imgsize"
+                  src="${items.cardimage}"
+                  alt="${items.cardimagealttext}"
+              /></a>
+              <div class="vida-blog-card__content">
+                ${items.cardtitle @ context = 'html'}
+                <div>
+                  <a
+                    class="vida-blog-card__blogname"
+                    href="${items.cardlink @ extension='html'}"
+                    >${items.cardlinktext}</a
+                  >
+                  ${items.carddesc @ context = 'html'}
+                  <div>${items.cardtimelinetext @ context = 'html'}</div>
+                </div>
+              </div>
+            </div>
+          </sly>
+        </sly>
+      </div>
+    </div>
+  </section>
+</sly>

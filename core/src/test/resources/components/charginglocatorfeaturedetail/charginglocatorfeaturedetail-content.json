@@ -1,0 +1,50 @@
+{
+    "charginglocatorfeatu": {
+      "jcr:primaryType": "nt:unstructured",
+      "jcr:createdBy": "admin",
+      "titleTag": "h2",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+      "preTitle": "0-80% IN 6 HOURS",
+      "jcr:lastModifiedBy": "admin",
+      "sectionId": "test",
+      "jcr:created": "Tue Jan 23 2024 12:12:25 GMT+0530",
+      "title": "Charge at Home",
+      "jcr:lastModified": "Tue Jan 23 2024 12:17:51 GMT+0530",
+      "sling:resourceType": "vida/components/vida-2.0/content/charginglocatorfeaturedetail",
+      "textIsRich": [
+        "true",
+        "true",
+        "true"
+      ],
+      "dataPosition": "charge-at-home",
+      "cardsInfo": {
+        "jcr:primaryType": "nt:unstructured",
+        "item0": {
+          "jcr:primaryType": "nt:unstructured",
+          "labelTag": "h2",
+          "description": "Removable batteries for easier charging connect to a 5A socket at home or work",
+          "imageTitle": "two removable batteries title",
+          "mobileImage": "/content/dam/vida2-0/chargingguide/chargeguide_desk1.png",
+          "imageAlt": "two removable batteries",
+          "sectionId": "#",
+          "link": "#",
+          "label": "Removable Batteries",
+          "order": "1",
+          "desktopImage": "/content/dam/vida2-0/chargingguide/chargeguide_desk1.png"
+        },
+        "item1": {
+          "jcr:primaryType": "nt:unstructured",
+          "labelTag": "h2",
+          "description": "Portable charger at any standard 5A socket board",
+          "imageTitle": "portable-charger-title",
+          "mobileImage": "/content/dam/vida2-0/chargingguide/chargeguide_desk1.png",
+          "imageAlt": "Portable charger",
+          "sectionId": "#",
+          "link": "#",
+          "label": "Portable charger",
+          "order": "2",
+          "desktopImage": "/content/dam/vida2-0/chargingguide/chargeguide_desk1.png"
+        }
+      }
+    }
+  }

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
+xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Calculator Card Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"              
+                        fieldLabel="Enter Title"
+                        name="./title"/>
+                    <titleTag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        emptyText="Select heading tag"
+                        fieldDescription="Please Select the heading tag for title"
+                        fieldLabel="Tag for Title"
+                        name="./titleTag">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Tag"
+                                value=""/>
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="H1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="H2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="H3"
+                                value="h3"/>
+                            <h4
+                                jcr:primaryType="nt:unstructured"
+                                text="H4"
+                                value="h4"/>
+                            <h5
+                                jcr:primaryType="nt:unstructured"
+                                text="H5"
+                                value="h5"/>
+                            <h6
+                                jcr:primaryType="nt:unstructured"
+                                text="H6"
+                                value="h6"/>
+                        </items>
+                    </titleTag>                                
+                    <secondTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Second Title"
+                        name="./secondTitle" />
+                    <subTitleTag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        emptyText="Select sub heading tag"
+                        fieldDescription="Please Select the heading tag for sub title"
+                        fieldLabel="Sub Tag for Title"
+                        name="./subTitleTag">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Tag"
+                                value=""/>
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="H1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="H2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="H3"
+                                value="h3"/>
+                            <h4
+                                jcr:primaryType="nt:unstructured"
+                                text="H4"
+                                value="h4"/>
+                            <h5
+                                jcr:primaryType="nt:unstructured"
+                                text="H5"
+                                value="h5"/>
+                            <h6
+                                jcr:primaryType="nt:unstructured"
+                                text="H6"
+                                value="h6"/>
+                        </items>
+                    </subTitleTag>       
+                    <selectCityLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Label  for City Selector" 
+                        name="./showingCityLabel" />    
+                    <selectCityPlaceHolder
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Placeholder  for City Selector" 
+                        name="./selectCityLabel" />
+                    <scooterCardLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Label for Scooter Card" 
+                        name="./scooterLabel" />
+                    <preTitleTag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        emptyText="Select Pre heading tag"
+                        fieldDescription="Please Select the heading tag for Label title"
+                        fieldLabel="Label Tag for Title"
+                        name="./preTitleTag">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Tag"
+                                value=""/>
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="H1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="H2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="H3"
+                                value="h3"/>
+                            <h4
+                                jcr:primaryType="nt:unstructured"
+                                text="H4"
+                                value="h4"/>
+                            <h5
+                                jcr:primaryType="nt:unstructured"
+                                text="H5"
+                                value="h5"/>
+                            <h6
+                                jcr:primaryType="nt:unstructured"
+                                text="H6"
+                                value="h6"/>
+                        </items>
+                    </preTitleTag>  
+                    <effectivePriceLabel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter the Price Label"
+                        name="./effectivePriceLabel" />    
+                    <defaultCityState
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter the Price for Default City, State"
+                        name="./defaultCityState" />    
+                    <locationErrMsg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter the Location Error Messge" 
+                        name="./locationErrorMsg" />        
+                    <scooterBgImageMobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Scooter Background Image for Mobile" 
+                        name="./scooterBgImageMobile" />  
+                    <scooterBgImageLeftDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Left Scooter Background Image for Desktop" 
+                        name="./scooterBgImageLeftDesktop" /> 
+                    <scooterBgImageRightDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Right Scooter Background Image for Desktop" 
+                        name="./scooterBgImageRightDesktop" />         
+                    <scooterBgImageAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter the Scooter Background Image Alt text" 
+                        name="./scooterBgImageAltText" />
+                    <scooterBgImageTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter the Scooter Background Image Title" 
+                        name="./scooterBgImageTitle" />              
+                    <selectCityIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Enter the Location Icon for Select city" 
+                        name="./selectCityIcon" /> 
+                    <selectCityAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter the Select City icon Alt text" 
+                        name="./selectCityAltText" />    
+                    <selectCityAltTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter the Select City icon Image Title" 
+                        name="./selectCityAltTitle" />    
+                    <selectedCityIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Enter the Location icon for Selected city" 
+                        name="./selectedCityIcon" />        
+                    <bikeImgMobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Scooter Image for Mobile" 
+                        name="./bikeImgMobile" />      
+                    <bikeImgDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Scooter Image for Desktop" 
+                        name="./bikeImgDesktop" />    
+                    <bikeImgAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Scooter Image Alt Text" 
+                        name="./bikeImgAltText" />   
+                    <bikeImgTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Scooter Image Title" 
+                        name="./bikeImgTitle" />                     
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

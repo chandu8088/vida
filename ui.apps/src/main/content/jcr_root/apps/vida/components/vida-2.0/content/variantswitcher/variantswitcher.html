@@ -1,0 +1,17 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Variant Switcher V2.0"></div>
+<sly data-sly-use.variantSwitcher="${'com.heromotocorp.vida.core.models.VariantSwitcherModel'}" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ variantSwitcher.json  @context = 'unsafe' }
+      });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <sly data-sly-test="${properties.enableNewVariantSwitcher}">
+    <div data-section-id="variant-switcher" data-component="VariantSwitcherNew" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>
+  </sly>
+  <sly data-sly-test="${!properties.enableNewVariantSwitcher}">
+      <div data-section-id="variant-switcher" data-component="VariantSwitcherComponent" data-cmp-type="react"
+       data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>
+  </sly>
+</sly>

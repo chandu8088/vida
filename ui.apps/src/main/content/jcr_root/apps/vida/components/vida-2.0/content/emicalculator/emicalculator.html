@@ -1,0 +1,14 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Emi Calculator Component V2.0"
+></div>
+<sly
+  data-sly-use.EmiCalculatorModel="com.heromotocorp.vida.core.models.EmiCalculatorModel"
+/>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${currentNode.name @context = 'scriptString'}: ${EmiCalculatorModel.json  @ context='unsafe' }});
+</script>
+<div data-section-id="${currentNode.name}" data-component="EmiCalculator" data-cmp-type="react"
+    data-cmp-version="2.0" data-cmp-config="${currentNode.name}"></div>

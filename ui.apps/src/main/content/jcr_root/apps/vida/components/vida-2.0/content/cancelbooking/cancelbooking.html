@@ -1,0 +1,15 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Cancel Booking 2.0 Component"></div>
+<sly data-sly-use.CancelBookingModel="com.heromotocorp.vida.core.models.CancelBookingModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    CancelBookingConfig: ${ CancelBookingModel.json  @context = 'unsafe' } });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+<div
+  data-section-id="cancel-booking"
+  data-component="CancelBooking"
+  data-cmp-type="react"
+  data-cmp-version="2.0"
+  data-cmp-config="CancelBookingConfig"
+></div>
+</sly>

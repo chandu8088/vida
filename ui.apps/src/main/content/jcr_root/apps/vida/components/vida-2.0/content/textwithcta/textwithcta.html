@@ -1,0 +1,14 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Text With CTA V2.0"></div>
+<section class="vida-aboutus-details" data-component="about-us-details">
+  <div class="vida-aboutus-details__wrapper">
+      <div class="vida-aboutus-details__container__content">
+          ${properties.textValue @context='html'}
+      </div>
+      <div class="vida-aboutus-details__container__read">
+          <a class="vida-aboutus-details__container__read__hidden" href="#">${properties.readMoreLabel}</a>
+      </div>
+      <button class="vida-aboutus-details__container__button" data-sly-test="${properties.ctaLabel}">
+          <a href="${properties.ctaLink}">
+            ${properties.ctaLabel}</a></button>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Compare Vida 2.0 Component"></div>
+<sly data-sly-use.CompareVidaModel="com.heromotocorp.vida.core.models.CompareVidaModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    CompareVariantsConfig: ${ CompareVidaModel.json  @context = 'unsafe' }
+      });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="compare-variants" data-component="CompareVariants" data-cmp-type="react" data-cmp-version="2.0"
+    data-cmp-config="CompareVariantsConfig" id="compare-variants"></div>
+</sly>

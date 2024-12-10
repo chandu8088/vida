@@ -1,0 +1,10 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Why You Need Vida Component"></div>
+<sly data-sly-use.whyYouNeedVidaModel="com.heromotocorp.vida.core.models.WhyYouNeedVidaModel" />
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${ currentNode.name @context = 'scriptString'}: ${ whyYouNeedVidaModel.json  @context = 'unsafe' }});
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="${currentNode.name}" data-cmp-version="2.0" data-cmp-type="react"
+    data-component="WhyYouNeedVida" data-cmp-config="${currentNode.name}"></div>
+</sly>

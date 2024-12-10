@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Find Vida Dealers"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <preTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter Pretitle"
+                        name="./preTitle" />
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Enter title"
+                        name="./title" />
+                    <titleTag
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        emptyText="select tag for Title"
+                        fieldDescription="Please Select the tag for Title"
+                        fieldLabel="Title Tag"
+                        name="./titleTag">
+                        <items jcr:primaryType="nt:unstructured">
+                            <default
+                                jcr:primaryType="nt:unstructured"
+                                text="Select Tag"
+                                value="\0"/>
+                            <h1
+                                jcr:primaryType="nt:unstructured"
+                                text="H1"
+                                value="h1"/>
+                            <h2
+                                jcr:primaryType="nt:unstructured"
+                                text="H2"
+                                value="h2"/>
+                            <h3
+                                jcr:primaryType="nt:unstructured"
+                                text="H3"
+                                value="h3"/>
+                            <h4
+                                jcr:primaryType="nt:unstructured"
+                                text="H4"
+                                value="h4"/>
+                            <h5
+                                jcr:primaryType="nt:unstructured"
+                                text="H5"
+                                value="h5"/>
+                            <h6
+                                jcr:primaryType="nt:unstructured"
+                                text="H6"
+                                value="h6"/>
+                        </items>
+                    </titleTag>
+                    <redirectionIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Redirection Icon"
+                        name="./redirectionIcon"
+                        rootPath="/content/dam" />
+                    <redirectionIconTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Redirection Icon Title"
+                        name="./redirectionIconTitle" />
+                    <redirectionIconAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Redirection Icon Alt Text"
+                        name="./redirectionIconAltText" />
+                    <redirectionLink
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Redirection Link"
+                        name="./redirectionLink"
+                        rootPath="/content" />
+                    <redirectionNewTab
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        name="./redirectionNewTab"
+                        text="Open link in new tab"
+                        uncheckedValue="{Boolean}false"
+                        value="{Boolean}true" />
+                    <dealersCardImgDesktop
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Dealers Card Image Desktop"
+                        name="./dealersCardImgDesktop"
+                        rootPath="/content/dam" />
+                    <dealersCardImgMobile
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Dealers Card Image Mobile"
+                        name="./dealersCardImgMobile"
+                        rootPath="/content/dam" />
+                    <dealersCardImgTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Dealers Card Image Title"
+                        name="./dealersCardImgTitle" />
+                    <dealersCardImgAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Dealers Card Image Alt Text"
+                        name="./dealersCardImgAltText" />
+                   <locationErrorMsg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Location Error message"
+                        name="./locationErrorMsg" />
+                    <getDirectionsCta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Get Directions CTA Label"
+                        name="./getDirectionsCta" />
+                    <locationIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Location icon image"
+                        name="./icon"
+                        rootPath="/content/dam" />
+                    <locationIconTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Location Icon Title"
+                        name="./locationIcon" />
+                    <locationIconAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Location Icon Alt Text"
+                        name="./locationIconAltText" />
+                    <secondLocationIcon
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Second Location icon image"
+                        name="./secondIcon"
+                        rootPath="/content/dam" />
+                    <secondLocationIconTitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Second Location Icon Title"
+                        name="./secondLocationIcon" />
+                    <secondLocationIconAltText
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Second Location Icon Alt Text"
+                        name="./secondLocationIconAltText" />
+                    <cityPlaceholder
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Place Holder for city field"
+                        name="./placeholder" />
+                    <noDealerErrorMsg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="No dealer Error message"
+                        name="./noDealerErrorMsg" />
+                    <noValueErrorMsg
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="No Value Error message"
+                        name="./noValueErrorMsg" />
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

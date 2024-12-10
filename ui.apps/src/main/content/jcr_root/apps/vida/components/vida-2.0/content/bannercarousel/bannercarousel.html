@@ -1,0 +1,9 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Banner Carousel Component V2"></div>
+<sly data-sly-use.BannerCarouselModel="com.heromotocorp.vida.core.models.BannerCarouselModel"/>
+  <script>
+    window.appConfig = Object.assign(window.appConfig || {}, {
+      bannerCarouselConfig:${BannerCarouselModel.json  @ context='unsafe' }});  
+  </script>
+  <sly data-sly-test="${!wcmmode.edit}">
+  	<div data-section-id="productBannerCarousel" data-component="ProductBannerCarousel" data-cmp-version="2.0" data-cmp-type="react" data-cmp-config="bannerCarouselConfig"></div>
+  </sly>

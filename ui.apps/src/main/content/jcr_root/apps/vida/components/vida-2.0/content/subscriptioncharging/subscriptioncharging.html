@@ -1,0 +1,35 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Subscription Charging Grid Component V2.0">
+</div>
+<section class="vida-subscription-details" data-component="subscription-details-card">
+  <div class="vida-subscription-details__container vida-2-container">
+    <div class="subscription-wrapper">
+    <div class="vida-subscription-details__icon">
+      <picture>
+        <source srcset="${properties.desktopChargingImage}" media="(min-width:1024px)">
+        <source srcset="${properties.mobileChargingImage}" media="(min-width: 360px)">
+        <img class="vida-product-subscriptionicon-image" src="${properties.desktopChargingImage}"
+          alt="${properties.chargingImageAltText}" @ context='uri' />
+      </picture>
+      <div class="vida-subscription-details__icontext">
+        <p class="vida-subscription-details__icontext-heading">${properties.chargingImageTitle @ context = 'html'}</p>
+        <div class="vida-subscription-details__icontext-description">
+          <h2 class="vida-subscription-details__icontext-description__heading">${properties.chargingHeading @ context =
+            'html'}</h2>
+        </div>
+      </div>
+    </div>
+    <div class="vida-subscription-details__card">
+      <sly data-sly-list.chargingItems="${resource.getChildren}">
+        <sly data-sly-test="${chargingItems.name == 'chargingCards'}">
+          <sly data-sly-list.item="${chargingItems.getChildren}">
+            <div class="vida-subscription-details__card-section">
+              <h3 class="vida-subscription-details__card-section__heading">${item.chargingCardHeading @ context = 'html'}</h3>
+              <p class="vida-subscription-details__card-section__description">${item.chargingCardDescription @ context = 'html'}</p>
+            </div>
+          </sly>
+        </sly>
+      </sly>
+    </div>
+  </div>
+  </div>
+</section>

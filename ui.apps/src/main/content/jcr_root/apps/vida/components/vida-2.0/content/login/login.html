@@ -1,0 +1,202 @@
+<div data-sly-test="${wcmmode.edit}" class="cq-placeholder" data-emptytext="Login Register Component"></div>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    userAccessConfig: {
+      loginBannerTitle: "${properties.loginBannerTitle @ context='scriptString'}",
+      registerBannerTitle: "${properties.registerBannerTitle @ context='scriptString'}",
+      secondRegisterBannerTitle: "${properties.secondRegisterBannerTitle @ context='scriptString'}",
+      loginBannerDescription: "${properties.loginBannerDescription @ context='scriptString'}",
+      registerBannerDescription:
+        "${properties.registerBannerDescription @ context='scriptString'}",
+      secondRegisterBannerDescription:
+        "${properties.secondRegisterBannerDescription @ context='scriptString'}",
+      loginBannerDesktopImg:
+        "${properties.loginBannerDesktopImg @ context='uri'}",
+      loginBannerMobileImg:
+        "${properties.loginBannerMobileImg @ context='uri'}",
+      registerBannerDesktopImg:
+        "${properties.registerBannerDesktopImg @ context='uri'}",
+      registerBannerMobileImg:
+        "${properties.registerBannerMobileImg @ context='uri'}",
+      secondRegisterBannerDesktopImg: "${properties.secondRegisterBannerDesktopImg @ context='uri'}",
+      secondRegisterBannerMobileImg: "${properties.secondRegisterBannerMobileImg @ context='uri'}",
+      loginBannerImgAlt: "${properties.loginBannerImgAlt @ context='scriptString'}",
+      loginBannerImgTitle: "${properties.loginBannerImgTitle @ context='scriptString'}",
+      registerBannerImgAlt: "${properties.registerBannerImgAlt @ context='scriptString'}",
+      registerBannerImgTitle: "${properties.registerBannerImgTitle @ context='scriptString'}",
+      secondRegisterImgAlt: "${properties.secondRegisterImgAlt @ context='scriptString'}",
+      secondRegisterImgTitle: "${properties.secondRegisterImgTitle @ context='scriptString'}",
+      loginConfig: {
+        phoneNumberField: {
+          id: "mobile",
+          placeholder: "${properties.phoneNumberPlaceHolder @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'mobileReqMsz' @ i18n,context='scriptString'}"
+            },
+            minLength: {
+              value: 10,
+              message: "${'minDigitMsz' @ i18n,context='scriptString'}"
+            },
+            maxLength: {
+              value: 10,
+              message: "${'maxDigitMsz' @ i18n,context='scriptString'}"
+            },
+            customValidation: {
+              message: "${'validMobileNumber' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        generateOtpBtnLabel: "${properties.generateOtpBtnLabel @ context='scriptString'}",
+        loginFormPrimaryText: "${properties.loginFormPrimaryText @ context='scriptString'}",
+        loginFormBoldText: "${properties.loginFormBoldText @ context='scriptString'}",
+        loginFormPrivacyPolicy:
+          "${properties.loginFormPrivacyPolicy @ context='scriptString'}"
+      },
+      registerConfig: {
+        firstNameField: {
+          id: "fname",
+          placeholder: "${properties.fnamePlcHld @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'nameReqMsz' @ i18n,context='scriptString'}"
+            },
+            minLength: {
+              value: 1,
+              message: "${'nameLeastMsz' @ i18n,context='scriptString'}"
+            },
+            fullName: {
+              message: "${'fullNameCustomMsz' @ i18n,context='scriptString'}"
+            },
+            customValidation: {
+              message: "${'validnameMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        mobileField: {
+          id: "mobile",
+          placeholder: "${properties.phplchld @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'mobileReqMsz' @ i18n,context='scriptString'}"
+            },
+            minLength: {
+              value: 10,
+              message: "${'minCharaterMsz' @ i18n,context='scriptString'}"
+            },
+            maxLength: {
+              value: 10,
+              message: "${'maxCharaterMsz' @ i18n,context='scriptString'}"
+            },
+            customValidation: {
+              message: "${'validMobileNumber' @ i18n,context='scriptString'}"
+            }
+          }
+        }
+        ,
+        emailField: {
+          placeholder: "${properties.emailplaceholder @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'emailReqMsz' @ i18n,context='scriptString'}"
+            },
+            customValidation: {
+              message: "${'emailValidMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        generateOtpBtnLabel: "${properties.registerOtpBtnLabel @ context='scriptString'}",
+        registerFormPrimaryText: "${properties.registerFormPrimaryText @ context='scriptString'}",
+        registerFormBoldText: "${properties.registerFormBoldText @ context='scriptString'}"
+      },
+      otpConfig: {
+        changeNumberLabel: "${properties.changeNumberLabel @ context='scriptString'}",
+        resendLabel: "${properties.resendLabel @ context='scriptString'}",
+        timer: {
+          minutes: "${properties.minutes @ context='scriptString'}",
+          seconds: "${properties.seconds @ context='scriptString'}"
+        },
+        verifyBtn: {
+          label: "${properties.verifyBtn @ context='scriptString'}"
+        },
+        validationRules: {
+          required: {
+            message: "${'enterOTPMsz' @ i18n,context='scriptString'}"
+          }
+        },
+        otpFormPrimaryText: "${properties.otpFormPrimaryText @ context='scriptString'}",
+        otpFormBoldText: "${properties.otpFormBoldText @ context='scriptString'}"
+      },
+      userProfileConfig: {
+        emailField: {
+          id: "email",
+          placeholder: "${properties.emailplaceholder @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'emailReqMsz' @ i18n,context='scriptString'}"
+            },
+            customValidation: {
+              message: "${'emailValidMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        stateField: {
+          id: "state",
+          placeholder: "${properties.statefieldph @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'stateReqMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        cityField: {
+          id: "city",
+          placeholder: "${properties.cityfieldph @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'cityLabelReqMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        countryField: {
+          label: "${properties.countryfieldph @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'countryReqMsz' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        pinCodeField: {
+          placeholder: "${properties.pinCodefieldph @ context='scriptString'}",
+          validationRules: {
+            required: {
+              message: "${'pincodeReqMsz' @ i18n,context='scriptString'}"
+            },
+            minLength: {
+              value: 6,
+              message: "${'pincodeMinMsz' @ i18n,context='scriptString'}"
+            },
+            custom: {
+              noServiceMsg: "${'noServiceMsg' @ i18n,context='scriptString'}",
+              noCityMatchMsg: "${'noCityMatchMsg' @ i18n,context='scriptString'}"
+            }
+          }
+        },
+        saveBtn: {
+          label: "${properties.saveBtnLabel @ context='scriptString'}"
+        },
+        secondFormPrimaryText: "${properties.secondFormPrimaryText @ context='scriptString'}",
+        registerFormNamePrefixText: "${properties.registerFormNamePrefixText @ context='scriptString'}",
+        registerFormNamePostText: "${properties.registerFormNamePostText @ context='scriptString'}"
+
+      },
+      redirectionUrl: "${properties.redirectionUrl @ extension = 'html', context='uri'}",
+      isLoginPage: ${ properties.isLoginPage @context = 'scriptString'}
+      }
+    });
+</script>
+<sly data-sly-test="${!wcmmode.edit}">
+  <div data-section-id="vidaSpinner" data-component="Spinner" data-cmp-version="2.0" data-cmp-type="react"></div>
+  <div data-section-id="vidaLogin" data-component="UserAccess" data-cmp-version="2.0" data-cmp-type="react"
+    data-cmp-config="userAccessConfig"></div>
+</sly>

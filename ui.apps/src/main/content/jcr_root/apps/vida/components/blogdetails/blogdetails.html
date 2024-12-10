@@ -1,0 +1,50 @@
+
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+    data-sly-call="${clientlib.js @ categories='vida.blog-details'}" />
+    <section class="vida-container vida-blog-details">
+        <h3 class="vida-blog__header">${properties.cardstitle @ context='html'}</h3>
+    <div class="vida-blog-card__container">
+        <ul class="vida-blog-card__list">
+            <sly data-sly-list.blogHeadings="${resource.getChildren}">
+                <sly data-sly-test="${blogHeadings.name == 'blogheadings'}">
+                    <sly data-sly-list.items="${blogHeadings.getChildren}">
+                        <li class="vida-blog-card__list-item" id="${items.blogcategory}">
+                            <a href="${items.bloglink @ extension='html'}">${items.blogheading @ context='html'}</a>
+                        </li>
+                    </sly>
+                </sly>
+            </sly>
+        </ul>
+        <div class="vida-blog-card__body">
+            <sly data-sly-list.title="${resource.getChildren}">
+                <sly data-sly-test="${title.name == 'carddetails'}">
+                    <sly data-sly-list.items="${title.getChildren}">
+                        <div class="vida-blog-card__articlebody" data-category="${items.cardcategory}">
+                            <a href="${items.cardlink @ extension='html'}">
+                                <img class="vida-blog-card__imgsize" src="${items.cardimage}"
+                                    alt="${items.cardimagealttext}">
+                            </a>
+                            <div class="vida-blog-card__content">
+                                <span class="vida-blog-card__category">${items.cardtitle @ context = 'html'}</span>
+
+                                <div>
+                                    <a href="${items.cardlink @ extension='html'}" class="vida-blog-card__blogname">${items.cardlinktext}</a>
+                                    <p class="vida-blog-card__by"> ${items.carddesc @ context =
+                                        'html'}
+                                    </p>
+                                    <div>
+                                        ${items.cardtimelinetext @ context = 'html'}
+                                        <!-- <span class="vida-blog-card__time">73448930 Views</span>
+                                        <span class="vida-blog-card__time">11 months ago</span> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        </sly>
+                        </sly>
+                        </sly>
+                        <div class="vida-blog-card__results">${properties.noBlogs}</div>
+        </div>
+
+    </div>
+</section>

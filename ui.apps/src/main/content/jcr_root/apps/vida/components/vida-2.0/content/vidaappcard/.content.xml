@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="This is a vida app card component by clicking it anyone can go to app store or play store to downlaod the app"
+    jcr:primaryType="cq:Component"
+    jcr:title="My Vida App Card V2.0"
+    componentGroup="Heromotocorp Vida 2.0 - Content"/>

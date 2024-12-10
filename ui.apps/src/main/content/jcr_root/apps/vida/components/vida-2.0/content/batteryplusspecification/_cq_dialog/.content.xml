@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Battery Plus Specification V2.0"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+        <items jcr:primaryType="nt:unstructured">
+            <column
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/container">
+                <items jcr:primaryType="nt:unstructured">
+                    <heading
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Heaing"
+                        name="./heading"/>
+                    <desktopimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Battery Center Desktop Image"
+                        name="./batteryCenterDesktopImage"
+                        rootPath="/content/dam"/>
+                    <mobileimage
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                        fieldLabel="Battery Center Mobile Image"
+                        name="./batteryCenterMobileImage"
+                        rootPath="/content/dam"/>
+                    <imagetitle
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Battery Center Image Title"
+                        name="./batteryCenterImagetitle"/>
+                    <imagealttext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Battery Center Image Alt Text"
+                        name="./batteryCenterImageAltText"/>
+                    <icons
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
+                        composite="{Boolean}true"
+                        fieldLabel="Battery Icons">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            name="./batteryIcons">
+                            <items jcr:primaryType="nt:unstructured">
+                                <defaulticon
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Battery Default Icon"
+                                    name="./batteryDefaultIcon"
+                                    rootPath="/content/dam"/>
+                                <hovericon
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                    fieldLabel="Battery Hover Icon"
+                                    name="./batteryHoverIcon"
+                                    rootPath="/content/dam"/>
+                                <defaultalttext
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Default Icon Alt Text"
+                                    name="./batteryDefaultAltText"/>
+                                <hoveralttext
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Hover Icon Alt Text"
+                                    name="./batteryHoverAltText"/>
+                                <icontitle
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel=" Battery Icon Title"
+                                    name="./batteryIconTitle"/>
+                                <iconcardheading
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Icon Card Heading"
+                                    name="./iconCardHeading"/>
+                                <iconcarddescription
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel="Icon Card Description"
+                                    name="./iconCardDescription"/>
+                                <batteryspecificationclassname
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel=" Battery Specification Class Name"
+                                    name="./batterySpecificationClassName"/>
+                                <batteryspecificationtooltipclassname
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                    fieldLabel=" Battery Specification Tool Tip Class Name"
+                                    name="./batterySpecificationToolTipClassName"/>
+                            </items>
+                        </field>
+                    </icons>
+                </items>
+            </column>
+        </items>
+    </content>
+</jcr:root>

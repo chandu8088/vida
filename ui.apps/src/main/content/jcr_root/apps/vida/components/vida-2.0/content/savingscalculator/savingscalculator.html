@@ -1,0 +1,19 @@
+<div
+  data-sly-test="${wcmmode.edit}"
+  class="cq-placeholder"
+  data-emptytext="Savings Calculator Component"
+></div>
+<sly
+  data-sly-use.SavingsCalculatorModel="com.heromotocorp.vida.core.models.SavingsCalculatorModel"
+/>
+<script>
+  window.appConfig = Object.assign(window.appConfig || {}, {
+    ${currentNode.name @context = 'scriptString'}: ${SavingsCalculatorModel.json  @ context='unsafe' }});
+</script>
+<div
+      data-section-id="${currentNode.name}"
+      data-cmp-version="2.0"
+      data-cmp-type="react"
+      data-component="SavingsCalculator"
+      data-cmp-config="${currentNode.name}"
+></div>
